@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: ThieuNhiGoVap
+        psr4_prefix: ThieuNhiGoVap
+        src_path: app

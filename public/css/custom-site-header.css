@@ -1,0 +1,119 @@
+/*=============================================================================
+ | custom-site-header.css
+ =============================================================================*/
+
+#header {
+  background-color: #fff;
+}
+
+html.has-background #header {
+  background-color: transparent;
+}
+
+/*=============================================================================
+ | custom-site-topbar.css
+ =============================================================================*/
+
+#topbar {
+  background-color: #fff;
+  border-top: 1px solid #2bd7c6;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
+}
+
+#socialurls-wrapper {
+  margin: 8px 0;
+}
+
+/*=============================================================================
+ | custom-site-diva.css
+ =============================================================================*/
+
+#diva {
+  margin: 15px 0;
+}
+
+/** Site Title */
+
+.site-title {
+}
+
+.site-title h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.site-title a {
+  outline-style: none;
+  text-decoration: none;
+}
+
+.site-title h2 a {
+  color: #4a4a4a;
+}
+
+/*=============================================================================
+ | ivy-site-navbar.css
+ =============================================================================*/
+
+#navbar {
+  margin-bottom: 0;
+}
+
+#navbar .glyphicon {
+  line-height: inherit;
+}
+
+#navbar a.navbar-brand {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+}
+
+#navbar a.navbar-brand,
+#navbar ul.navbar-nav > li > a,
+#navbar ul.navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+#navbar a.navbar-brand:hover,
+#navbar ul.navbar-nav > li > a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#navbar a.navbar-brand.active,
+#navbar ul.navbar-nav > li.active > a {
+  background-color: #fff;
+  color: #000;
+}
+
+#navbar-menu-wrapper {
+  background-color: #0093dd;
+  border: 1px solid #0093dd;
+}
+
+#navbar .dropdown-menu > li > a:hover,
+#navbar .dropdown-menu > li > a:focus {
+  background-color: #eb7404;
+  color: #fff;
+}
+
+#navbar .navbar-toggle {
+  padding: 5px 10px;
+}
+
+#navbar .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  #navbar ul.navbar-nav > li > a {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

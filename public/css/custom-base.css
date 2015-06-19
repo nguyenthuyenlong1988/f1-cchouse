@@ -1,0 +1,85 @@
+/*=============================================================================
+ | custom-base.css
+ =============================================================================*/
+
+/** Some classes */
+
+html.has-background body {
+  background: #0f9d58 url(../img/bg3.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+html.has-background.has-boxshadow #page:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, .79);
+}
+
+html.has-borderradius #featured-wrapper,
+html.has-borderradius #addition-wrapper {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+html.has-boxshadow #navbar-menu-wrapper,
+html.has-boxshadow #activity-wrapper,
+html.has-boxshadow #dreams-wrapper,
+html.has-boxshadow #featured-wrapper,
+html.has-boxshadow #detail-wrapper,
+html.has-boxshadow #addition-wrapper {
+  -webkit-box-shadow: 1px 1px 6px rgba(102, 102, 102, .4);
+  -moz-box-shadow: 1px 1px 6px rgba(102, 102, 102, .4);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .4);
+}
+
+html.has-transition .ivy-page-wrapper {
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -ms-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+html.has-transition .ivy-site-navbar li a {
+  -webkit-transition: background-color .15s ease-in;
+  -moz-transition: background-color .15s ease-in;
+  -ms-transition: background-color .15s ease-in;
+  -o-transition: background-color .15s ease-in;
+  transition: background-color .15s ease-in;
+}
+
+ul.no-bullets, ol.no-bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.no-bullets.with-arrow li {
+  display: block;
+  margin: 8px 0;
+  padding-left: 17px;
+  background: url(../img/bullet-arrow-yellow.png) no-repeat left 5px;
+}
+
+@media (min-width: 768px) {
+
+  .ivy-page-wrapper {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .ivy-page-wrapper {
+    width: 970px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .ivy-page-wrapper {
+    width: 1000px;
+  }
+
+}

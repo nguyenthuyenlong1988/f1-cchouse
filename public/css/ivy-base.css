@@ -1,0 +1,81 @@
+/*=============================================================================
+ | base.css
+ =============================================================================*/
+
+:focus {
+  outline-width: 0;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #aaa;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-weight: 300;
+  color: #666;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-weight: 300;
+  color: #666;
+}
+:-ms-input-placeholder {
+  color: #bbb !important;
+}
+
+a {
+  cursor: pointer;
+
+  /* Remove iOS tap highlight */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  /* 100% height needed for full-bleed hero header image */
+  height: 100%;
+}
+
+body {
+  /* 100% height needed for full-bleed hero header image */
+  height: 100%;
+
+  /* Prevent mobile font resizing */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body, input, textarea, select, button {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+/*=============================================================================
+ | ivy-base.css
+ =============================================================================*/
+
+.ivy-page-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ivy-page-wrapper:before,
+.ivy-page-wrapper:after {
+  display: table;
+  content: " ";
+}
+
+.ivy-page-wrapper:after {
+  clear: both;
+}
