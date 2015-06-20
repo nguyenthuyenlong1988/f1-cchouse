@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SubjectsTableSeeder extends Seeder
+class TraineesTableSeeder extends Seeder
 {
   /**
    * Run the database seeds.
@@ -11,6 +11,6 @@ class SubjectsTableSeeder extends Seeder
    */
   public function run()
   {
-    factory(ThieuNhiGoVap\Subject::class, 10)->create();
+    factory(ThieuNhiGoVap\Trainee::class, 20)->create();
   }
 }
