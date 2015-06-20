@@ -5,8 +5,8 @@
 
 @section('page_css')
 
-<link rel="stylesheet" href="fekit/owl-carousel/1.3.3/owl.carousel.css" />
-<link rel="stylesheet" href="fekit/owl-carousel/1.3.3/owl.theme.css" />
+<link rel="stylesheet" href="vendor/owl-carousel/1.3.3/owl.carousel.css" />
+<link rel="stylesheet" href="vendor/owl-carousel/1.3.3/owl.theme.css" />
 <link rel="stylesheet" href="css/home.css" media="all" />
 
 @stop
@@ -19,8 +19,8 @@
 
 @section('page_js_load')
 
-<script src="fekit/owl-carousel/1.3.3/owl.carousel.js"></script>
-<script src="fekit/jquery-jcarousel/0.3.3/js/jquery.jcarousel.js"></script>
+<script src="vendor/owl-carousel/1.3.3/owl.carousel.js"></script>
+<script src="vendor/jquery-jcarousel/0.3.3/js/jquery.jcarousel.js"></script>
 <script src="js/final.js"></script>
 
 @stop

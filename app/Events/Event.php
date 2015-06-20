@@ -1,7 +1,8 @@
-<?php namespace ThieuNhiGoVap\Events;
+<?php
 
-abstract class Event {
+namespace ThieuNhiGoVap\Events;
 
-	//
-
+abstract class Event
+{
+    //
 }

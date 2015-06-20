@@ -31,16 +31,16 @@
 <link rel="icon" href="javascript:void(0)" sizes="16x16" />
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&amp;subset=latin,vietnamese" />
-<!--[if lt IE 9]><script src="fekit/html5shiv/3.7.2/js/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="fekit/bootstrap/3.3.4/css/bootstrap.css" />
+<!--[if lt IE 9]><script src="vendor/html5shiv/3.7.2/js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="vendor/bootstrap/3.3.4/css/bootstrap.css" />
 
 @yield('page_css')
 
 <link rel="stylesheet" href="css/stupid-google-fix.css" />
 
-<script src="fekit/modernizr/2.8.3/js/modernizr.js"></script>
-<script src="fekit/jquery/1.11.1/js/jquery.js"></script>
-<script src="fekit/bootstrap/3.3.4/js/bootstrap.js"></script>
+<script src="vendor/modernizr/2.8.3/js/modernizr.js"></script>
+<script src="vendor/jquery/1.11.1/js/jquery.js"></script>
+<script src="vendor/bootstrap/3.3.4/js/bootstrap.js"></script>
 
 @yield('page_js_preload')
 
