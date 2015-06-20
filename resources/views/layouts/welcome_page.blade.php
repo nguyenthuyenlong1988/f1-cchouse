@@ -17,7 +17,7 @@
 @stop
 
 @section('content')
-
+<?php echo Uuid::generate(); ?>
 <div class="container-fluid">
 
   <div id="children-intl-1" class="text-center">
