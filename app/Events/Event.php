@@ -1,8 +1,8 @@
 <?php
 
-namespace ThieuNhiGoVap\Events;
+namespace NhaThieuNhi\Events;
 
 abstract class Event
 {
-    //
+  //
 }

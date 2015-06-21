@@ -1,4 +1,4 @@
-<?php namespace ThieuNhiGoVap;
+<?php namespace NhaThieuNhi;
 /**
  * @author: Tien Nguyen
  * @version: $Id: Post.php,v 1.0 2015/06/21 03:29 htien Exp $

@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,6 +10,34 @@
 |
 */
 
-Route::get('/welcome', 'WelcomeController@index');
+Route::get('welcome', [
+    'as'   => 'welcome',
+    'uses' => 'WelcomeController@index'
+]);
 
-Route::get('/', 'HomeController@index');
+Route::get('/', [
+    'as'   => 'home',
+    'uses' => 'HomeController@index'
+]);
+
+// Controllers within the "App\Http\Controllers\Admin" namespace
+Route::group([
+    'as'        => 'admin::',
+    'prefix'    => 'love@dmin',
+    'namespace' => 'Admin'
+], function () {
+
+  Route::get('/', [
+      'as'   => 'index',
+      'uses' => 'DashboardController@index'
+  ]);
+
+  Route::resource('dashboard', 'DashboardController', [
+      'only' => [
+          'index'
+      ]
+  ]);
+
+  Route::resource('posts', 'PostController');
+
+});

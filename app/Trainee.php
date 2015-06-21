@@ -1,4 +1,4 @@
-<?php namespace ThieuNhiGoVap;
+<?php namespace NhaThieuNhi;
 /**
  * @author: Tien Nguyen
  * @version: $Id: Trainee.php,v 1.0 2015/06/21 00:57 htien Exp $

@@ -1,6 +1,6 @@
 <?php
 
-namespace ThieuNhiGoVap\Http\Requests;
+namespace NhaThieuNhi\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
