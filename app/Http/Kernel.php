@@ -1,33 +1,33 @@
 <?php
 
-namespace ThieuNhiGoVap\Http;
+namespace NhaThieuNhi\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
-    /**
-     * The application's global HTTP middleware stack.
-     *
-     * @var array
-     */
-    protected $middleware = [
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \ThieuNhiGoVap\Http\Middleware\EncryptCookies::class,
-        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-        \Illuminate\Session\Middleware\StartSession::class,
-        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \ThieuNhiGoVap\Http\Middleware\VerifyCsrfToken::class,
-    ];
+  /**
+   * The application's global HTTP middleware stack.
+   *
+   * @var array
+   */
+  protected $middleware = [
+      \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+      \NhaThieuNhi\Http\Middleware\EncryptCookies::class,
+      \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+      \Illuminate\Session\Middleware\StartSession::class,
+      \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+      \NhaThieuNhi\Http\Middleware\VerifyCsrfToken::class,
+  ];
 
-    /**
-     * The application's route middleware.
-     *
-     * @var array
-     */
-    protected $routeMiddleware = [
-        'auth' => \ThieuNhiGoVap\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \ThieuNhiGoVap\Http\Middleware\RedirectIfAuthenticated::class,
-    ];
+  /**
+   * The application's route middleware.
+   *
+   * @var array
+   */
+  protected $routeMiddleware = [
+      'auth'       => \NhaThieuNhi\Http\Middleware\Authenticate::class,
+      'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+      'guest'      => \NhaThieuNhi\Http\Middleware\RedirectIfAuthenticated::class,
+  ];
 }

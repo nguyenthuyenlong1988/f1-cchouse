@@ -1,4 +1,6 @@
-<?php namespace ThieuNhiGoVap\Http\Controllers;
+<?php
+
+namespace NhaThieuNhi\Http\Controllers;
 
 class WelcomeController extends Controller {
 
