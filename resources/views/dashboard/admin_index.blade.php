@@ -3,6 +3,8 @@
 
 @section('content')
 
-Dashboard
+<p>Dashboard...</p>
+
+<a href="{{ url('auth/logout') }}">Đăng xuất</a>
 
 @stop
