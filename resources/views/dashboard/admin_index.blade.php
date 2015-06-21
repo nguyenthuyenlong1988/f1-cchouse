@@ -5,6 +5,8 @@
 
 <p>Dashboard...</p>
 
-<a href="{{ url('auth/logout') }}">Đăng xuất</a>
+<div>
+  <a href="{{ url('auth/logout') }}">Đăng xuất</a>
+</div>
 
 @stop

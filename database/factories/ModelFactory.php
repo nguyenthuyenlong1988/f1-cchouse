@@ -21,7 +21,7 @@ $factory->define(NhaThieuNhi\User::class, function ($faker) {
 
 $factory->define(NhaThieuNhi\Subject::class, function ($faker) {
   return [
-      'id'           => uniqid(),
+      'id'           => uniqid_base36(TRUE),
       'subject_name' => $faker->streetName,
   ];
 });

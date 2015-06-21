@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,6 +18,10 @@ Route::get('welcome', [
 
 Route::get('/', [
     'as'   => 'home',
+    'uses' => 'HomeController@index'
+]);
+
+Route::get('home', [
     'uses' => 'HomeController@index'
 ]);
 
