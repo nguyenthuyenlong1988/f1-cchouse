@@ -41,3 +41,8 @@ Route::group([
   Route::resource('posts', 'PostController');
 
 });
+
+Route::controllers([
+    'auth'     => Auth\AuthController::class,
+    'password' => Auth\PasswordController::class,
+]);
