@@ -11,6 +11,6 @@ class PostsTableSeeder extends Seeder
    */
   public function run()
   {
-    factory(ThieuNhiGoVap\Post::class, 9)->create();
+    factory(NhaThieuNhi\Post::class, 9)->create();
   }
 }
