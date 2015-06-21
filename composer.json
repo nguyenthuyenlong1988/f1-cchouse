@@ -21,7 +21,10 @@
         ],
         "psr-4": {
             "NhaThieuNhi\\": "app/"
-        }
+        },
+        "files": [
+            "app/Http/helpers.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [
