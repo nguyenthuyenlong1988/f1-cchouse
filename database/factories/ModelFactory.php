@@ -10,7 +10,7 @@
 |
 */
 
-$factory->define(ThieuNhiGoVap\User::class, function ($faker) {
+$factory->define(NhaThieuNhi\User::class, function ($faker) {
   return [
       'name'           => $faker->name,
       'email'          => $faker->email,
@@ -19,14 +19,14 @@ $factory->define(ThieuNhiGoVap\User::class, function ($faker) {
   ];
 });
 
-$factory->define(ThieuNhiGoVap\Subject::class, function ($faker) {
+$factory->define(NhaThieuNhi\Subject::class, function ($faker) {
   return [
       'id'           => uniqid(),
       'subject_name' => $faker->streetName,
   ];
 });
 
-$factory->define(ThieuNhiGoVap\Trainee::class, function ($faker) {
+$factory->define(NhaThieuNhi\Trainee::class, function ($faker) {
   return [
       'id'            => Uuid::generate(),
       'first_name'    => $faker->firstName(),
@@ -39,7 +39,7 @@ $factory->define(ThieuNhiGoVap\Trainee::class, function ($faker) {
   ];
 });
 
-$factory->define(ThieuNhiGoVap\Post::class, function ($faker) {
+$factory->define(NhaThieuNhi\Post::class, function ($faker) {
   return [
       'post_author'  => '',
       'post_date'    => (new DateTime())->getTimestamp(),

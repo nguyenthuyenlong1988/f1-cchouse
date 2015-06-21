@@ -1,7 +1,7 @@
 {{-- Created at 2015/06/01 04:21 htien Exp $ --}}
-@extends('layouts.home_page')
+@extends('layouts.home.main_page')
 
-@section('page_title', 'Khai Trương')
+@section('page_title', 'Chào mừng')
 
 @section('page_css')
 @parent
@@ -12,7 +12,7 @@
 
 @section('content_after')
 
-@include('partials.dreams_section')
+@include('partials.home.dreams_section')
 
 @stop
 

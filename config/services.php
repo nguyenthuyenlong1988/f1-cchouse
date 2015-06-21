@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => ThieuNhiGoVap\User::class,
+        'model'  => NhaThieuNhi\User::class,
         'key' => '',
         'secret' => '',
     ],

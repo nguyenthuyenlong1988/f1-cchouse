@@ -140,9 +140,9 @@ return [
         /*
          * Application Service Providers...
          */
-        ThieuNhiGoVap\Providers\AppServiceProvider::class,
-        ThieuNhiGoVap\Providers\EventServiceProvider::class,
-        ThieuNhiGoVap\Providers\RouteServiceProvider::class,
+        NhaThieuNhi\Providers\AppServiceProvider::class,
+        NhaThieuNhi\Providers\EventServiceProvider::class,
+        NhaThieuNhi\Providers\RouteServiceProvider::class,
 
     ],
 
