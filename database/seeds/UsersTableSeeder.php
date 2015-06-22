@@ -17,6 +17,8 @@ class UsersTableSeeder extends Seeder
         'email'          => 'admin@localhost.com',
         'password'       => bcrypt('secret'),
         'remember_token' => str_random(10),
+        'created_at' => (new DateTime())->getTimestamp(),
+        'updated_at' => (new DateTime())->getTimestamp(),
     ]);
   }
 }

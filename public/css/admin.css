@@ -6,6 +6,16 @@ body {
   margin-top: 20px;
 }
 
+#topbar a {
+  color: #ff6969;
+}
+
+#topbar .ivy-page-wrapper {
+  padding: 10px 15px;
+  background-color: #444;
+  color: #eee;
+}
+
 #topbar .panel {
   margin-bottom: 0;
 }

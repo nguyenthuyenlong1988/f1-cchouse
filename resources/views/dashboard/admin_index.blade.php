@@ -14,7 +14,7 @@
 
         <div class="col-md-6">
 
-          <div class="panel panel-info">
+          <div class="panel panel-danger">
             <div class="panel-heading">
               <a class="btn btn-default" href="{{ route('admin::@dmin-zone.posts.index') }}">Tin tức - Hoạt động</a>
             </div>
@@ -33,14 +33,14 @@
 
         <div class="col-md-6">
 
-          <div class="panel panel-info">
+          <div class="panel panel-success">
             <div class="panel-heading">...</div>
             <div class="panel-body">
               ...
             </div>
           </div>
 
-          <div class="panel panel-info">
+          <div class="panel panel-warning">
             <div class="panel-heading">...</div>
             <div class="panel-body">
               ...

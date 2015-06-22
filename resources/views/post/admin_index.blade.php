@@ -11,7 +11,7 @@
 <div class="container-fluid">
 
   <div class="panel panel-primary">
-    <div class="panel-footer">
+    <div class="panel-heading">
       <a class="btn btn-default" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
     </div>
     <div class="panel-heading">Danh sách bài viết</div>
@@ -22,24 +22,37 @@
         </tr>
       </thead>
       <tbody>
+        @if (! $posts OR count($posts) == 0)
+        <tr>
+          <td colspan="5">Chưa có dữ liệu</td>
+        </tr>
+        @else
+
         @foreach ($posts as $p)
         @if ($p->post_type != 'trashed')
         <tr>
           <td>{{ $p->id }}</td>
           <td>
-            {{ date_create()->setTimestamp($p->post_date)->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'))->format('Y-m-d H:i:s') }}
+            {{ Carbon::createFromTimestamp($p->post_date, $user_timezone)->format($user_dateformat) }}
           </td>
           <td>
             <a href="{{ route('admin::@dmin-zone.posts.show', $p->id) }}">{{ $p->post_title }}</a>
           </td>
           <td>{{ $p->post_excerpt }}</td>
           <td>
-            {{ date_create($p->updated_at)->setTimezone(new DateTimeZone('Asia/Ho_Chi_Minh'))->format('Y-m-d H:i:s') }}
+            {{ $p->updated_at->setTimezone($user_timezone)->format($user_dateformat) }}
           </td>
         </tr>
         @endif
         @endforeach
+
+        @endif
       </tbody>
+      <tfoot>
+        <tr>
+          <th>#</th><th>Ngày đăng</th><th>Tiêu đề</th><th>Tóm tắt</th><th>Cập nhật lần cuối</th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 

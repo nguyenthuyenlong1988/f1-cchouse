@@ -49,12 +49,12 @@ class PostController extends Controller
    */
   public function store(PostFormRequest $request)
   {
-    $title   = $request->input('title');
-    $excerpt = $request->input('excerpt');
-    $content = $request->input('content');
+    $title   = $request->input('post_title');
+    $excerpt = $request->input('post_excerpt');
+    $content = $request->input('post_content');
 
     Post::create([
-        'post_author'  => '',
+        'post_author'  => \Auth::user()->id,
         'post_date'    => (new \DateTime())->getTimestamp(),
         'post_type'    => 'post',
         'post_status'  => 'publish',
@@ -76,7 +76,11 @@ class PostController extends Controller
    */
   public function show($id)
   {
-    $post = Post::find($id);
+    $post = Post::with('author')->find($id);
+
+    if (! $post) {
+      return redirect()->route('admin::@dmin-zone.posts.index');
+    }
 
     return view('post.admin_show', ['post' => $post]);
   }
@@ -90,19 +94,30 @@ class PostController extends Controller
    */
   public function edit($id)
   {
-    //
+    $post = Post::find($id);
+
+    return view('post.admin_edit', compact('post'));
   }
 
   /**
    * Update the specified resource in storage.
    *
-   * @param  int $id
+   * @param $id
+   * @param PostFormRequest $request
    *
-   * @return Response
+   * @return \Illuminate\Http\RedirectResponse
    */
-  public function update($id)
+  public function update($id, PostFormRequest $request)
   {
-    //
+    $post = Post::find($id);
+    $post->update([
+        'post_title'   => $request->get('post_title'),
+        'post_excerpt' => $request->get('post_excerpt'),
+        'post_content' => $request->get('post_content'),
+        'post_name'    => '',
+    ]);
+
+    return redirect()->route('admin::@dmin-zone.posts.show', $id);
   }
 
   /**
