@@ -8,6 +8,8 @@
 namespace NhaThieuNhi\Http\Controllers\Admin;
 
 use NhaThieuNhi\Http\Controllers\Controller;
+use NhaThieuNhi\Http\Requests\PostFormRequest;
+use NhaThieuNhi\Post;
 
 class PostController extends Controller
 {
@@ -23,7 +25,9 @@ class PostController extends Controller
    */
   public function index()
   {
-    //
+    $posts = Post::orderBy('id', 'DESC')->get();
+
+    return view('post.admin_index', ['posts' => $posts]);
   }
 
   /**
@@ -33,17 +37,34 @@ class PostController extends Controller
    */
   public function create()
   {
-    //
+    return view('post.admin_create');
   }
 
   /**
    * Store a newly created resource in storage.
    *
-   * @return Response
+   * @param PostFormRequest $request
+   *
+   * @return \Illuminate\Http\RedirectResponse
    */
-  public function store()
+  public function store(PostFormRequest $request)
   {
-    //
+    $title   = $request->input('title');
+    $excerpt = $request->input('excerpt');
+    $content = $request->input('content');
+
+    Post::create([
+        'post_author'  => '',
+        'post_date'    => (new \DateTime())->getTimestamp(),
+        'post_type'    => 'post',
+        'post_status'  => 'publish',
+        'post_title'   => $title,
+        'post_excerpt' => $excerpt,
+        'post_content' => $content,
+        'post_name'    => '',
+    ]);
+
+    return redirect()->route('admin::@dmin-zone.posts.index');
   }
 
   /**
@@ -55,7 +76,9 @@ class PostController extends Controller
    */
   public function show($id)
   {
-    //
+    $post = Post::find($id);
+
+    return view('post.admin_show', ['post' => $post]);
   }
 
   /**
