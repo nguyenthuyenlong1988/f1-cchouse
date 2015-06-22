@@ -44,7 +44,7 @@ $factory->define(NhaThieuNhi\Post::class, function ($faker) {
       'post_author'  => '',
       'post_date'    => (new DateTime())->getTimestamp(),
       'post_type'    => 'post',
-      'post_status'  => 'pending',
+      'post_status'  => 'publish',
       'post_title'   => $faker->sentence(6),
       'post_excerpt' => $faker->text(rand(90, 150)),
       'post_content' => $faker->text(rand(1000, 2000)),

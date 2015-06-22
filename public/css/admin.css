@@ -1,0 +1,11 @@
+body {
+  background-color: #026649;
+}
+
+.login-panel, .admin-panel {
+  margin-top: 20px;
+}
+
+#topbar .panel {
+  margin-bottom: 0;
+}
