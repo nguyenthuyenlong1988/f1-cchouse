@@ -38,4 +38,12 @@ class Post extends Model
    * @var string
    */
   protected $dateFormat = 'U';
+
+  /**
+   * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+   */
+  public function author()
+  {
+    return $this->belongsTo(User::class, 'post_author');
+  }
 }

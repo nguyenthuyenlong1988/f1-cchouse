@@ -12,10 +12,10 @@
 <div class="container">
 
   <div class="panel panel-primary">
-    <div class="panel-footer">
+    <div class="panel-heading">
       <div class="btn-group" role="group">
         <a class="btn btn-warning" href="{{ route('admin::@dmin-zone.posts.index') }}">&lt;&lt;</a>
-        <a class="btn btn-warning">Chỉnh sửa</a>
+        <a class="btn btn-warning" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>
       </div>
       <div class="btn-group">
         <a class="btn btn-default" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
@@ -27,7 +27,20 @@
           <li><a>Hủy bài viết</a></li>
         </ul>
       </div>
-      <h2>{{ $post->post_title }}</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-9">
+          <h2 style="margin-top:0">{{ $post->post_title }}</h2>
+          <h5>
+            <em>&mdash; Cập nhật lần cuối:</em> {{ $post->updated_at->setTimezone($user_timezone)->format($user_dateformat) }}
+          </h5>
+        </div>
+        <div class="col-md-3">
+          <h5><em>Ngày tạo:</em> {{ $post->created_at->setTimezone($user_timezone)->format($user_dateformat) }}</h5>
+          <h5><em>Tác giả:</em> {{ empty($post->post_author) ? 'SYSTEM' : $post->author->name }}</h5>
+        </div>
+      </div>
     </div>
     <div class="panel-heading">Tóm tắt</div>
     <div class="panel-body">
