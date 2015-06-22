@@ -28,7 +28,7 @@ Route::get('home', [
 // Controllers within the "App\Http\Controllers\Admin" namespace
 Route::group([
     'as'        => 'admin::',
-    'prefix'    => 'love@dmin',
+    'prefix'    => '@dmin-zone',
     'namespace' => 'Admin'
 ], function () {
 

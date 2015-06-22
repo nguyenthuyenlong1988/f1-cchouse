@@ -20,6 +20,9 @@
 
     <!-- SITE_HEADER BEGIN -->
     <header id="header" class="ivy-site-header">
+
+      @include('layouts.admin.inc.site_topbar')
+
     </header>
 
     <!-- SITE_HEADER END -->
