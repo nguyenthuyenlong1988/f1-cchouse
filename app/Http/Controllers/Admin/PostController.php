@@ -25,7 +25,9 @@ class PostController extends Controller
    */
   public function index()
   {
-    $posts = Post::orderBy('id', 'DESC')->get();
+    $posts = Post::where('post_status', 'publish')
+                 ->orderBy('id', 'DESC')
+                 ->get();
 
     return view('post.admin_index', ['posts' => $posts]);
   }
@@ -129,6 +131,8 @@ class PostController extends Controller
    */
   public function destroy($id)
   {
-    //
+    Post::destroy($id);
+
+    return redirect()->route('admin::@dmin-zone.posts.index');
   }
 }

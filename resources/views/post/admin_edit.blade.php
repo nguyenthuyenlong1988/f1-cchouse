@@ -12,7 +12,7 @@
 <div class="container">
 
   <div class="panel panel-primary">
-    <div class="panel-heading">Tin tức - Hoạt động &raquo; Sửa bài viết</div>
+    <div class="panel-heading">Bài viết #{{ $post->id }} &raquo; Đang chỉnh sửa...</div>
     <div class="panel-body">
       @if (count($errors) > 0)
       <div class="alert alert-danger">

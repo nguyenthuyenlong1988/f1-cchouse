@@ -14,17 +14,19 @@
   <div class="panel panel-primary">
     <div class="panel-heading">
       <div class="btn-group" role="group">
-        <a class="btn btn-warning" href="{{ route('admin::@dmin-zone.posts.index') }}">&lt;&lt;</a>
-        <a class="btn btn-warning" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>
+        <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}">&lt;&lt;</a>
+        <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>
       </div>
       <div class="btn-group">
-        <a class="btn btn-default" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="caret"></span>
           <span class="sr-only">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
-          <li><a>Hủy bài viết</a></li>
+          <li>
+            <a href="javascript:void(0)" onclick="dlg_post_delete('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">Hủy bài viết</a>
+          </li>
         </ul>
       </div>
     </div>
