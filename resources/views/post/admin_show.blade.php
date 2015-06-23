@@ -13,6 +13,7 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
+      <span style="margin-right:10px">#{{ $post->id }}</span>
       <div class="btn-group" role="group">
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}">&lt;&lt;</a>
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>
@@ -25,7 +26,7 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            <a href="javascript:void(0)" onclick="dlg_post_delete('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">Hủy bài viết</a>
+            <a href="javascript:void(0)" onclick="dlg_post_delete('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')" style="color:#c9302c">Hủy bài viết</a>
           </li>
         </ul>
       </div>
