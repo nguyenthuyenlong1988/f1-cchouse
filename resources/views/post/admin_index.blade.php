@@ -10,11 +10,14 @@
 
 <div class="container-fluid">
 
-  <div class="panel panel-primary">
+  <div class="panel panel-primary posts-list">
     <div class="panel-heading">
-      <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
+      <h2 class="title">
+        <span class="literal">Danh sách bài viết</span>
+        <a class="btn btn-danger" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
+        <a class="btn btn-primary" href="#">Bài viết đã xóa</a>
+      </h2>
     </div>
-    <div class="panel-heading">Danh sách bài viết</div>
     <table class="table">
       <thead>
         <tr>
