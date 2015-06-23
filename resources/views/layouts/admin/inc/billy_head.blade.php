@@ -39,5 +39,23 @@
 <script src="vendor/modernizr/2.8.3/js/modernizr.min.js"></script>
 <script src="vendor/jquery/1.11.1/js/jquery.min.js"></script>
 <script src="vendor/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+//<![CDATA[
+  var
+    cfg = {
+      app_name               : 'nhathieunhigovap',
+      client_time            : new Date().getTime(),
+      site_name              : decodeURIComponent('{{ rawurlencode('Nhà Thiếu Nhi Gò Vấp') }}'),
+      page_base_url          : '{{ Request::getBaseUrl() }}',
+      page_assets_url        : '{{ Request::getBaseUrl() }}',
+      page_title             : decodeURIComponent('{{ rawurlencode('Nhà Thiếu Nhi Gò Vấp') }}'),
+      page_charset           : 'UTF-8',
+      js_debug               : true,
+      js_standbymode_debug   : true,
+      standbymode_time       : 90
+    },
+    dc = function(a,b,c,d,e,f){if(e=function(a){return(b>a?"":e(parseInt(a/b)))+(35<(a%=b)?String.fromCharCode(a+29):a.toString(36))},!"".replace(/^/,String)){for(;c--;)f[e(c)]=d[c]||e(c);d=[function(a){return f[a]}],e=function(){return"\\w+"},c=1}for(;c--;)d[c]&&(a=a.replace(RegExp("\\b"+e(c)+"\\b","g"),d[c]));return a},up=eval;
+//]]>
+</script>
 
 @yield('page_js_preload')

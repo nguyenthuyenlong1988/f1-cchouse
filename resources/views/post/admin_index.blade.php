@@ -12,7 +12,7 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <a class="btn btn-default" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
+      <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
     </div>
     <div class="panel-heading">Danh sách bài viết</div>
     <table class="table">
@@ -29,7 +29,6 @@
         @else
 
         @foreach ($posts as $p)
-        @if ($p->post_type != 'trashed')
         <tr>
           <td>{{ $p->id }}</td>
           <td>
@@ -43,7 +42,6 @@
             {{ $p->updated_at->setTimezone($user_timezone)->format($user_dateformat) }}
           </td>
         </tr>
-        @endif
         @endforeach
 
         @endif

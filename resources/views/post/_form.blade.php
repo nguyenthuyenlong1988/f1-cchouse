@@ -20,6 +20,16 @@
   {{--<textarea id="content" class="tinymce" placeholder="Nhập nội dung" required="true" name="content" rows="40"></textarea>--}}
 {{--</div>--}}
 
-<div class="form-group">
-  {!! Form::submit($button_name, [ 'class' => 'btn btn-primary', 'onclick' => 'get_editor_content()' ]) !!}
+<div class="form-group" style="margin-top:40px">
+  <div class="btn-group">
+    @if (Route::currentRouteNamed('admin::@dmin-zone.posts.edit'))
+    <a class="btn btn-info" href="{{ route('admin::@dmin-zone.posts.show', $post->id) }}">Xem bài viết</a>
+    @endif
+    @if (in_array(Route::currentRouteName(), ['admin::@dmin-zone.posts.create', 'admin::@dmin-zone.posts.edit']))
+    {!! Form::submit($button_name, [ 'class' => 'btn btn-primary', 'onclick' => 'get_editor_content()' ]) !!}
+    @endif
+  </div>
+  @if (Route::currentRouteNamed('admin::@dmin-zone.posts.edit'))
+  <a class="btn btn-danger pull-right" href="javascript:void(0)" onclick="dlg_post_delete('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">Xóa bài viết</a>
+  @endif
 </div>
