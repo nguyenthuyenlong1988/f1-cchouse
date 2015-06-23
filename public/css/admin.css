@@ -21,3 +21,11 @@ body {
 #topbar .panel {
   margin-bottom: 0;
 }
+
+.posts-list h2.title {
+  margin-top: 0;
+}
+
+.posts-list h2.title .literal {
+  margin-right: 15px;
+}

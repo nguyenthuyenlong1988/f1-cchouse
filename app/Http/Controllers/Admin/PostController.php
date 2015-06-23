@@ -55,7 +55,7 @@ class PostController extends Controller
     $excerpt = $request->input('post_excerpt');
     $content = $request->input('post_content');
 
-    Post::create([
+    $post = Post::create([
         'post_author'  => \Auth::user()->id,
         'post_date'    => (new \DateTime())->getTimestamp(),
         'post_type'    => 'post',
@@ -66,7 +66,7 @@ class PostController extends Controller
         'post_name'    => '',
     ]);
 
-    return redirect()->route('admin::@dmin-zone.posts.index');
+    return redirect()->route('admin::@dmin-zone.posts.show', $post->id);
   }
 
   /**

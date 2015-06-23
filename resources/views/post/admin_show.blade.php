@@ -51,7 +51,7 @@
     </div>
     <div class="panel-heading">Nội dung chi tiết</div>
     <div class="panel-body">
-      {{ $post->post_content }}
+      {!! $post->post_content !!}
     </div>
   </div>
 
