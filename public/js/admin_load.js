@@ -5,11 +5,21 @@
  * Created by Tien Nguyen on 2015/06/22 07:44.
  */
 
-function get_editor_content()
-{
-  var content = tinyMCE.get('content').getContent();
-  alert(content);
-}
+//function get_editor(name)
+//{
+//  return tinyMCE.get(name);
+//}
+//
+//function get_editor_content(name)
+//{
+//  var data = get_editor(name).getContent();
+//  alert(data);
+//}
+//
+//function set_editor_content(name, data)
+//{
+//  get_editor(name).setContent(data);
+//}
 
 function dlg_post_delete(post_id, post_title, _token)
 {

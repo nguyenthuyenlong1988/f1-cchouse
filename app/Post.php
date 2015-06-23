@@ -40,7 +40,7 @@ class Post extends Model
    *
    * @var array
    */
-  protected $dates = ['deleted_at'];
+  protected $dates = ['post_date', 'deleted_at'];
 
   /**
    * The storage format of the model's date columns.

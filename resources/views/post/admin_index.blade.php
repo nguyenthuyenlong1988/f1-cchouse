@@ -22,29 +22,47 @@
         </tr>
       </thead>
       <tbody>
-        @if (! $posts OR count($posts) == 0)
-        <tr>
-          <td colspan="5">Chưa có dữ liệu</td>
-        </tr>
-        @else
 
-        @foreach ($posts as $p)
+        @forelse ($posts as $p)
         <tr>
           <td>{{ $p->id }}</td>
           <td>
-            {{ Carbon::createFromTimestamp($p->post_date, $user_timezone)->format($user_dateformat) }}
+            <?php $tmp_post_date = $p->post_date->setTimezone($user_timezone); ?>
+            @if ($tmp_post_date->isToday())
+              Mới hôm nay @ {{ $tmp_post_date->format($user_hourformat) }}
+            @elseif ($tmp_post_date->isYesterday())
+              Hôm qua @ {{ $tmp_post_date->format($user_hourformat) }}
+            @else
+              {{ $tmp_post_date->format($user_dateformat) }}
+            @endif
           </td>
           <td>
             <a href="{{ route('admin::@dmin-zone.posts.show', $p->id) }}">{{ $p->post_title }}</a>
           </td>
           <td>{{ $p->post_excerpt }}</td>
           <td>
-            {{ $p->updated_at->setTimezone($user_timezone)->format($user_dateformat) }}
+            @if ($p->updated_at->setTimezone($user_timezone)->isToday())
+              Mới hôm nay @ {{ $p->updated_at->format($user_hourformat) }}
+            @elseif ($p->updated_at->isYesterday())
+              Hôm qua @ {{ $p->updated_at->format($user_hourformat) }}
+            @else
+              <?php $tmp_updated_at = $p->updated_at->setTimezone($user_timezone); ?>
+              @if ($tmp_updated_at->isToday())
+                Mới hôm nay @ {{ $tmp_updated_at->format($user_hourformat) }}
+              @elseif ($tmp_updated_at->isYesterday())
+                Hôm qua @ {{ $tmp_updated_at->format($user_hourformat) }}
+              @else
+                {{ $tmp_updated_at->format($user_dateformat) }}
+              @endif
+            @endif
           </td>
         </tr>
-        @endforeach
+        @empty
+        <tr>
+          <td colspan="5">Chưa có dữ liệu</td>
+        </tr>
+        @endforelse
 
-        @endif
       </tbody>
       <tfoot>
         <tr>
