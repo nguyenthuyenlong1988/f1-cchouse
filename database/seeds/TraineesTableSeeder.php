@@ -11,6 +11,6 @@ class TraineesTableSeeder extends Seeder
    */
   public function run()
   {
-    factory(NhaThieuNhi\Trainee::class, 20)->create();
+    //
   }
 }

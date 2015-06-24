@@ -1,6 +1,8 @@
 {{-- Created at 2015/06/21 12:38 htien Exp $ --}}
 @extends('layouts.admin.main_page')
 
+@section('page_title', 'Đăng nhập')
+
 @section('content')
 
 <div class="container-fluid">
@@ -18,36 +20,34 @@
           <div class="alert alert-danger">
             <strong>Xác nhận đăng nhập thất bại.</strong>
             <ul>
-              @foreach ($errors->all() as $err)
-              <li>{{ $err }}</li>
-              @endforeach
+              @foreach ($errors->all() as $err)<li>{{ $err }}</li>@endforeach
             </ul>
           </div>
           @endif
 
-          <form class="form-horizontal" action="{{ url('auth/login') }}" method="POST">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+          {!! Form::open(['class' => 'form-horizontal', 'method' => 'POST', 'url' => 'auth/login']) !!}
 
             <div class="form-group">
-              <label class="control-label col-md-3" for="email">ID đăng nhập</label>
-              <div class=" col-md-7">
-                <input class="form-control" type="email" name="email" value="{{ old('email') }}" />
+              {!! Form::label('email', 'ID đăng nhập', ['class' => 'control-label col-md-3']) !!}
+              <div class="col-md-7">
+                {!! Form::email('email', null, [ 'class' => 'form-control', 'placeholder' => 'your_email@example.com' ]) !!}
               </div>
             </div>
 
             <div class="form-group">
-              <label class="control-label col-md-3" for="password">Mật mã</label>
+              {!! Form::label('password', 'Mật mã', ['class' => 'control-label col-md-3']) !!}
               <div class="col-md-7">
-                <input class="form-control" type="password" name="password" />
+                {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '*****']) !!}
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-md-6 col-md-offset-3">
-                <button class="btn btn-primary">Đăng nhập</button>
+                {!! Form::submit('Đăng nhập', ['class' => 'btn btn-primary']) !!}
               </div>
             </div>
-          </form>
+
+          {!! Form::close() !!}
         </div>
         <div class="panel-footer">&copy; {{ date('Y') }} &mdash; Nhà Văn Hóa Thiếu Nhi Gò Vấp.</div>
       </div>

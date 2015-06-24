@@ -13,7 +13,7 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <span style="margin-right:10px">#{{ $post->id }}</span>
+      <span style="margin-right:10px">Bài viết #{{ $post->id }}</span>
       <div class="btn-group" role="group">
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}">&lt;&lt;</a>
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>
@@ -36,11 +36,11 @@
         <div class="col-md-9">
           <h2 style="margin-top:0">{{ $post->post_title }}</h2>
           <h5>
-            <em>&mdash; Cập nhật lần cuối:</em> {{ $post->updated_at->setTimezone($user_timezone)->format($user_dateformat) }}
+            <em>&mdash; Cập nhật lần cuối:</em> {{ ivy_echo_date($post->updated_at) }}
           </h5>
         </div>
         <div class="col-md-3">
-          <h5><em>Ngày tạo:</em> {{ $post->created_at->setTimezone($user_timezone)->format($user_dateformat) }}</h5>
+          <h5><em>Ngày tạo:</em> {{ ivy_echo_date($post->created_at) }}</h5>
           <h5><em>Tác giả:</em> {{ empty($post->post_author) ? 'SYSTEM' : $post->author->name }}</h5>
         </div>
       </div>

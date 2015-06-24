@@ -20,9 +20,9 @@
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<base href="{{ url('/') }}/" />
-<title>@yield('page_title') :: Nhà Văn Hóa Thiếu Nhi Gò Vấp</title>
-<meta name="description" content="@yield('page_description', 'Nhà Văn Hóa Thiếu Nhi &mdash; Quận Gò Vấp &mdash; TP.HCM')" />
+<base href="{{ Request::getBaseUrl() }}/" />
+<title>@yield('page_title') :: {{ config('params.page_title') }}</title>
+<meta name="description" content="@yield('page_description', config('params.page_description'))" />
 <link rel="author" href="https://plus.google.com/+ThichlinuxNet" />
 <link rel="publisher" href="https://plus.google.com/+ThichlinuxNet" />
 <link rel="shortcut icon" href="javascript:void(0)" sizes="16x16" />
@@ -43,13 +43,13 @@
 //<![CDATA[
   var
     cfg = {
-      app_name               : 'nhathieunhigovap',
+      app_name               : '{{ config('params.app_name') }}',
       client_time            : new Date().getTime(),
-      site_name              : decodeURIComponent('{{ rawurlencode('Nhà Thiếu Nhi Gò Vấp') }}'),
+      site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),
       page_base_url          : '{{ Request::getBaseUrl() }}',
       page_assets_url        : '{{ Request::getBaseUrl() }}',
-      page_title             : decodeURIComponent('{{ rawurlencode('Nhà Thiếu Nhi Gò Vấp') }}'),
-      page_charset           : 'UTF-8',
+      page_title             : decodeURIComponent('{{ rawurlencode(config('params.page_title')) }}'),
+      page_charset           : '{{ config('params.page_charset') }}',
       js_debug               : true,
       js_standbymode_debug   : true,
       standbymode_time       : 90
@@ -58,4 +58,5 @@
 //]]>
 </script>
 
-@yield('page_js_preload')
+@section('page_js_preload')
+@stop

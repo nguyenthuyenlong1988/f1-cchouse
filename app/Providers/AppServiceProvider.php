@@ -13,12 +13,10 @@ class AppServiceProvider extends ServiceProvider
    */
   public function boot()
   {
-    $view = view();
-    $view->share([
-        'user_dateformat' => 'Y-m-d H:i:s',
-        'user_hourformat' => 'H:i',
-        'user_timezone'   => 'Asia/Ho_Chi_Minh',
-    ]);
+    $sharedVars = [
+      'ps' => config('params')
+    ];
+    view()->share($sharedVars);
   }
 
   /**

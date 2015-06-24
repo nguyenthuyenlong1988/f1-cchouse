@@ -1,19 +1,34 @@
-<?php namespace NhaThieuNhi;
+<?php
+
 /**
  * @author: Tien Nguyen
  * @version: $Id: Trainee.php,v 1.0 2015/06/21 00:57 htien Exp $
  */
 
-use Illuminate\Database\Eloquent\Model;
+namespace NhaThieuNhi;
 
-class Trainee extends Model
+class Trainee extends AModel
 {
-  protected $table = 'trainees';
-
   /**
-   * The storage format of the model's date columns.
+   * The database table used by the model.
    *
    * @var string
    */
-  protected $dateFormat = 'U';
+  protected $table = 'trainees';
+
+  /**
+   * The attributes that are mass assignable.
+   *
+   * @var array
+   */
+  protected $fillable = [
+    'id',
+    'first_name',
+    'last_name',
+    'birthday',
+    'sex',
+    'address_line1',
+    'address_line2',
+    'note',
+  ];
 }
