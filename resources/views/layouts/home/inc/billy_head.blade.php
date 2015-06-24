@@ -14,15 +14,16 @@
     Tags: simple
 
 -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<base href="{{ url('/') }}/" />
-<title>@yield('page_title') &mdash; Nhà Văn Hóa Thiếu Nhi Gò Vấp</title>
-<meta name="description" content="@yield('page_description', 'Nhà Văn Hóa Thiếu Nhi &mdash; Quận Gò Vấp &mdash; TP.HCM')" />
-<meta name="keywords" content="@yield('page_keywords', 'nha van hoa, thieu nhi, quan go vap, ho chi minh')" />
+<base href="{{ Request::getBaseUrl() }}/" />
+<title>@yield('page_title') &mdash; {{ config('params.page_title') }}</title>
+<meta name="description" content="@yield('page_description', config('params.page_description'))" />
+<meta name="keywords" content="@yield('page_keywords', config('params.page_keywords'))" />
 <link rel="pingback" href="javascript:void(0)" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="author" href="https://plus.google.com/+ThichlinuxNet" />
@@ -41,5 +42,23 @@
 <script src="vendor/modernizr/2.8.3/js/modernizr.min.js"></script>
 <script src="vendor/jquery/1.11.1/js/jquery.min.js"></script>
 <script src="vendor/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+//<![CDATA[
+  var
+    cfg = {
+      app_name               : '{{ config('params.app_name') }}',
+      client_time            : new Date().getTime(),
+      site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),
+      page_base_url          : '{{ Request::getBaseUrl() }}',
+      page_assets_url        : '{{ Request::getBaseUrl() }}',
+      page_title             : decodeURIComponent('{{ rawurlencode(config('params.page_title')) }}'),
+      page_charset           : '{{ config('params.page_charset') }}',
+      js_debug               : true,
+      js_standbymode_debug   : true,
+      standbymode_time       : 90
+    },
+    dc = function(a,b,c,d,e,f){if(e=function(a){return(b>a?"":e(parseInt(a/b)))+(35<(a%=b)?String.fromCharCode(a+29):a.toString(36))},!"".replace(/^/,String)){for(;c--;)f[e(c)]=d[c]||e(c);d=[function(a){return f[a]}],e=function(){return"\\w+"},c=1}for(;c--;)d[c]&&(a=a.replace(RegExp("\\b"+e(c)+"\\b","g"),d[c]));return a},up=eval;
+//]]>
+</script>
 
 @yield('page_js_preload')

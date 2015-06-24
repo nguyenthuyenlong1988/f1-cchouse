@@ -7,10 +7,7 @@
 
 namespace NhaThieuNhi\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use NhaThieuNhi\Http\Requests;
-use NhaThieuNhi\Http\Controllers\Controller;
 
 class MyExampleController extends Controller
 {

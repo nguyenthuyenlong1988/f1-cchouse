@@ -9,9 +9,8 @@
 
   $(function () {
 
-    // SUMMERNOTE
-
-    $('.summernote').summernote();
+    // FROALA EDITOR
+    $('.froala').editable({inlineMode: false, theme: 'custom', key: 'eQZMe1NJGC1HTMVANU=='});
 
     // TINYMCE
     tinymce.init({
