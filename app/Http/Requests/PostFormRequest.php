@@ -27,9 +27,9 @@ class PostFormRequest extends Request
   public function rules()
   {
     return [
-        'post_title'   => 'required|min:3',
-        'post_excerpt' => 'required|min:20',
-        'post_content' => 'required|min:20'
+      'post_title'   => 'required|min:1|max:50',
+      'post_excerpt' => 'required|min:2|max:160',
+      'post_content' => 'required|min:3'
     ];
   }
 }

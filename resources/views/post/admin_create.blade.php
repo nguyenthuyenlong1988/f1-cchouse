@@ -18,19 +18,13 @@
       <div class="alert alert-danger">
         <strong>Chú ý!</strong> Có một vài vấn đề trong việc nhập liệu.<br><br>
         <ul>
-          @foreach ($errors->all() as $err)
-          <li>{{ $err }}</li>
-          @endforeach
+          @foreach ($errors->all() as $err)<li>{{ $err }}</li>@endforeach
         </ul>
       </div>
       @endif
 
-      {!! Form::open([
-              'route' => [ 'admin::@dmin-zone.posts.store' ],
-              'method' => 'POST'
-          ])
-      !!}
-          @include('post._form', [ 'button_name' => 'Tạo mới' ])
+      {!! Form::open(['route' => ['admin::@dmin-zone.posts.store'],'method' => 'POST']) !!}
+          @include('post._form', ['button_name' => 'Tạo mới'])
       {!! Form::close() !!}
 
     </div>

@@ -25,12 +25,8 @@
       </div>
       @endif
 
-      {!! Form::model($post, [
-              'route' => [ 'admin::@dmin-zone.posts.update', $post->id ],
-              'method' => 'PUT'
-          ])
-      !!}
-          @include('post._form', [ 'button_name' => 'Cập nhật' ])
+      {!! Form::model($post, ['route' => ['admin::@dmin-zone.posts.update', $post->id], 'method' => 'PUT']) !!}
+          @include('post._form', ['button_name' => 'Cập nhật'])
       {!! Form::close() !!}
 
     </div>

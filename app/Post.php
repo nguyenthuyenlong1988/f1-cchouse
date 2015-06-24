@@ -5,13 +5,8 @@
  * @version: $Id: Post.php,v 1.0 2015/06/21 03:29 htien Exp $
  */
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-
-class Post extends Model
+class Post extends AModel
 {
-  use SoftDeletes;
-
   /**
    * The database table used by the model.
    *
@@ -25,14 +20,15 @@ class Post extends Model
    * @var array
    */
   protected $fillable = [
-      'post_author',
-      'post_date',
-      'post_type',
-      'post_status',
-      'post_title',
-      'post_excerpt',
-      'post_content',
-      'post_name'
+    // id auto_increment
+    'post_author',
+    'post_date',
+    'post_type',
+    'post_status',
+    'post_title',
+    'post_excerpt',
+    'post_content',
+    'post_name',
   ];
 
   /**
@@ -41,13 +37,6 @@ class Post extends Model
    * @var array
    */
   protected $dates = ['post_date', 'deleted_at'];
-
-  /**
-   * The storage format of the model's date columns.
-   *
-   * @var string
-   */
-  protected $dateFormat = 'U';
 
   /**
    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
