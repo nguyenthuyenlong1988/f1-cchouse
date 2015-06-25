@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
    */
   public function boot()
   {
-    //
+    $sharedVars = [
+      'ps' => config('params')
+    ];
+    view()->share($sharedVars);
   }
 
   /**

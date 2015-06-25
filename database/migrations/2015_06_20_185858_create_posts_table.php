@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreatePostsTable extends Migration
 {
@@ -25,6 +25,7 @@ class CreatePostsTable extends Migration
 
       $table->unsignedInteger('created_at');
       $table->unsignedInteger('updated_at');
+      $table->unsignedInteger('deleted_at')->nullable();
     });
   }
 

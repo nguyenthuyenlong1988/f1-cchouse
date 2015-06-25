@@ -2,7 +2,8 @@
 
 namespace NhaThieuNhi\Http\Controllers;
 
-class WelcomeController extends Controller {
+class WelcomeController extends Controller
+{
 
   /*
   |--------------------------------------------------------------------------

@@ -1,0 +1,10 @@
+/*=============================================================================
+ | tinymce-override.css
+ =============================================================================*/
+
+body {
+  font-family: 'Open Sans', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+}

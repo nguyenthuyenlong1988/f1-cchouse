@@ -1,0 +1,31 @@
+@import 'ivy-override.css';
+
+body {
+  background-color: #026649;
+}
+
+.login-panel, .admin-panel {
+  margin-top: 20px;
+}
+
+#topbar a {
+  color: #ff6969;
+}
+
+#topbar .ivy-page-wrapper {
+  padding: 10px 15px;
+  background-color: #444;
+  color: #eee;
+}
+
+#topbar .panel {
+  margin-bottom: 0;
+}
+
+.posts-list h2.title {
+  margin-top: 0;
+}
+
+.posts-list h2.title .literal {
+  margin-right: 15px;
+}

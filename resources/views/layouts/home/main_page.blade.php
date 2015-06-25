@@ -13,7 +13,8 @@
 
 @section('page_js_preload')
 
-<script src="js/main.js"></script>
+<script src="js/base.js"></script>
+<script src="js/home.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,7 +32,7 @@
 
 <script src="vendor/owl-carousel/1.3.3/owl.carousel.js"></script>
 <script src="vendor/jquery-jcarousel/0.3.3/js/jquery.jcarousel.js"></script>
-<script src="js/final.js"></script>
+<script src="js/home_load.js"></script>
 
 @stop
 
