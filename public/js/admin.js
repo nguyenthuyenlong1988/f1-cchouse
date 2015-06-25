@@ -17,7 +17,7 @@
       inlineMode       : false,
       theme            : 'custom',
       buttons          : $.merge(['fullscreen'], $.Editable.DEFAULTS.buttons),
-      imageUploadURL   : cfg.page_base_url + '/upload_image.php',
+      imageUploadURL   : cfg.page_base_url + '/test_upload_image.php',
       imageUploadParams: {}
     });
 
