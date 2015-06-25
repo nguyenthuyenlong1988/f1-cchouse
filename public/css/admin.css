@@ -22,10 +22,36 @@ body {
   margin-bottom: 0;
 }
 
+.posts-list .list-post-status a {
+  color: #c0eaff;
+}
+
 .posts-list h2.title {
   margin-top: 0;
 }
 
 .posts-list h2.title .literal {
   margin-right: 15px;
+}
+
+.panel .post-content table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.panel .post-content table thead th {
+  padding: 3px 5px;
+  border: 1px solid #aaa;
+  border-bottom-width: 2px;
+}
+
+.panel .post-content table tbody td {
+  padding: 3px 5px;
+  border: 1px solid #bbb;
+}
+
+.froala-box:after {
+  bottom: -30px;
+  font-size: 24px;
+  color: #666;
 }

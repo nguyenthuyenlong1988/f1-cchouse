@@ -3,6 +3,8 @@
 
 @section('page_title', 'Trang Chủ')
 
+{{-- Load resources --}}
+
 @section('page_css')
 
 <link rel="stylesheet" href="vendor/owl-carousel/1.3.3/owl.carousel.css" />
@@ -35,6 +37,8 @@
 <script src="js/home_load.js"></script>
 
 @stop
+
+{{-- Load content --}}
 
 @section('main_content')
 

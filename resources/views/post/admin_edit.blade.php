@@ -1,6 +1,8 @@
 {{-- Created at 2015/06/21 09:28 htien Exp $ --}}
 @extends('layouts.admin.main_page')
 
+@section('page_title', 'Sửa bài viết #' . $post->id)
+
 @section('content')
 
 <ol class="breadcrumb">
