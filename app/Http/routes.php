@@ -31,6 +31,7 @@ Route::group([
 
   // Dashboard routes
   Route::group([
+    'as'         => '',
     'middleware' => ['adminzone', 'auth']
   ], function () {
     Route::get('/', [
@@ -44,7 +45,8 @@ Route::group([
 
   // Posts routes
   Route::group([
-    'middle' => ['auth']
+    'as'     => '',
+    'middle' => 'auth',
   ], function () {
     Route::resource('posts', 'PostController');
   });
