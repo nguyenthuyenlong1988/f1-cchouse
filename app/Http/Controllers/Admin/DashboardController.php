@@ -11,10 +11,11 @@ use NhaThieuNhi\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-  public function __construct()
-  {
-    $this->middleware('auth');
-  }
+//  public function __construct()
+//  {
+//    $this->middleware('adminzone');
+//    $this->middleware('auth');
+//  }
 
   public function index()
   {

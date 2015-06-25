@@ -1,6 +1,8 @@
 {{-- Created at 2015/06/21 09:26 htien Exp $ --}}
 @extends('layouts.admin.main_page')
 
+@section('page_title', 'Bài viết mới')
+
 @section('content')
 
 <ol class="breadcrumb">

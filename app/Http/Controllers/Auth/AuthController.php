@@ -3,6 +3,7 @@
 namespace NhaThieuNhi\Http\Controllers\Auth;
 
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Support\Facades\Cookie;
 use NhaThieuNhi\Http\Controllers\Controller;
 use NhaThieuNhi\User;
 use Validator;
@@ -23,11 +24,19 @@ class AuthController extends Controller
   use AuthenticatesAndRegistersUsers;
 
   /**
+   * Set default redirectPath instead of /home route.
+   *
+   * @var string
+   */
+  protected $redirectPath = '/';
+
+  /**
    * Create a new authentication controller instance.
    */
   public function __construct()
   {
     $this->middleware('guest', ['except' => 'getLogout']);
+    $this->middleware('adminzone.deny');
   }
 
   /**

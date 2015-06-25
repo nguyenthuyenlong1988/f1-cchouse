@@ -1,6 +1,8 @@
 {{-- Created at 2015/06/21 06:04 htien Exp $ --}}
 @extends('layouts.admin.main_page')
 
+@section('page_title', 'Tin tức - Hoạt động')
+
 @section('content')
 
 <ol class="breadcrumb">
@@ -13,10 +15,14 @@
   <div class="panel panel-primary posts-list">
     <div class="panel-heading">
       <h2 class="title">
-        <span class="literal">Danh sách bài viết</span>
+        <span class="literal">Tin tức - Hoạt động</span>
         <a class="btn btn-danger" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
-        <a class="btn btn-primary" href="javascript:void(0)">Bài viết đã xóa ({{ $countDeletedPosts }})</a>
       </h2>
+      <div class="list-post-status">
+        <a href="javascript:void(0)">Đã đăng tải</a> ({{ $countPublished }})
+        <span class="sep">|</span>
+        <a href="javascript:void(0)">Đã xóa</a> ({{ $countDeleted }})
+      </div>
     </div>
     <table class="table">
       <thead>
