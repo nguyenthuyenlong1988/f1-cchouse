@@ -9,12 +9,47 @@ namespace NhaThieuNhi\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use NhaThieuNhi\Http\Controllers\Controller;
+use Webpatser\Uuid\Uuid;
 
 class UploadFile extends Controller
 {
-  public function uploadImage(Request $request)
+  public function storeImage(Request $request)
   {
-    //$imageName = $request->file
-    return 'eh';
+    if (! $request->hasFile('file')) {
+      return response()->json([
+        'status'  => 0,
+        'message' => 'No uploaded image.'
+      ]);
+    }
+
+    $image = $request->file('file');
+
+    if (! $image->isValid()) {
+      return response()->json([
+        'status'  => 2,
+        'message' => 'Corrupted.'
+      ]);
+    }
+
+    $extension    = $image->getClientOriginalExtension();
+    $originalName = $image->getClientOriginalName();
+    $imageName    = sha1(Uuid::generate(1) . $originalName
+                         . Uuid::generate(5, $originalName, Uuid::NS_DNS)
+                         . Uuid::generate(4))
+                    . '.' . $extension;
+
+    $link        = $request->getBaseUrl() . '/uploads/' . date('Y') . '-' . date('m');
+    $destination = base_path() . '/..' . $link;
+    if (! file_exists($destination)) {
+      mkdir($destination, 0777, TRUE);
+    }
+
+    $image->move($destination, $imageName);
+
+    return response()->json([
+      'status'  => 1,
+      'message' => 'Uploaded successfully.',
+      'link'    => $link . '/' . $imageName
+    ]);
   }
 }

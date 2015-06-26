@@ -68,5 +68,6 @@ $factory->defineAs(NhaThieuNhi\Post::class, 'act_news', function ($faker) {
     'post_excerpt' => $faker->text(rand(90, 150)),
     'post_content' => $faker->text(rand(1000, 2000)),
     'post_name'    => '',
+    'post_avatar'  => '',
   ];
 });

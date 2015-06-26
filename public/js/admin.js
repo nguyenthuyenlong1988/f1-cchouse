@@ -17,7 +17,7 @@
       inlineMode       : false,
       theme            : 'custom',
       buttons          : $.merge(['fullscreen'], $.Editable.DEFAULTS.buttons),
-      imageUploadURL   : cfg.page_base_url + '/test_upload_image.php',
+      imageUploadURL   : cfg.page_base_url + '/api/_upload_image.py',
       imageUploadParams: {}
     });
 
@@ -35,7 +35,9 @@
         'searchreplace visualblocks code fullscreen',
         'insertdatetime table contextmenu paste'
       ],
-      toolbar         : 'preview | undo redo | styleselect | formatselect fontsizeselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | fullscreen',
+      toolbar         : 'preview | undo redo | styleselect | formatselect fontsizeselect' +
+      ' | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify' +
+      ' | bullist numlist outdent indent | link image | fullscreen',
       resize          : false
     });
 

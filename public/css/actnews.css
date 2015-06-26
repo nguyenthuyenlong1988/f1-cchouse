@@ -1,0 +1,51 @@
+#actnews-page .page-header {
+  margin-top: 25px;
+  border-color: #ccc;
+}
+
+#actnews-page .post {
+  margin: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+#actnews-page .post-first {
+  border-top: 0;
+}
+
+#actnews-page .post-title, #actnews-page .post-title a {
+  color: #222;
+}
+
+#actnews-page .post-info {
+  text-align: right;
+}
+
+#actnews-page .post-date,
+#actnews-page .post-author {
+  padding: 1px 8px;
+  font-size: .96em;
+  color: #555;
+  background-color: #d0ead3;
+  border-radius: 12px;
+}
+
+#actnews-page .post-date {
+  font-weight: bold;
+}
+
+#actnews-page .post-author {
+  background-color: #e5e5e5;
+}
+
+#actnews-page .post-avatar {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#actnews-page .post-avatar img {
+  margin-bottom: 10px;
+}
+
+#actnews-page .post-excerpt {
+  margin-top: 30px;
+}

@@ -59,7 +59,7 @@
               '<p>#<strong>' + post_id + '</strong><br /><strong>' + post_title + '</strong></p>' +
             '</div>' +
             '<div class="modal-footer">' +
-              '<form method="POST" action="' + cfg['page_base_url'] + '/@dmin-zone/posts/' + post_id + '" accept-charset="' + cfg['page_charset'] + '">' +
+              '<form method="POST" action="' + cfg.page_base_url + '/@dmin-zone/posts/' + post_id + '" accept-charset="' + cfg.page_charset + '">' +
                 '<input type="hidden" name="_method" value="DELETE">' +
                 '<input type="hidden" name="_token" value="' + _token + '">' +
                 '<button type="button" class="btn btn-primary" data-dismiss="modal">Không, đừng xóa</button>' +
@@ -75,6 +75,67 @@
     {
       $(this).remove();
     }).modal();
+  };
+
+  _func.postResetInput = function (el)
+  {
+    _func.resetInput(el);
+    $('#post_avayar').val('');
+    $('.post-avatar img').attr('src', 'img/blank.gif');
+  };
+
+  // Post image avatar (in posts.create/posts.edit page)
+  _func.postImgAvatar = function (input)
+  {
+    var onSuccess = function (data, textStatus, jqXHR)
+    {
+      console.log(data);
+
+      $('#post_avatar').val(data.link);
+      $('.post-avatar img').attr('src', data.link);
+
+      _func.resetInput(input);
+    };
+
+    _func.ajaxUploadImage(input, {success: onSuccess});
+  };
+
+  // Reset HTML input[text] and input[file] control
+  _func.resetInput = function (el)
+  {
+    var $el = $(el);
+    $el.wrap('<form>').closest('form').get(0).reset();
+    $el.unwrap();
+  };
+
+  // Ajax upload image
+  _func.ajaxUploadImage = function (input, options)
+  {
+    if (!global.FormData) {
+      console.log('Your browser is not support File API.');
+      return;
+    }
+
+    var _options = options || {},
+      formData = new FormData();
+
+    formData.append('file', input.files[0]);
+
+    $.ajax({
+      url        : cfg.api_url + '/_upload_image.py',
+      type       : 'POST',
+      data       : formData,
+      dataType   : 'json',
+      cache      : false,
+      processData: false,
+      contentType: false,
+      success    : _options.success || null,
+      error      : function (jqXHR, textStatus, errorThrown)
+      {
+        // Handle errors here
+        console.log('ERRORS: ' + textStatus);
+      }
+    });
   };
 
   // Assign all functions to global object

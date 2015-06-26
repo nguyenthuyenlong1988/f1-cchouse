@@ -29,6 +29,7 @@ class Post extends AModel
     'post_excerpt',
     'post_content',
     'post_name',
+    'post_avatar',
   ];
 
   /**

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('welcome', [
+Route::get('chao-mung', [
   'as'   => 'welcome',
   'uses' => 'WelcomeController@index'
 ]);
@@ -19,6 +19,11 @@ Route::get('welcome', [
 Route::get('/', [
   'as'   => 'home',
   'uses' => 'HomeController@index'
+]);
+
+Route::get('tin-tuc-hoat-dong', [
+  'as'   => 'actnews.index',
+  'uses' => 'ActNewsController@index'
 ]);
 
 // Controllers within the "App\Http\Controllers\Admin" namespace
@@ -54,19 +59,24 @@ Route::group([
 });
 
 // Controllers within the "App\Http\Controllers\Api" namespace
-// Route name: ivy::api...
+// Route name: api::...
 Route::group([
-  'as'        => 'ivy::',
+  'as'        => 'api::',
   'prefix'    => 'api',
   'namespace' => 'Api'
 ], function () {
 
   // UploadFile routes
   Route::group([
+    'as'         => 'func::',
     'middleware' => 'auth'
   ], function () {
-    Route::put('_upload_image.py', 'UploadFile@uploadImage');
+    Route::match(['post', 'put'], '_upload_image.py', [
+      'as'   => '_upload_image.store',
+      'uses' => 'UploadFile@storeImage'
+    ]);
     Route::get('_upload_image.py', [
+      'as'   => '_upload_image.index',
       'uses' => function () {
         return '<code>PUT your image :)</code>';
       }

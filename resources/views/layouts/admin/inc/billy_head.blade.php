@@ -45,6 +45,7 @@
     cfg = {
       // Base configuration
       app_name               : '{{ config('params.app_name') }}',
+      api_url                : '{{ Request::getBaseUrl() }}' + '/api',
       client_time            : new Date().getTime(),
       site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),
       page_base_url          : '{{ Request::getBaseUrl() }}',
