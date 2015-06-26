@@ -1,29 +1,49 @@
 /*jslint browser:true, nomen:true, unused:false */
-/*global cfg, jQuery, tinyMCE */
+/*global cfg, jQuery */
 
 /**
  * Created by Tien Nguyen on 2015/06/22 07:44.
  */
 
-//function get_editor(name)
-//{
-//  return tinyMCE.get(name);
-//}
-//
-//function get_editor_content(name)
-//{
-//  var data = get_editor(name).getContent();
-//  alert(data);
-//}
-//
-//function set_editor_content(name, data)
-//{
-//  get_editor(name).setContent(data);
-//}
-
-function dlg_post_delete(post_id, post_title, _token)
+(function (global, cfg, $)
 {
-  (function ($)
+  'use strict';
+
+  // DEFINE ALL FUNCTIONS
+  var _func = {},
+    formSubmitting = false;
+
+  // Confirmation message on close window
+  _func.cfmOnClose = function ()
+  {
+    var _onBeforeUnload = function (e)
+    {
+      var confirmationMessage =
+        'Nếu bạn đang soạn thảo/cập nhật nội dung, ' +
+        'thì nên lưu lại nội dung trước khi chuyển sang trang khác. ' +
+        'Nếu không nội dung sẽ bị mất!';
+
+      if (formSubmitting) {
+        return;
+      }
+
+      (e || global.event).returnValue = confirmationMessage; //Gecko + IE
+      return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+    };
+
+    global.onload = function ()
+    {
+      global.addEventListener('beforeunload', _onBeforeUnload);
+    };
+  };
+
+  _func.setFormSubmitting = function ()
+  {
+    formSubmitting = true;
+  };
+
+  // Show confirm dialog on delete record
+  _func.cfmOnDeleteRecord = function (post_id, post_title, _token)
   {
     var str =
       // @formatter:off
@@ -55,6 +75,9 @@ function dlg_post_delete(post_id, post_title, _token)
     {
       $(this).remove();
     }).modal();
+  };
 
-  }(jQuery));
-}
+  // Assign all functions to global object
+  global._func = _func;
+
+}(window, cfg, jQuery));

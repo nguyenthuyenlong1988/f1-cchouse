@@ -1,7 +1,7 @@
 @import 'ivy-override.css';
 
 body {
-  background-color: #026649;
+  background-color: #026649; /*94a5a0,026649*/
 }
 
 .login-panel, .admin-panel {
@@ -20,6 +20,10 @@ body {
 
 #topbar .panel {
   margin-bottom: 0;
+}
+
+.breadcrumb a {
+  color: #000;
 }
 
 .posts-list .list-post-status a {
