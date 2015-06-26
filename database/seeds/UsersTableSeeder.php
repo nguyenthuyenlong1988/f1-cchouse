@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
     factory(NhaThieuNhi\User::class, 'admin')->create();
 
     // Additional admin
-    User::create([
+    \NhaThieuNhi\User::create([
       'id'             => Uuid::generate(),
       'name'           => 'Quản trị viên',
       'email'          => 'admin@local.com',

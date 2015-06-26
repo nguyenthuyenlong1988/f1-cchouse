@@ -75,7 +75,7 @@ class="home-page"
     <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
       <h3 style="margin-top:0">Chưa có tin tức.</h3>
       <img src="img/demo/demo_100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
-      Hãy cập nhật thêm Tin tức Hoạt động trong hệ thống quản lý!
+      Hãy cập nhật thêm bài viết trong hệ thống quản lý!
     </div>
     @endforelse
   </div>
