@@ -1,6 +1,8 @@
 {{-- Created at 2015/06/21 09:27 htien Exp $ --}}
 @extends('layouts.admin.main_page')
 
+@section('page_title', 'Bài viết #' . $post->id)
+
 @section('content')
 
 <ol class="breadcrumb">
@@ -26,7 +28,7 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            <a href="javascript:void(0)" onclick="dlg_post_delete('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')" style="color:#c9302c">Hủy bài viết</a>
+            <a href="javascript:void(0)" onclick="_func.cfmOnDeleteRecord('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')" style="color:#c9302c">Hủy bài viết</a>
           </li>
         </ul>
       </div>
@@ -50,7 +52,7 @@
       {{ $post->post_excerpt }}
     </div>
     <div class="panel-heading">Nội dung chi tiết</div>
-    <div class="panel-body">
+    <div class="panel-body post-content">
       {!! $post->post_content !!}
     </div>
   </div>

@@ -43,7 +43,9 @@
 //<![CDATA[
   var
     cfg = {
+      // Base configuration
       app_name               : '{{ config('params.app_name') }}',
+      api_url                : '{{ Request::getBaseUrl() }}' + '/api',
       client_time            : new Date().getTime(),
       site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),
       page_base_url          : '{{ Request::getBaseUrl() }}',
@@ -52,11 +54,14 @@
       page_charset           : '{{ config('params.page_charset') }}',
       js_debug               : true,
       js_standbymode_debug   : true,
-      standbymode_time       : 90
+      standbymode_time       : 90,
+
+      // Advanced configuration
+      is_login               : {{ ($isLogin = Auth::check()) ? 1 : 0 }},
+      uid                    : '{{ $isLogin ? Auth::user()->id : ''  }}'
     },
     dc = function(a,b,c,d,e,f){if(e=function(a){return(b>a?"":e(parseInt(a/b)))+(35<(a%=b)?String.fromCharCode(a+29):a.toString(36))},!"".replace(/^/,String)){for(;c--;)f[e(c)]=d[c]||e(c);d=[function(a){return f[a]}],e=function(){return"\\w+"},c=1}for(;c--;)d[c]&&(a=a.replace(RegExp("\\b"+e(c)+"\\b","g"),d[c]));return a},up=eval;
 //]]>
 </script>
 
-@section('page_js_preload')
-@stop
+@yield('page_js_preload')

@@ -11,7 +11,7 @@
 
   <!-- BILLY_HEAD END -->
 </head>
-<body id="www__com">
+<body @yield('page_body_attributes')>
 
   @include('layouts.home.inc.billy_neck')
 

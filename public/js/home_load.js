@@ -1,3 +1,6 @@
+/*jslint browser:true, nomen:true, unused:false */
+/*global cfg, jQuery, tinymce */
+
 (function (global, Modernizr, $) {
   'use strict';
 
@@ -10,7 +13,7 @@
     $activityMenuPrev = $('.prev', $activityMenuWrapper),
     $activityMenuNext = $('.next', $activityMenuWrapper);
 
-  // Slider
+  // SLIDER
   $activityImageSlider.owlCarousel({
     autoPlay: 5000,
 
@@ -32,7 +35,7 @@
     }
   });
 
-  // Quick Menu
+  // QUICKMENU
   $activityMenu
     .jcarousel({
       list: '.overview',

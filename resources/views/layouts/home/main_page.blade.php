@@ -1,7 +1,9 @@
 {{-- Created at 2015/06/01 04:10 htien Exp $ --}}
 @extends('layouts.home.app')
 
-@section('page_title', 'Trang Chủ')
+@section('page_title', '[Không tiêu đề]')
+
+{{-- Load resources --}}
 
 @section('page_css')
 
@@ -35,6 +37,8 @@
 <script src="js/home_load.js"></script>
 
 @stop
+
+{{-- Load content --}}
 
 @section('main_content')
 

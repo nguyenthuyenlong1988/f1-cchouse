@@ -21,7 +21,8 @@ class CreatePostsTable extends Migration
       $table->text('post_title');
       $table->text('post_excerpt');
       $table->longText('post_content');
-      $table->string('post_name', 200);
+      $table->string('post_name', 200)->default('');
+      $table->string('post_avatar', 255)->default('');
 
       $table->unsignedInteger('created_at');
       $table->unsignedInteger('updated_at');
