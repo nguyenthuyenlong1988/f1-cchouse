@@ -22,4 +22,14 @@ class ActNewsController extends Controller
 
     return view('actnews.index', compact('actNews'));
   }
+
+  public function show($id)
+  {
+    $actNews = Post::find($id);
+    if (count($actNews) == 0) {
+      return redirect()->route('actnews.index', ['error' => '404']);
+    }
+
+    return view('actnews.show', compact('actNews'));
+  }
 }

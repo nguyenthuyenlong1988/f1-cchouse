@@ -21,9 +21,15 @@ Route::get('/', [
   'uses' => 'HomeController@index'
 ]);
 
+// Actnews Posts
 Route::get('tin-tuc-hoat-dong', [
   'as'   => 'actnews.index',
   'uses' => 'ActNewsController@index'
+]);
+
+Route::get('tin-tuc-hoat-dong/{id}', [
+  'as'   => 'actnews.show',
+  'uses' => 'ActNewsController@show'
 ]);
 
 // Controllers within the "App\Http\Controllers\Admin" namespace

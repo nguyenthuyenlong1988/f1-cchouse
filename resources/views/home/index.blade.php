@@ -3,7 +3,7 @@
 
 @section('page_title', 'Trang Chủ')
 @section('page_body_attributes')
-id="home-page"
+class="home-page"
 @stop
 
 @section('content_before')
@@ -50,18 +50,26 @@ id="home-page"
       </h2>
     </div>
     @forelse ($actNews as $key => $p)
-    @if ($key == 0)
-    <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
-      <h3 style="margin-top:0">{{ $p->post_title }}</h3>
+    @if ($key == 0)  {{-- First post --}}
+
+    <div class="actnews actnews-first clearfix">
+      <h3 class="actnews-title">
+        <a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>
+      </h3>
       <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:100px;max-height:100px" />
       {{ $p->post_excerpt }}
     </div>
-    @else
-    <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dotted #84cdc7">
-      <h3 style="margin-top:0">{{ $p->post_title }}</h3>
+
+    @else  {{-- Continue posts --}}
+
+    <div class="actnews clearfix">
+      <h3 class="actnews-title">
+        <a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>
+      </h3>
       <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:100px;max-height:100px" />
       {{ $p->post_excerpt }}
     </div>
+
     @endif
     @empty
     <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">

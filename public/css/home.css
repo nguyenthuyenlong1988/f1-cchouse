@@ -8,3 +8,26 @@
 @import 'custom-site-header.css';
 @import 'custom-site-footer.css';
 @import 'custom-site-general.css';
+
+/*=============================================================================
+ | home-page.css
+ =============================================================================*/
+
+.home-page .actnews {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px dotted #84cdc7;
+}
+
+.home-page .actnews-first {
+  border: 2px dashed #84cdc7;
+}
+
+.home-page .actnews .actnews-title {
+  margin-top: 0;
+}
+
+.home-page .actnews .actnews-title a {
+  color: #222;
+}

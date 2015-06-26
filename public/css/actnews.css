@@ -1,51 +1,64 @@
-#actnews-page .page-header {
+/*=============================================================================
+ | actnews-page.css
+ =============================================================================*/
+
+.actnews-page .page-header {
   margin-top: 25px;
   border-color: #ccc;
 }
 
-#actnews-page .post {
+.actnews-page .post {
   margin: 30px 0;
   border-top: 1px solid #ccc;
 }
 
-#actnews-page .post-first {
+.actnews-page .post-first {
   border-top: 0;
 }
 
-#actnews-page .post-title, #actnews-page .post-title a {
+.actnews-page .post-title, .actnews-page .post-title a {
   color: #222;
 }
 
-#actnews-page .post-info {
+.actnews-page .post-info {
   text-align: right;
 }
 
-#actnews-page .post-date,
-#actnews-page .post-author {
+.actnews-page .post-date,
+.actnews-page .post-author {
   padding: 1px 8px;
   font-size: .96em;
-  color: #555;
-  background-color: #d0ead3;
-  border-radius: 12px;
+  color: #fff;
+  background-color: #7fb979;
+  border-radius: 12px 0;
 }
 
-#actnews-page .post-date {
-  font-weight: bold;
+.actnews-page .post-author {
+  background-color: #e57979;
 }
 
-#actnews-page .post-author {
-  background-color: #e5e5e5;
-}
-
-#actnews-page .post-avatar {
+.actnews-page .post-avatar {
   margin-top: 30px;
   text-align: center;
 }
 
-#actnews-page .post-avatar img {
+.actnews-page .post-avatar img {
   margin-bottom: 10px;
 }
 
-#actnews-page .post-excerpt {
+.actnews-page .post-excerpt,
+.actnews-page .post-content {
   margin-top: 30px;
+}
+
+/*=============================================================================
+ | actnews-show.css
+ =============================================================================*/
+
+#actnews-show {
+}
+
+#actnews-show .comment-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
