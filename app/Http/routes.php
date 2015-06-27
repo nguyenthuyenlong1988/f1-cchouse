@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('chao-mung', [
-  'as'   => 'welcome',
-  'uses' => 'WelcomeController@index'
-]);
-
 Route::get('/', [
   'as'   => 'home',
   'uses' => 'HomeController@index'
+]);
+
+Route::get('chao-mung', [
+  'as'   => 'welcome',
+  'uses' => 'WelcomeController@index'
 ]);
 
 // Actnews Posts
