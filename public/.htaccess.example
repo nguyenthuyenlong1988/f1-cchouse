@@ -4,10 +4,9 @@
     </IfModule>
 
     RewriteEngine On
-    RewriteBase /f1_cchouse/public/
 
     # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ $1 [L,R=301]
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
 
     # To redirect all users to access the site WITHOUT the 'www.' prefix,
     # (http://www.example.com/... will be redirected to http://example.com/...)
