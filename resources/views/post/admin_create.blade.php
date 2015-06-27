@@ -3,6 +3,11 @@
 
 @section('page_title', 'Bài viết mới')
 
+@section('page_js_load')
+  @parent
+  <script>_func.cfmOnClose()</script>
+@stop
+
 @section('content')
 
 <ol class="breadcrumb">
@@ -25,7 +30,7 @@
       </div>
       @endif
 
-      {!! Form::open(['route' => ['admin::@dmin-zone.posts.store'],'method' => 'POST']) !!}
+      {!! Form::open(['route' => ['admin::@dmin-zone.posts.store'], 'method' => 'POST', 'onsubmit' => 'func.setFormSubmitting()']) !!}
           @include('post._form', ['button_name' => 'Tạo mới'])
       {!! Form::close() !!}
 

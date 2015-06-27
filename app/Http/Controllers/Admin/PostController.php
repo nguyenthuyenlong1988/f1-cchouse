@@ -68,16 +68,18 @@ class PostController extends Controller
     $title   = $request->input('post_title');
     $excerpt = $request->input('post_excerpt');
     $content = $request->input('post_content');
+    $avatar  = $request->input('post_avatar');
 
     $post = Post::create([
       'post_author'  => \Auth::user()->id,
       'post_date'    => (new \DateTime())->getTimestamp(),
-      'post_type'    => 'post',
+      'post_type'    => 'act_news',
       'post_status'  => 'publish',
       'post_title'   => $title,
       'post_excerpt' => $excerpt,
       'post_content' => $content,
       'post_name'    => '',
+      'post_avatar'  => $avatar,
     ]);
 
     return redirect()->route('admin::@dmin-zone.posts.show', $post->id);
@@ -92,7 +94,11 @@ class PostController extends Controller
    */
   public function show($id)
   {
-    $post = Post::with('author')->find($id);
+    $post = Post::with([
+      'author' => function ($query) {
+        $query->select('id', 'name');
+      }
+    ])->find($id);
 
     if (! $post) {
       return redirect()->route('admin::@dmin-zone.posts.index');
@@ -131,6 +137,7 @@ class PostController extends Controller
       'post_excerpt' => $request->input('post_excerpt'),
       'post_content' => $request->input('post_content'),
       'post_name'    => '',
+      'post_avatar'  => $request->input('post_avatar'),
     ]);
 
     return redirect()->route('admin::@dmin-zone.posts.show', $id);

@@ -26,12 +26,20 @@
           {{--<li>Những chức năng như facebook comment, cửa sổ chat trả lời trực tuyến sẽ được tích hợp sau khi đã coding.</li>--}}
         {{--</ul>--}}
         <img src="img/underconstruction.gif" alt="" />
+        <p class="text-center">tien@thichlinux.net</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">:)</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-tooltip title="Tắt hình nền" onclick="_disableBodyBackground()">:)</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  function _disableBodyBackground()
+  {
+    $('body').css('background-image', 'none');
+  }
+</script>
 
 @yield('page_js_load')

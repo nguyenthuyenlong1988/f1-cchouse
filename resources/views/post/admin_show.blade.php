@@ -28,7 +28,7 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            <a href="javascript:void(0)" onclick="dlg_post_delete('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')" style="color:#c9302c">Hủy bài viết</a>
+            <a href="javascript:void(0)" onclick="_func.cfmOnDeleteRecord('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')" style="color:#c9302c">Hủy bài viết</a>
           </li>
         </ul>
       </div>

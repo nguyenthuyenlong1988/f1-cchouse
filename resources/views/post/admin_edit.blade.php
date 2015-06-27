@@ -3,6 +3,11 @@
 
 @section('page_title', 'Sửa bài viết #' . $post->id)
 
+@section('page_js_load')
+  @parent
+  <script>_func.cfmOnClose()</script>
+@stop
+
 @section('content')
 
 <ol class="breadcrumb">

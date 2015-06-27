@@ -3,7 +3,6 @@
   $(function () {
 
     // TOOLTIP
-
     $('[data-tooltip]').tooltip({ animation: false });
 
   });

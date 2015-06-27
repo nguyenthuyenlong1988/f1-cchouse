@@ -6,7 +6,7 @@
     <div class="col-md-4">
       <div class="site-title text-right">
         <h2>
-          <a href="./welcome" title="Đang phát triển." data-tooltip data-placement="bottom">
+          <a href="{{ route('welcome') }}" title="Đang phát triển." data-tooltip data-placement="bottom">
             <img src="img/logo_250x250.png" alt="" style="height:200px;border-radius:50%" />
           </a>
         </h2>

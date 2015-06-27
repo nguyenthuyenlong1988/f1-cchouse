@@ -17,7 +17,7 @@ $factory->defineAs(NhaThieuNhi\User::class, 'admin', function () {
     'id'             => Uuid::generate(),
     'name'           => 'Administrator',
     'email'          => 'ops@hva.io',
-    'password'       => bcrypt('secret'),
+    'password'       => bcrypt('@Ssecret*7979#'),
     'remember_token' => str_random(10),
   ];
 });
@@ -68,5 +68,6 @@ $factory->defineAs(NhaThieuNhi\Post::class, 'act_news', function ($faker) {
     'post_excerpt' => $faker->text(rand(90, 150)),
     'post_content' => $faker->text(rand(1000, 2000)),
     'post_name'    => '',
+    'post_avatar'  => '',
   ];
 });
