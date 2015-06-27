@@ -12,7 +12,7 @@
             vun trồng biết bao bạn nhỏ, đã đào tạo được những tài năng về thẩm mỹ nghệ thuật, thể dục thể thao,
             khoa học kỹ thuật, ngoại ngữ và các lãnh vực khác...</p>
             <div class="text-center">
-              <button type="button" class="btn btn-success btn-lg btn-block">Đăng Ký Học</button>
+              <button class="btn btn-success btn-lg btn-block" type="button" disabled>Đăng Ký Học</button>
             </div>
           </div>
         </div>
