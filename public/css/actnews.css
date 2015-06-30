@@ -62,7 +62,9 @@
  | actnews-show.css
  =============================================================================*/
 
-#actnews-show {
+#actnews-show .post-avatar {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 #actnews-show .comment-header {

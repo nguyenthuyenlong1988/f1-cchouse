@@ -19,21 +19,21 @@ id="actnews-show" class="actnews-page"
 
 <div class="container-fluid">
   <h1 class="page-header">{{ $actNews->post_title }}</h1>
+  @unless(empty($actNews->post_avatar))
+  <div class="post-avatar">
+    <img src="{{ $actNews->post_avatar }}" alt="" />
+  </div>
+  @endunless
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-7">
       <div class="post post-first">
-        {{--<h2 class="post-title">--}}
-          {{--<a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>--}}
-        {{--</h2>--}}
         <p class="post-info">
           <span class="post-date">{{ ivy_echo_date($actNews->post_date) }}</span>
           <span class="post-author">bởi {{ $author ? $author->name : 'Hệ thống' }}</span>
         </p>
-        {{--@unless(empty($actNews->post_avatar))--}}
-        {{--<div class="post-avatar">--}}
-          {{--<img src="{{ $actNews->post_avatar }}" alt="" />--}}
-        {{--</div>--}}
-        {{--@endunless--}}
         <div class="post-content">{!! $actNews->post_content !!}</div>
       </div>
 
@@ -44,7 +44,7 @@ id="actnews-show" class="actnews-page"
       <h2 class="comment-header">Bình luận</h2>
       <div class="fb-comments" data-href="{{ Request::url() }}" data-numposts="5"></div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
         <h4>Slide hình</h4>
         <ul class="no-bullets">
