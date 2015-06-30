@@ -5,7 +5,8 @@
 /** Some classes */
 
 html.has-background body {
-  background: #0f9d58 url(../img/bg3.jpg) no-repeat fixed;
+  background: #0f9d58 no-repeat fixed;
+  /*background-image: url(../img/bg3.jpg);*/
   background-size: cover;
 }
 
@@ -40,11 +41,11 @@ html.has-transition .ivy-page-wrapper {
 }
 
 html.has-transition .ivy-site-navbar li a {
-  -webkit-transition: background-color .15s ease-in;
-  -moz-transition: background-color .15s ease-in;
-  -ms-transition: background-color .15s ease-in;
-  -o-transition: background-color .15s ease-in;
-  transition: background-color .15s ease-in;
+  -webkit-transition: background-color .08s ease-in;
+  -moz-transition: background-color .08s ease-in;
+  -ms-transition: background-color .08s ease-in;
+  -o-transition: background-color .08s ease-in;
+  transition: background-color .08s ease-in;
 }
 
 ul.no-bullets, ol.no-bullets {
@@ -58,6 +59,11 @@ ul.no-bullets.with-arrow li {
   margin: 8px 0;
   padding-left: 17px;
   background: url(../img/bullet-arrow-yellow.png) no-repeat left 5px;
+}
+
+hr.sepace {
+  margin-top: 50px;
+  border-color: transparent;
 }
 
 @media (min-width: 768px) {
