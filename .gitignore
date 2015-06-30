@@ -1,6 +1,7 @@
 /.idea
 /node_modules
 /vendor
+
+/public/.htaccess
 .env
 composer.lock
-/public/.htaccess

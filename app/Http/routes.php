@@ -11,6 +11,11 @@
 |
 */
 
+Route::get('test', function ()
+{
+    return 'Test';
+});
+
 Route::get('/', [
   'as'   => 'home',
   'uses' => 'HomeController@index'
@@ -27,7 +32,7 @@ Route::get('tin-tuc-hoat-dong', [
   'uses' => 'ActNewsController@index'
 ]);
 
-Route::get('tin-tuc-hoat-dong/{id}', [
+Route::get('tin-tuc-hoat-dong/{uri}', [
   'as'   => 'actnews.show',
   'uses' => 'ActNewsController@show'
 ]);

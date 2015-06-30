@@ -19,44 +19,45 @@ class="home-page"
 @section('content')
 
 <div class="cuztom-row">
-  <div class="col-sm-3">
+  <div class="sidebar col-sm-3">
     <div style="margin-bottom:10px;padding:10px;color:#fff;background-color:#1b837b;border:0 solid #1b837b;border-radius:2px;
-      background-image:linear-gradient(to top, #3b817e, #49b860);">
-    <h4>
-      <img src="img/florish-left.png" alt="" width="45" />
-      Giới Thiệu
-      <img src="img/florish-right.png" alt="" width="45" /><br />
-      Nhà Thiếu Nhi Gò Vấp
-    </h4>
-    In hac habitasse platea dictumst. Curabitur eu leo sit amet ante sollicitudin pharetra et id ex. Ut sit amet tortor at lectus laoreet ullamcorper.
+      background-image:linear-gradient(to top, #14814c, #49b860);">
+      <h4 class="box-title">
+        <img src="img/florish-left.png" alt="" width="45" />
+        Giới Thiệu
+        <img src="img/florish-right.png" alt="" width="45" /><br />
+        Nhà Thiếu Nhi Gò Vấp
+      </h4>
+      In hac habitasse platea dictumst. Curabitur eu leo sit amet ante sollicitudin pharetra et id ex. Ut sit amet tortor at lectus laoreet ullamcorper.
     </div>
 
-    <div style="margin-bottom:10px;padding:10px;background-color:#f8a22f;border:1px solid #f8a22f;border-radius:2px;
+    <div style="margin-bottom:10px;padding:10px;background-color:#f8a22f;border-radius:2px;
       background-image:linear-gradient(to top, #f8a22f, #fcddb2)">
-      <h4>Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</h4>
+      <h4 class="box-title">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</h4>
       <img src="img/demo/hcm.jpg" alt="" />
     </div>
 
     <div style="margin-bottom:10px;padding:10px;background-color:#f3d3f4;border:0 solid #eaaeae;border-radius:2px">
-      <h4>Hỗ Trợ Trực Tuyến</h4>
+      <h4 class="box-title">Hỗ Trợ Trực Tuyến</h4>
     </div>
   </div>
   <div class="col-sm-6">
     <div>
-      <h2 class="text-center" style="margin-top:5px">
+      <h2 class="box-title">
         <img src="img/florish-left.png" alt="" />
         Tin Tức Hoạt Động
         <img src="img/florish-right.png" alt="" />
       </h2>
     </div>
     @forelse ($actNews as $key => $p)
+    <?php $postId = Hashids::encode($p->id); ?>
     @if ($key == 0)  {{-- First post --}}
 
     <div class="actnews actnews-first clearfix">
       <h3 class="actnews-title">
-        <a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>
+        <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
       </h3>
-      <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:100px;max-height:100px" />
+      <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;margin-bottom:8px" />
       {{ $p->post_excerpt }}
     </div>
 
@@ -64,9 +65,9 @@ class="home-page"
 
     <div class="actnews clearfix">
       <h3 class="actnews-title">
-        <a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>
+        <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
       </h3>
-      <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:100px;max-height:100px" />
+      <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:150px;max-height:150px" />
       {{ $p->post_excerpt }}
     </div>
 
@@ -79,9 +80,9 @@ class="home-page"
     </div>
     @endforelse
   </div>
-  <div class="col-sm-3">
+  <div class="sidebar col-sm-3">
     <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
-      <h4>Slide hình</h4>
+      <h4 class="box-title">Slide hình</h4>
       <ul class="no-bullets">
         @for ($i = 0; $i < 12; $i++)
         <li>&nbsp;</li>
@@ -90,14 +91,14 @@ class="home-page"
     </div>
 
     <div style="margin-bottom:10px;padding:10px;background-color:#c3d339;border:3px solid #c3d339;border-radius:2px">
-      <h4>Phòng Chiếu Phim 3D</h4>
+      <h4 class="box-title">Phòng Chiếu Phim 3D</h4>
       @for ($i = 0; $i < 5; $i++)
       <br />
       @endfor
     </div>
 
     <div style="margin-bottom:10px;padding:10px;background-color:#f0f2b6;border:1px solid #c3d339;border-radius:2px">
-      <h4>Đặt quảng cáo nhà tài trợ</h4>
+      <h4 class="box-title">Quảng cáo</h4>
       @for ($i = 0; $i < 5; $i++)
       <br />
       @endfor
@@ -111,7 +112,7 @@ class="home-page"
 <div id="addition-wrapper">
   <div class="cuztom-row">
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <h4>Văn Nghệ Thiếu Nhi</h4>
+      <h4 class="box-title">Văn Nghệ Thiếu Nhi</h4>
       <ul class="no-bullets with-arrow">
         <li><a href="javascript:void(0)">Donec ut vestibulum nunc</a></li>
         <li><a href="javascript:void(0)">Ut malesuada suscipit augue accumsan rutrum</a></li>
@@ -119,16 +120,16 @@ class="home-page"
       </ul>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <h4>Nuôi Dưỡng Tâm Hồn Trẻ Thơ</h4>
+      <h4 class="box-title">Nuôi Dưỡng Tâm Hồn Trẻ Thơ</h4>
       <p>Aliquam erat volutpat. Sed at egestas libero, ac venenatis odio. Integer in tortor eu lacus ornare mattis. Aliquam at dolor ut lorem mollis accumsan eget sed sem.</p>
       <a class="peekaboo-btn"  href="javascript:void(0)">Xem chi tiết...</a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <h4>Truyện Cười, Thư Giãn</h4>
+      <h4 class="box-title">Truyện Cười, Thư Giãn</h4>
       <img src="img/demo/chu_he_ngo_nghinh.jpg" alt="" />
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <h4>Liên Hệ</h4>
+      <h4 class="box-title">Liên Hệ</h4>
       <img src="img/demo/ads.jpg" alt="" />
     </div>
   </div>

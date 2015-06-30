@@ -4,7 +4,7 @@
 
 .actnews-page .page-header {
   margin-top: 25px;
-  border-color: #ccc;
+  border-bottom: 2px solid #e57979;
 }
 
 .actnews-page .post {
@@ -28,13 +28,14 @@
 .actnews-page .post-author {
   padding: 1px 8px;
   font-size: .96em;
-  color: #fff;
-  background-color: #7fb979;
+  color: #0a0a0a;
+  background-color: #e0e0e0;
   border-radius: 12px 0;
 }
 
 .actnews-page .post-author {
   background-color: #e57979;
+  color: #fff;
 }
 
 .actnews-page .post-avatar {
@@ -49,6 +50,12 @@
 .actnews-page .post-excerpt,
 .actnews-page .post-content {
   margin-top: 30px;
+}
+
+#actnews-index .page-header {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 /*=============================================================================
