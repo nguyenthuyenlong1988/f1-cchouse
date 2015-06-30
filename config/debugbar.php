@@ -12,7 +12,7 @@ return array(
      |
      */
 
-    'enabled' => env('APP_DEBUG') AND env('APP_DEBUGBAR'),
+    'enabled' => env('APP_DEBUG') AND env('APP_DEBUGBAR') AND env('APP_ENV') == 'local',
 
     /*
      |--------------------------------------------------------------------------

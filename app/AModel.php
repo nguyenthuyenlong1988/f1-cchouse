@@ -10,7 +10,7 @@ namespace NhaThieuNhi;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class AModel extends Model
+abstract class AModel extends Model
 {
   use SoftDeletes;
 
