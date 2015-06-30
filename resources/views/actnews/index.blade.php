@@ -27,7 +27,10 @@ id="actnews-index" class="actnews-page"
     Tin tức &mdash; Hoạt động
   </h1>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-7">
       @forelse($actNews as $key => $p)
       <?php $author = $p->author()->select('id', 'name')->first();
             $postId = Hashids::encode($p->id); ?>
@@ -43,7 +46,9 @@ id="actnews-index" class="actnews-page"
         </p>
         @unless(empty($p->post_avatar))
         <div class="post-avatar">
-          <img src="{{ $p->post_avatar }}" alt="" />
+          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">
+            <img src="{{ $p->post_avatar }}" alt="" />
+          </a>
         </div>
         @endunless
         <div class="post-excerpt">{{ $p->post_excerpt }}</div>
@@ -61,7 +66,9 @@ id="actnews-index" class="actnews-page"
         </p>
         @unless(empty($p->post_avatar))
         <div class="post-avatar">
-          <img src="{{ $p->post_avatar }}" alt="" />
+          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">
+            <img src="{{ $p->post_avatar }}" alt="" />
+          </a>
         </div>
         @endunless
         <div class="post-excerpt">{{ $p->post_excerpt }}</div>
@@ -72,7 +79,7 @@ id="actnews-index" class="actnews-page"
       <p>Chưa có dữ liệu.</p>
       @endforelse
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
         <h4>Slide hình</h4>
         <ul class="no-bullets">

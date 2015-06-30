@@ -50,14 +50,16 @@ class="home-page"
       </h2>
     </div>
     @forelse ($actNews as $key => $p)
-    <?php $postId = Hashids::encode($p->id); ?>
+    <?php $postUri = $p->post_name . '-' . Hashids::encode($p->id); ?>
     @if ($key == 0)  {{-- First post --}}
 
     <div class="actnews actnews-first clearfix">
       <h3 class="actnews-title">
-        <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
+        <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
       </h3>
-      <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;margin-bottom:8px" />
+      <a href="{{ route('actnews.show', $postUri) }}">
+        <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-bottom:8px" />
+      </a>
       {{ $p->post_excerpt }}
     </div>
 
@@ -65,9 +67,11 @@ class="home-page"
 
     <div class="actnews clearfix">
       <h3 class="actnews-title">
-        <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
+        <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
       </h3>
-      <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:150px;max-height:150px" />
+      <a href="{{ route('actnews.show', $postUri) }}">
+        <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:150px;max-height:150px" />
+      </a>
       {{ $p->post_excerpt }}
     </div>
 
