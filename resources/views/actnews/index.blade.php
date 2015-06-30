@@ -3,7 +3,7 @@
 
 @section('page_title', 'Tin tức Hoạt động')
 @section('page_body_attributes')
-class="actnews-page"
+id="actnews-index" class="actnews-page"
 @stop
 
 @section('page_css')
@@ -22,16 +22,20 @@ class="actnews-page"
   </div>
   @endif
 
-  <h1 class="page-header">Tin tức &mdash; Hoạt động</h1>
+  <h1 class="page-header">
+    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    Tin tức &mdash; Hoạt động
+  </h1>
   <div class="row">
     <div class="col-md-8">
       @forelse($actNews as $key => $p)
-      <?php $author = $p->author()->select('id', 'name')->first(); ?>
+      <?php $author = $p->author()->select('id', 'name')->first();
+            $postId = Hashids::encode($p->id); ?>
       @if ($key == 0) {{-- First post --}}
 
       <div class="post post-first">
         <h2 class="post-title">
-          <a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>
+          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
         </h2>
         <p class="post-info">
           <span class="post-date">{{ ivy_echo_date($p->post_date) }}</span>
@@ -49,7 +53,7 @@ class="actnews-page"
 
       <div class="post">
         <h2 class="post-title">
-          <a href="{{ route('actnews.show', $p->id) }}">{{ $p->post_title }}</a>
+          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
         </h2>
         <p class="post-info">
           <span class="post-date">{{ ivy_echo_date($p->post_date) }}</span>

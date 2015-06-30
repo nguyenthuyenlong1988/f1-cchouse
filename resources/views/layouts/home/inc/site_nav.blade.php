@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand active" href="javascript:void(0)">
+        <a class="navbar-brand active" href="{{ route('home') }}">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         </a>
       </div>
@@ -26,7 +26,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">L/Hệ</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">

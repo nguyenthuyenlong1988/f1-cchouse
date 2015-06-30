@@ -8,28 +8,31 @@
 namespace NhaThieuNhi\Http\Controllers;
 
 use NhaThieuNhi\Post;
+use Vinkla\Hashids\Facades\Hashids;
 
 class ActNewsController extends Controller
 {
-  public function index()
-  {
-    $actNews = Post::where([
-      'post_type'   => 'act_news',
-      'post_status' => 'publish'
-    ])
-                   ->orderBy('id', 'DESC')
-                   ->get();
+    public function index()
+    {
+        $actNews = Post::where([
+            'post_type'   => 'act_news',
+            'post_status' => 'publish'
+        ])
+                       ->orderBy('id', 'DESC')
+                       ->get();
 
-    return view('actnews.index', compact('actNews'));
-  }
-
-  public function show($id)
-  {
-    $actNews = Post::find($id);
-    if (count($actNews) == 0) {
-      return redirect()->route('actnews.index', ['error' => '404']);
+        return view('actnews.index', compact('actNews'));
     }
 
-    return view('actnews.show', compact('actNews'));
-  }
+    public function show($uri)
+    {
+        $id = Hashids::decode(ivy_last_word($uri, '-'))[0];
+
+        $actNews = Post::find($id);
+        if (count($actNews) == 0) {
+            return redirect()->route('actnews.index', ['error' => '404']);
+        }
+
+        return view('actnews.show', compact('actNews'));
+    }
 }

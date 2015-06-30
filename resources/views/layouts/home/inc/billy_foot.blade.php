@@ -38,7 +38,7 @@
 <script>
   function _disableBodyBackground()
   {
-    $('body').css('background-image', 'none');
+    $('body').addClass('image');
   }
 </script>
 

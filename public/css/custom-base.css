@@ -6,8 +6,11 @@
 
 html.has-background body {
   background: #0f9d58 no-repeat fixed;
-  /*background-image: url(../img/bg3.jpg);*/
   background-size: cover;
+}
+
+html.has-background body.image {
+  background-image: url(../img/bg3.jpg);
 }
 
 html.has-background.has-boxshadow #page:hover {
