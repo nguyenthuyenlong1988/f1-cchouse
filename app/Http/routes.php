@@ -32,6 +32,20 @@ Route::get('gioi-thieu', [
     }
 ]);
 
+Route::get('lien-he', [
+    'as'   => 'contact',
+    'uses' => function () {
+        return view('welcome.contact');
+    }
+]);
+
+Route::get('lich-hoc', [
+    'as'   => 'schedule',
+    'uses' => function () {
+        return view('welcome.schedule');
+    }
+]);
+
 // Actnews Posts
 Route::get('tin-tuc-hoat-dong', [
     'as'   => 'actnews.index',
