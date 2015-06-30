@@ -29,13 +29,20 @@ id="actnews-show" class="actnews-page"
           <span class="post-date">{{ ivy_echo_date($actNews->post_date) }}</span>
           <span class="post-author">bởi {{ $author ? $author->name : 'Hệ thống' }}</span>
         </p>
-        @unless(empty($actNews->post_avatar))
-        <div class="post-avatar">
-          <img src="{{ $actNews->post_avatar }}" alt="" />
-        </div>
-        @endunless
+        {{--@unless(empty($actNews->post_avatar))--}}
+        {{--<div class="post-avatar">--}}
+          {{--<img src="{{ $actNews->post_avatar }}" alt="" />--}}
+        {{--</div>--}}
+        {{--@endunless--}}
         <div class="post-content">{!! $actNews->post_content !!}</div>
       </div>
+
+      <hr class="sepace" />
+
+      <div class="fb-like" data-href="{{ Request::url() }}" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+
+      <h2 class="comment-header">Bình luận</h2>
+      <div class="fb-comments" data-href="{{ Request::url() }}" data-numposts="5"></div>
     </div>
     <div class="col-md-4">
       <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
@@ -61,11 +68,6 @@ id="actnews-show" class="actnews-page"
         @endfor
       </div>
     </div>
-  </div>
-  <div>
-    <div class="fb-like" data-href="{{ Request::url() }}" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-    <h2 class="comment-header">Bình luận</h2>
-    <div class="fb-comments" data-href="{{ Request::url() }}" data-numposts="5"></div>
   </div>
 </div>
 
