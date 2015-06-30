@@ -24,11 +24,16 @@ class="home-page"
       background-image:linear-gradient(to top, #14814c, #49b860);">
       <h4 class="box-title">
         <img src="img/florish-left.png" alt="" width="45" />
-        Giới Thiệu
+        <strong>Giới Thiệu</strong>
         <img src="img/florish-right.png" alt="" width="45" /><br />
-        Nhà Thiếu Nhi Gò Vấp
+        <strong>Nhà Thiếu Nhi Gò Vấp</strong>
       </h4>
-      In hac habitasse platea dictumst. Curabitur eu leo sit amet ante sollicitudin pharetra et id ex. Ut sit amet tortor at lectus laoreet ullamcorper.
+      <p>
+      	Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố, 
+      	và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú, 
+      	đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
+      	<a class="peekaboo-btn" href="{{ route('intro') }}">Xem tiếp...</a>
+      </p>
     </div>
 
     <div style="margin-bottom:10px;padding:10px;background-color:#f8a22f;border-radius:2px;
@@ -134,7 +139,7 @@ class="home-page"
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <h4 class="box-title">Liên Hệ</h4>
-      <img src="img/demo/ads.jpg" alt="" />
+      <a href="{{ route('contact') }}"><img src="img/lien-he/lien-he-01.jpg" alt="lien-he-nha-thieu-nhi-go-vap" /></a>
     </div>
   </div>
 </div>

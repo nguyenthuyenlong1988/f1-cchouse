@@ -26,11 +26,11 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
+          <li><a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Giới Thiệu</a></li>
+              <li><a href="{{ route('intro') }}">Giới Thiệu</a></li>
               <li class="divider"></li>
               <li><a href="#" data-toggle="modal" data-target="#my-message">Thông tin website</a></li>
             </ul>

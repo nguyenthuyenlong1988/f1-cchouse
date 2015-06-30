@@ -1,7 +1,10 @@
 /.idea
+/.settings
 /node_modules
 /vendor
 
 /public/.htaccess
 .env
+.buildpath
+.project
 composer.lock
