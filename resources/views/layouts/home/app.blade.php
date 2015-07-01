@@ -23,9 +23,9 @@
 
       @include('layouts.home.inc.site_topbar')
 
-      @include('layouts.home.inc.site_header')
-
       @include('layouts.home.inc.site_nav')
+
+      @include('layouts.home.inc.site_header')
 
     </header>
 

@@ -80,6 +80,11 @@ id="actnews-index" class="actnews-page"
       @endforelse
     </div>
     <div class="col-md-3">
+      <div>
+        <div class="fb-page" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="220" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+          <div class="fb-xfbml-parse-ignore"></div>
+        </div>
+      </div>
       <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
         <h4>Slide hình</h4>
         <ul class="no-bullets">

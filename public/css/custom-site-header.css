@@ -61,15 +61,12 @@ html.has-background #header {
 
 #navbar {
   margin-bottom: 0;
-}
-
-#navbar .glyphicon {
-  line-height: inherit;
+  min-height: 0; /* override bootstrap */
 }
 
 #navbar a.navbar-brand {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   height: auto;
 }
 

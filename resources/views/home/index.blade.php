@@ -1,6 +1,5 @@
 {{-- Created at 2015/05/27 03:44 htien Exp $ --}}
 @extends('layouts.home.main_page')
-
 @section('page_title', 'Trang Chủ')
 @section('page_body_attributes')
 class="home-page"
@@ -29,8 +28,8 @@ class="home-page"
         <strong>Nhà Thiếu Nhi Gò Vấp</strong>
       </h4>
       <p>
-      	Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố, 
-      	và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú, 
+      	Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
+      	và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
       	đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
       	<a class="peekaboo-btn" href="{{ route('intro') }}">Xem tiếp...</a>
       </p>
@@ -120,7 +119,7 @@ class="home-page"
 
 <div id="addition-wrapper">
   <div class="cuztom-row">
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-xs-12 col-md-3">
       <h4 class="box-title">Văn Nghệ Thiếu Nhi</h4>
       <ul class="no-bullets with-arrow">
         <li><a href="javascript:void(0)">Donec ut vestibulum nunc</a></li>
@@ -128,16 +127,12 @@ class="home-page"
         <li><a href="javascript:void(0)">Suspendisse non est ut augue dapibus pulvinar</a></li>
       </ul>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h4 class="box-title">Nuôi Dưỡng Tâm Hồn Trẻ Thơ</h4>
-      <p>Aliquam erat volutpat. Sed at egestas libero, ac venenatis odio. Integer in tortor eu lacus ornare mattis. Aliquam at dolor ut lorem mollis accumsan eget sed sem.</p>
-      <a class="peekaboo-btn"  href="javascript:void(0)">Xem chi tiết...</a>
+    <div class="col-xs-12 col-md-6">
+      <div class="fb-page hidden-xs" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+        <div class="fb-xfbml-parse-ignore"></div>
+      </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h4 class="box-title">Truyện Cười, Thư Giãn</h4>
-      <img src="img/demo/chu_he_ngo_nghinh.jpg" alt="" />
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="col-xs-12 col-md-3">
       <h4 class="box-title">Liên Hệ</h4>
       <a href="{{ route('contact') }}"><img src="img/lien-he/lien-he-01.jpg" alt="lien-he-nha-thieu-nhi-go-vap" /></a>
     </div>

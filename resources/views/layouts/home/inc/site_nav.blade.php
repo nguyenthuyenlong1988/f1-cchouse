@@ -1,5 +1,15 @@
 {{-- Created at 2015/05/27 05:08 htien Exp $ --}}
 
+@if (! Route::is('enrolstudents'))
+<section id="enrolstudents-section" class="ivy-section">
+  <div class="text-center">
+    <span class="glyphicon glyphicon-star"></span>
+    <a href="{{ route('enrolstudents') }}">Chiêu sinh khóa mới 2015</a>
+    <span class="glyphicon glyphicon-star"></span>
+  </div>
+</section>
+@endif
+
 <nav id="navbar" class="ivy-site-nav ivy-site-navbar navbar">
   <div class="ivy-page-wrapper">
 

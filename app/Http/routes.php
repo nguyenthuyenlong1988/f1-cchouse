@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('test', function () {
-    return 'Test';
-});
+Route::get('test', [
+    'as'   => 'test',
+    'uses' => function () {
+        return Route::is('test') ? 'true' : 'false';
+    }
+]);
 
 Route::get('/', [
     'as'   => 'home',
@@ -43,6 +46,13 @@ Route::get('lich-hoc', [
     'as'   => 'schedule',
     'uses' => function () {
         return view('welcome.schedule');
+    }
+]);
+
+Route::get('chieu-sinh', [
+    'as'   => 'enrolstudents',
+    'uses' => function () {
+        return view('welcome.enrolstudents');
     }
 ]);
 
