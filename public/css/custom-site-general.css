@@ -36,6 +36,39 @@ h4, h5, h6 {
 
 .billy-copyright {}
 
+.page-header {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 2px solid #e57979;
+  text-transform: uppercase;
+}
+
+.page-header.header-large {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.page-header small {
+  font-weight: 300;
+}
+
+.page-heading {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-heading small {
+  font-weight: 300;
+}
+
+.text-large {
+  font-size: 150%;
+}
+
 /** Search */
 
 #site-search-wrapper {

@@ -2,11 +2,6 @@
  | actnews-page.css
  =============================================================================*/
 
-.actnews-page .page-header {
-  margin-top: 25px;
-  border-bottom: 2px solid #e57979;
-}
-
 .actnews-page .post {
   margin: 30px 0;
   border-top: 1px solid #ccc;
@@ -52,11 +47,6 @@
   margin-top: 30px;
 }
 
-#actnews-index .page-header {
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
 
 /*=============================================================================
  | actnews-show.css

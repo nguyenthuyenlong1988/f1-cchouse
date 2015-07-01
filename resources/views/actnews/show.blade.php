@@ -18,7 +18,7 @@ id="actnews-show" class="actnews-page"
 <?php $author = $actNews->author()->select('id', 'name')->first(); ?>
 
 <div class="container-fluid">
-  <h1 class="page-header">{{ $actNews->post_title }}</h1>
+  <h1 class="page-header header-large">{{ $actNews->post_title }}</h1>
   @unless(empty($actNews->post_avatar))
   <div class="post-avatar">
     <img src="{{ $actNews->post_avatar }}" alt="" />
