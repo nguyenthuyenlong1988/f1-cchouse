@@ -18,6 +18,12 @@ id="intro-page"
     margin-left: 30px;
   }
 
+  .pg-bg-skyblue {
+    margin: 0 -15px;
+    padding: 10px 15px;
+    background-color: #7be0dc;
+  }
+
   .pg-image {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -52,7 +58,7 @@ id="intro-page"
   <h1 class="page-header"><span class="glyphicon glyphicon-info-sign"></span> Giới Thiệu</h1>
   <div class="content">
     <h2 class="page-heading">Nhà thiếu nhi quận Gò Vấp<br /><small>Tụ điểm vui chơi lành mạnh của Thanh thiếu niên</small></h2>
-    <div class="text-center text-large">
+    <div class="text-center text-large pg-bg-skyblue">
       <span class="glyphicon glyphicon-bullhorn"></span>
       Tiến tới kỷ niệm 70 năm<br />ngày thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh<br />(15/5/1941 – 15/5/2011)
     </div>
