@@ -3,7 +3,7 @@
 
 @section('page_title', 'Chào Mừng')
 @section('page_body_attributes')
-id="welcome-page"
+id="welcome-page" class="welcome-page"
 @stop
 
 @section('page_css')
@@ -18,7 +18,7 @@ id="welcome-page"
 <div class="container-fluid">
 
   <div id="children-intl-1" class="text-center">
-    <img src="img/2015-06-01/mung-ngay-quoc-te-thieu-nhi.jpg" alt="" />
+    <img src="img/2015-06-01/mung-ngay-quoc-te-thieu-nhi.jpg" alt="" style="width:100%" />
   </div>
 
   <div id="children-intl-2" role="tabpanel">

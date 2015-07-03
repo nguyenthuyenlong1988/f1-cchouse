@@ -1,7 +1,7 @@
 {{-- Created at 2015/06/01 04:00 htien Exp $ --}}
 
 <section id="activity-section" class="ivy-section">
-  <div class="ivy-page-wrapper">
+  <div>
     <h2 class="hidden">Activities</h2>
     <div id="activity-wrapper">
       <div class="cuztom-row">
@@ -10,21 +10,6 @@
           <div class="ribbon"></div>
           <img class="cover-image" src="img/demo/slide-image-4.jpg" alt="" />
           <div id="activity-image-slider" class="owl-carousel">
-          	<div class="item">
-          	  <a href="{{ route('enrolstudents') }}">
-              	<img class="lazyOwl" data-src="img/all/chieu-sinh-01.jpg" src="img/blank.gif" alt="" >
-           	  </a>
-            </div>
-            <div class="item">
-              <a href="{{ route('enrolstudents') }}">
-              	<img class="lazyOwl" data-src="img/all/chieu-sinh-02.jpg" src="img/blank.gif" alt="" >
-           	  </a>
-            </div>
-            <div class="item">
-              <a href="{{ route('enrolstudents') }}">
-              	<img class="lazyOwl" data-src="img/all/chieu-sinh-03.jpg" src="img/blank.gif" alt="" >
-           	  </a>
-            </div>
             <div class="item">
               <img class="lazyOwl" data-src="img/all/giaoducthieunhi-trochoi-dangian-1.jpg" src="img/blank.gif" alt="" >
             </div>

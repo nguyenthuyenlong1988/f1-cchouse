@@ -3,18 +3,24 @@
 
 @section('page_title', 'Giới Thiệu')
 @section('page_body_attributes')
-id="intro-page"
+class="intro-page"
 @stop
 
 @section('page_css')
 @parent
 
 <style>
-  #intro-page .content {
+
+  .intro-page #detail-section,
+  .intro-page #navbar ul.navbar-nav > li.active > a {
+    background-color: #6f4c74;
+  }
+
+  .intro-page .content {
     line-height: 1.7;
   }
 
-  #intro-page p::first-letter {
+  .intro-page p::first-letter {
     margin-left: 30px;
   }
 

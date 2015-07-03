@@ -13,6 +13,17 @@
  | home-page.css
  =============================================================================*/
 
+.home-page #enrolstudents-section a {
+  display: block;
+  padding: 4px 15px;
+  background: /*#ffd70d*/ url(../img/enrol_toppage.png);
+  color: #222;
+}
+
+.home-page #detail-section {
+  background-color: #0f9d58;
+}
+
 .home-page .actnews {
   margin-top: 5px;
   padding: 10px;

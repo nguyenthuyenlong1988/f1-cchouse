@@ -16,7 +16,7 @@ html.has-background #header {
 
 #topbar {
   background-color: #fff;
-  border-top: 1px solid #2bd7c6;
+  border-top: 1px solid #4cc4f8;
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
   -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
@@ -61,7 +61,9 @@ html.has-background #header {
 
 #navbar {
   margin-bottom: 0;
-  min-height: 0; /* override bootstrap */
+  min-height: 0; /* override Bootstrap */
+  background-color: #ccc;
+  border-width: 0; /* override Bootstrap */
 }
 
 #navbar a.navbar-brand {
@@ -74,7 +76,7 @@ html.has-background #header {
 #navbar ul.navbar-nav > li > a,
 #navbar ul.navbar-nav > li > a:focus {
   background-color: transparent;
-  color: #fff;
+  color: #333;
 }
 
 #navbar a.navbar-brand:hover,
@@ -85,13 +87,12 @@ html.has-background #header {
 
 #navbar a.navbar-brand.active,
 #navbar ul.navbar-nav > li.active > a {
-  background-color: #fff;
+  background-color: #4cc4f8;
   color: #000;
 }
 
 #navbar-menu-wrapper {
-  background-color: #0f8e50;
-  border: 1px solid #0f8e50;
+  background-color: #ccc;
 }
 
 #navbar .dropdown-menu > li > a:hover,

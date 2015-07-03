@@ -3,13 +3,23 @@
 
 @section('page_title', 'Liên Hệ')
 @section('page_body_attributes')
-id="contact-page"
+id="contact-page" class="contact-page"
 @stop
 
 @section('page_css')
 @parent
 
 <style>
+
+  .contact-page #detail-section,
+  .contact-page #navbar ul.navbar-nav > li.active > a {
+    background-color: #0a9d97;
+  }
+
+  .contact-page #navbar ul.navbar-nav > li.active > a {
+    color: #fff;
+  }
+
 </style>
 
 @stop

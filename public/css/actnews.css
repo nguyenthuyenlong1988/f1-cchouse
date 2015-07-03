@@ -2,6 +2,15 @@
  | actnews-page.css
  =============================================================================*/
 
+.actnews-page #detail-section,
+.actnews-page #navbar ul.navbar-nav > li.active > a {
+  background-color: #0f9d58;
+}
+
+.actnews-page #navbar ul.navbar-nav > li.active > a {
+  color: #fff;
+}
+
 .actnews-page .post {
   margin: 30px 0;
   border-top: 1px solid #ccc;

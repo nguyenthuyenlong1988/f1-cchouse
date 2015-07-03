@@ -5,7 +5,7 @@
 /** Some classes */
 
 html.has-background body {
-  background: #0f9d58 no-repeat fixed;
+  background: /*#0f9d58*/ no-repeat fixed;
   background-size: cover;
 }
 

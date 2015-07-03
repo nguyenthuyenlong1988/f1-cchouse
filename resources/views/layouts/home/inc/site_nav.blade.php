@@ -1,19 +1,11 @@
 {{-- Created at 2015/05/27 05:08 htien Exp $ --}}
 
-@if (! Route::is('enrolstudents'))
-<section id="enrolstudents-section" class="ivy-section">
-  <div class="text-center">
-    <span class="glyphicon glyphicon-star"></span>
-    <a href="{{ route('enrolstudents') }}">Chiêu sinh khóa mới 2015</a>
-    <span class="glyphicon glyphicon-star"></span>
-  </div>
-</section>
-@endif
-
 <nav id="navbar" class="ivy-site-nav ivy-site-navbar navbar">
   <div class="ivy-page-wrapper">
 
     <div id="navbar-menu-wrapper">
+      <?php $menuActive = Route::currentRouteName(); ?>
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -21,14 +13,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand active" href="{{ route('home') }}">
+        <a class="navbar-brand{!! Illuminate\Support\Str::is('home', $menuActive) ? ' active' : '' !!}" href="{{ route('home') }}">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         </a>
       </div>
 
       <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động<span class="sr-only">(current)</span></a></li>
+          <li{!! Illuminate\Support\Str::is('actnews.*', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động<span class="sr-only">(current)</span></a></li>
           <li><a href="javascript:void(0)">Phòng Ban</a></li>
           <li><a href="javascript:void(0)">Ghi Danh Năng Khiếu</a></li>
           <li><a href="javascript:void(0)">Hoạt Động Thanh Thiếu Nhi</a></li>
@@ -36,7 +28,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
+          <li{!! Illuminate\Support\Str::is('contact', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">

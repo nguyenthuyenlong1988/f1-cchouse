@@ -12,14 +12,14 @@
             vun trồng biết bao bạn nhỏ, đã đào tạo được những tài năng về thẩm mỹ nghệ thuật, thể dục thể thao,
             khoa học kỹ thuật, ngoại ngữ và các lãnh vực khác...</p>
             <div class="text-center">
-              <a class="btn btn-success btn-lg btn-block" href="{{ route('welcome') }}">Chương Trình & Lịch Học</a>
+              <a class="btn btn-success btn-lg btn-block" href="{{ route('welcome') }}" style="margin-bottom:10px;">Chương Trình & Lịch Học</a>
             </div>
           </div>
         </div>
         <div class="cuztom-col col-sm-8">
           <div id="dreams-clip-wrapper">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/_Qw40fMgArk?rel=0&amp;showinfo=0&amp;wmode=opaque&amp;theme=light" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" width="640" height="360" src="https://www.youtube.com/embed/ySImLnpAa68?rel=0&amp;showinfo=0&amp;wmode=opaque&amp;theme=light" allowfullscreen></iframe>
             </div>
           </div>
         </div>
