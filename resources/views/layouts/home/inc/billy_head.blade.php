@@ -28,8 +28,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="author" href="https://plus.google.com/+ThichlinuxNet" />
 <link rel="publisher" href="https://plus.google.com/+ThichlinuxNet" />
-<link rel="shortcut icon" href="javascript:void(0)" sizes="16x16" />
-<link rel="icon" href="javascript:void(0)" sizes="16x16" />
+<link rel="shortcut icon" href="favicon.ico" sizes="16x16" />
+<link rel="icon" href="favicon.ico" sizes="16x16" />
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&amp;subset=latin,vietnamese,latin-ext" />
 <!--[if lt IE 9]><script src="vendor/html5shiv/3.7.2/js/html5shiv.min.js"></script><![endif]-->
