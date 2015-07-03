@@ -4,6 +4,8 @@
   <div class="ivy-page-wrapper">
 
     <div id="navbar-menu-wrapper">
+      <?php $menuActive = Route::currentRouteName(); ?>
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -11,14 +13,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand active" href="{{ route('home') }}">
+        <a class="navbar-brand{!! Illuminate\Support\Str::is('home', $menuActive) ? ' active' : '' !!}" href="{{ route('home') }}">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         </a>
       </div>
 
       <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động<span class="sr-only">(current)</span></a></li>
+          <li{!! Illuminate\Support\Str::is('actnews.*', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động<span class="sr-only">(current)</span></a></li>
           <li><a href="javascript:void(0)">Phòng Ban</a></li>
           <li><a href="javascript:void(0)">Ghi Danh Năng Khiếu</a></li>
           <li><a href="javascript:void(0)">Hoạt Động Thanh Thiếu Nhi</a></li>
@@ -26,11 +28,11 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
+          <li{!! Illuminate\Support\Str::is('contact', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Giới Thiệu</a></li>
+              <li><a href="{{ route('intro') }}">Giới Thiệu</a></li>
               <li class="divider"></li>
               <li><a href="#" data-toggle="modal" data-target="#my-message">Thông tin website</a></li>
             </ul>

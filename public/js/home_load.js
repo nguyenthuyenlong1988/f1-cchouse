@@ -17,7 +17,9 @@
   $activityImageSlider.owlCarousel({
     autoPlay: 5000,
 
-    singleItem: true,
+    items: 3,
+
+    singleItem: false,
     slideSpeed: 200,
 
     pagination: false,

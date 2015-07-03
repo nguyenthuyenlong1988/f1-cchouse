@@ -1,10 +1,9 @@
 {{-- Created at 2015/06/01 04:25 htien Exp $ --}}
-{{-- Created at 2015/06/01 04:21 htien Exp $ --}}
 @extends('layouts.home.main_page')
 
-@section('page_title', 'Chào mừng')
+@section('page_title', 'Chào Mừng')
 @section('page_body_attributes')
-id="welcome-page"
+id="welcome-page" class="welcome-page"
 @stop
 
 @section('page_css')
@@ -14,30 +13,24 @@ id="welcome-page"
 
 @stop
 
-@section('content_after')
-
-@include('partials.home.dreams_section')
-
-@stop
-
 @section('content')
 
 <div class="container-fluid">
 
   <div id="children-intl-1" class="text-center">
-    <img src="img/2015-06-01/mung-ngay-quoc-te-thieu-nhi.jpg" alt="" />
+    <img src="img/2015-06-01/mung-ngay-quoc-te-thieu-nhi.jpg" alt="" style="width:100%" />
   </div>
 
   <div id="children-intl-2" role="tabpanel">
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#_evt_ngayhoituoitho" aria-controls="_evt_ngayhoituoitho" role="tab" data-toggle="tab">Ngày Hội Tuổi Thơ - 2015</a></li>
-      <li role="presentation"><a href="#_hoatdongboich" aria-controls="_hoatdongboich" role="tab" data-toggle="tab">Hoạt động bổ ích</a></li>
+      <!--<li role="presentation" class="active"><a href="#_evt_ngayhoituoitho" aria-controls="_evt_ngayhoituoitho" role="tab" data-toggle="tab">Ngày Hội Tuổi Thơ - 2015</a></li>-->
+      <li role="presentation" class="active"><a href="#_hoatdongboich" aria-controls="_hoatdongboich" role="tab" data-toggle="tab">Hoạt động bổ ích</a></li>
       <li role="presentation"><a href="#_lophocnangkhieu" aria-controls="_lophocnangkhieu" role="tab" data-toggle="tab">Lớp học năng khiếu - 2015</a></li>
       <li role="presentation"><a href="#_hinhanh" aria-controls="_hinhanh" role="tab" data-toggle="tab">Hình ảnh</a></li>
       <li role="presentation"><a href="#_lichhoc" aria-controls="_lichhoc" role="tab" data-toggle="tab">Lịch học</a></li>
     </ul>
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="_evt_ngayhoituoitho">
+      <div role="tabpanel" class="tab-pane" id="_evt_ngayhoituoitho">
         <div class="text-center">
           <img src="img/2015-06-01/ngay-hoi-tuoi-tho-2015.jpg" alt="" />
           <h2><strong>NGÀY HỘI TUỔI THƠ</strong></h2>
@@ -73,7 +66,7 @@ id="welcome-page"
           <p><strong>BTC chương trình.</strong></p>
         </div>
       </div>
-      <div role="tabpanel" class="tab-pane" id="_hoatdongboich">
+      <div role="tabpanel" class="tab-pane active" id="_hoatdongboich">
         <img src="img/2015-06-01/brochure-01.jpg" alt="" />
       </div>
       <div role="tabpanel" class="tab-pane" id="_lophocnangkhieu">
