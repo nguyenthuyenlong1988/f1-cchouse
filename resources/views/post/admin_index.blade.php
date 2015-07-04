@@ -12,7 +12,7 @@
 
 <div class="container-fluid">
 
-  <div class="panel panel-primary posts-list">
+  <div class="panel panel-primary panel-dark posts-list">
     <div class="panel-heading">
       <h2 class="title">
         <span class="literal">Tin tức - Hoạt động</span>
@@ -43,7 +43,7 @@
             {{ ivy_echo_date($p->post_date) }}
           </td>
           <td>
-            <a href="{{ route('admin::@dmin-zone.posts.show', $p->id) }}">{{ $p->post_title }}</a>
+            <a href="{{ route('admin::@dmin-zone.posts.show', $p->id) }}"><strong>{{ $p->post_title }}</strong></a>
           </td>
           <td>{{ $p->post_excerpt }}</td>
           <td>

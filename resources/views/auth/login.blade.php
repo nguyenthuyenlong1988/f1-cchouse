@@ -13,7 +13,7 @@
         <div class="panel-heading">Hệ Thống Quản Lý</div>
         <div class="panel-body">
           <div class="text-center">
-            <img src="img/logo_250x250.png" alt="Admin logo" height="150" style="margin-bottom:15px" />
+            <img src="img/home_logo_h120.png" alt="Admin logo" style="margin-bottom:15px" />
           </div>
 
           @if (count($errors) > 0)

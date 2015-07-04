@@ -13,7 +13,7 @@
 
 <div class="container">
 
-  <div class="panel panel-primary">
+  <div class="panel panel-primary panel-dark">
     <div class="panel-heading">
       <span style="margin-right:10px">Bài viết #{{ $post->id }}</span>
       <div class="btn-group" role="group">

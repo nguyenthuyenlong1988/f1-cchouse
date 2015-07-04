@@ -41,7 +41,7 @@
 
 <script src="vendor/modernizr/2.8.3/js/modernizr.min.js"></script>
 <script src="vendor/jquery/1.11.1/js/jquery.min.js"></script>
-<script src="vendor/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="vendor/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 //<![CDATA[
   var
