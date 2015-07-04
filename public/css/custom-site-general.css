@@ -133,25 +133,25 @@ h4, h5, h6 {
  =============================================================================*/
 
 #enrolstudents-section {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 300;
   border-top: 1px solid #4cc4f8;
   letter-spacing: 1px;
   text-align: center;
   text-shadow: 0 1px 4px rgba(0,0,0,.1);
   text-transform: uppercase;
-  word-spacing: 14px;
 }
 
 #enrolstudents-section a {
   display: block;
   padding: 4px 15px;
-  background: /*#ffd70d*/ url(../img/ui_bg_medium_75_cccccc_40x40.png);
+  background: /*#ffd70d*/ url(../img/ui_bg_medium_75_cccccc_40x40.png) center 0;
   color: #222;
 }
 
 #enrolstudents-section a:hover {
   background-image: url(../img/enrol_toppage.png);
+  background-size: cover;
 }
 
 
