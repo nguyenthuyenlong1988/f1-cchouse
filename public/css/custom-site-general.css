@@ -133,10 +133,15 @@ h4, h5, h6 {
  =============================================================================*/
 
 #enrolstudents-section {
+  border-top: 1px solid #4cc4f8;
+}
+
+#enrolstudents-section h2 {
+  margin: 0;
   font-size: 24px;
   font-weight: 300;
-  border-top: 1px solid #4cc4f8;
   letter-spacing: 1px;
+  line-height: inherit;
   text-align: center;
   text-shadow: 0 1px 4px rgba(0,0,0,.1);
   text-transform: uppercase;

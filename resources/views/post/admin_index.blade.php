@@ -12,7 +12,7 @@
 
 <div class="container-fluid">
 
-  <div class="panel panel-primary panel-dark posts-list">
+  <div class="panel panel-primary posts-list">
     <div class="panel-heading">
       <h2 class="title">
         <span class="literal">Tin tức - Hoạt động</span>

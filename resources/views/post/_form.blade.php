@@ -39,10 +39,12 @@
 <div class="form-group" style="margin-top:40px">
   <div class="btn-group">
     @if (Route::currentRouteNamed('admin::@dmin-zone.posts.edit'))
-    <a class="btn btn-info" href="{{ route('admin::@dmin-zone.posts.show', $post->id) }}">Bài viết #{{ $post->id }}</a>
+    <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.show', $post->id) }}">
+      <span class="glyphicon glyphicon-menu-left"></span>
+    </a>
     @endif
     @if (in_array(Route::currentRouteName(), ['admin::@dmin-zone.posts.create', 'admin::@dmin-zone.posts.edit']))
-    {!! Form::submit($button_name, ['class' => 'btn btn-primary', 'onclick' => '_func.setFormSubmitting()']) !!}
+    {!! Form::submit($button_name, ['class' => 'btn btn-success', 'onclick' => '_func.setFormSubmitting()']) !!}
     @endif
   </div>
   @if (Route::currentRouteNamed('admin::@dmin-zone.posts.edit'))
