@@ -15,7 +15,6 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <span style="margin-right:10px">Bài viết #{{ $post->id }}</span>
       <div class="btn-group" role="group">
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}"><span class="glyphicon glyphicon-menu-left"></span></a>
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>

@@ -6,7 +6,12 @@ a {
 }
 
 body {
+  font-family: Roboto, sans-serif;
   background-color: #26292e; /*1d1e23,026649,94a5a0,026649*/
+}
+
+#header, .breadcrumb {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .login-panel, .admin-panel {
@@ -24,18 +29,31 @@ body {
   text-transform: uppercase;
 }
 
-#topbar .ivy-page-wrapper {
-  padding: 20px 15px;
+#topbar ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-#topbar .panel {
-  margin-bottom: 0;
+#topbar ul li {
+  float: left;
+}
+
+#topbar .ivy-page-wrapper {
+}
+
+#topbar .item {
+  display: block;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+#topbar .item:hover {
+  background-color: #4cc4f8;
 }
 
 .panel {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1470px;
   box-shadow: 0 2px 20px rgba(0,0,0,.1)
 }
 

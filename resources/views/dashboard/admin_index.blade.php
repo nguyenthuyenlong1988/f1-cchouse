@@ -7,7 +7,7 @@
 
 <div class="container">
 
-  <div class="panel panel-primary admin-panel">
+  <div class="panel admin-panel">
     <div class="panel-heading">Vùng quản lý</div>
     <div class="panel-body">
       <p>Danh mục các chức năng quản lý chính.</p>

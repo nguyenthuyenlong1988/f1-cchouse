@@ -3,9 +3,21 @@
 <nav id="topbar" class="ivy-site-topbar">
   <div class="ivy-page-wrapper">
     @if (Auth::guest())
-    <a href="{{ url('/') }}" target="_blank">Nhà Văn Hóa Thiếu Nhi Gò Vấp</a>
+    <a class="item" href="{{ url('/') }}" target="_blank"><span class="glyphicon glyphicon-home"></span> Nhà Văn Hóa Thiếu Nhi Gò Vấp</a>
     @else
-    <a href="{{ url('/') }}" target="_blank">Trang chủ</a> &mdash; {{ Auth::user()->name }} &laquo; {{ Auth::user()->email }} &raquo; &mdash; <a href="{{ url('auth/logout') }}">Thoát</a>
+    <ul class="pull-left">
+      <li>
+        <a class="item" href="{{ url('/') }}" target="_blank"><span class="glyphicon glyphicon-home"></span></a>
+      </li>
+    </ul>
+    <ul class="pull-right">
+      <li>
+        <span class="item"><span class="glyphicon glyphicon-user"></span> {{ Auth::user()->name }}</span>
+      </li>
+      <li>
+        <a class="item" href="{{ url('auth/logout') }}"><span class="glyphicon glyphicon-option-vertical"></span></a>
+      </li>
+    </ul>
     @endif
   </div>
 </nav>

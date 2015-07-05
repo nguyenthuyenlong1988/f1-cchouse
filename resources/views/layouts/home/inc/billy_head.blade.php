@@ -31,7 +31,7 @@
 <link rel="shortcut icon" href="favicon.ico" sizes="16x16" />
 <link rel="icon" href="favicon.ico" sizes="16x16" />
 
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&amp;subset=latin,vietnamese,latin-ext" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=latin,vietnamese,latin-ext" />
 <!--[if lt IE 9]><script src="vendor/html5shiv/3.7.2/js/html5shiv.min.js"></script><![endif]-->
 <link rel="stylesheet" href="vendor/bootstrap/3.3.5/css/bootstrap.min.css" />
 
