@@ -2,6 +2,73 @@
  | custom-base.css
  =============================================================================*/
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-button:horizontal {
+  background-color: transparent;
+  width: 4px;
+}
+
+::-webkit-scrollbar-button:start:decrement {
+  display: block;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment {
+  display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  background: url(../img/scrollbar_track.png) repeat-y;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0,0,0,0.035);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.14),inset -1px -1px 0 rgba(0,0,0,0.07)
+}
+
+::-webkit-scrollbar-track:active {
+  background-color: rgba(0,0,0,0.05);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,0.14),inset -1px -1px 0 rgba(0,0,0,0.07)
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 28px;
+  padding-top: 100px;
+  background-clip: padding-box;
+  background-color: #4cc4f8;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),inset 0 -1px 0 rgba(0,0,0,0.07);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4cc4f8;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #007cc2;
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #c0c0c0;
+}
+
 /** Some classes */
 
 html.has-background body {

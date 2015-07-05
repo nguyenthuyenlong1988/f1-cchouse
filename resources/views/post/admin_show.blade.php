@@ -17,7 +17,7 @@
     <div class="panel-heading">
       <span style="margin-right:10px">Bài viết #{{ $post->id }}</span>
       <div class="btn-group" role="group">
-        <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}">&lt;&lt;</a>
+        <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}"><span class="glyphicon glyphicon-menu-left"></span></a>
         <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.edit', $post->id) }}">Chỉnh sửa</a>
       </div>
       <div class="btn-group">
@@ -47,10 +47,14 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="panel">
     <div class="panel-heading">Tóm tắt</div>
     <div class="panel-body">
       {{ $post->post_excerpt }}
     </div>
+  </div>
+  <div class="panel">
     <div class="panel-heading">Nội dung chi tiết</div>
     <div class="panel-body post-content">
       {!! $post->post_content !!}

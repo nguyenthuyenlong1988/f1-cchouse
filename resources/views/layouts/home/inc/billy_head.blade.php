@@ -33,7 +33,7 @@
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&amp;subset=latin,vietnamese,latin-ext" />
 <!--[if lt IE 9]><script src="vendor/html5shiv/3.7.2/js/html5shiv.min.js"></script><![endif]-->
-<link rel="stylesheet" href="vendor/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" href="vendor/bootstrap/3.3.5/css/bootstrap.min.css" />
 
 @yield('page_css')
 
@@ -41,7 +41,7 @@
 
 <script src="vendor/modernizr/2.8.3/js/modernizr.min.js"></script>
 <script src="vendor/jquery/1.11.1/js/jquery.min.js"></script>
-<script src="vendor/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="vendor/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 //<![CDATA[
   var

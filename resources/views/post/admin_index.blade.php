@@ -43,7 +43,7 @@
             {{ ivy_echo_date($p->post_date) }}
           </td>
           <td>
-            <a href="{{ route('admin::@dmin-zone.posts.show', $p->id) }}">{{ $p->post_title }}</a>
+            <a href="{{ route('admin::@dmin-zone.posts.show', $p->id) }}"><strong>{{ $p->post_title }}</strong></a>
           </td>
           <td>{{ $p->post_excerpt }}</td>
           <td>

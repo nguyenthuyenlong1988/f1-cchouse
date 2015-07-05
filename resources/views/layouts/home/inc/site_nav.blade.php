@@ -20,9 +20,8 @@
 
       <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li{!! Illuminate\Support\Str::is('actnews.*', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động<span class="sr-only">(current)</span></a></li>
+          <li{!! Illuminate\Support\Str::is('actnews.*', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động</a></li>
           <li><a href="javascript:void(0)">Phòng Ban</a></li>
-          <li><a href="javascript:void(0)">Ghi Danh Năng Khiếu</a></li>
           <li><a href="javascript:void(0)">Hoạt Động Thanh Thiếu Nhi</a></li>
           <li><a href="javascript:void(0)">Góc Măng Non</a></li>
         </ul>

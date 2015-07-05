@@ -55,6 +55,10 @@ img {
   height: auto;
 }
 
+input::-moz-focus-inner {
+  border: 0;
+}
+
 ol, ul {
   list-style: none;
   padding-left: 0;

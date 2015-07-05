@@ -13,7 +13,7 @@ id="enrolstudents-page"
   #enrolstudents-page #detail-section,
   #enrolstudents-page #navbar a.navbar-brand.active,
   #enrolstudents-page #navbar ul.navbar-nav > li.active > a {
-    background-color: #e85656;
+    background-color: #eab645; /*e85656*/
   }
 
   #enrolstudents-page #navbar a.navbar-brand.active,

@@ -11,13 +11,15 @@
 
 @if (! Route::is('enrolstudents'))
 <section id="enrolstudents-section" class="ivy-section">
-  <div>
+<div>
+  <h2>
     <a href="{{ route('enrolstudents') }}">
       <span class="glyphicon glyphicon-star"></span>
       Chiêu sinh khóa mới 2015
       <span class="glyphicon glyphicon-star"></span>
     </a>
-  </div>
+  </h2>
+</div>
 </section>
 @endif
 
