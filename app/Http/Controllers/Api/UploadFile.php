@@ -39,7 +39,7 @@ class UploadFile extends Controller
                         . '.' . $extension;
 
         $link = $request->getBaseUrl() . '/uploads/' . date('Y') . '-' . date('m');
-        $destination = base_path() . (App::environment('production') ?  '/../../public_html': '/..') . $link;
+        $destination = base_path() . (\App::environment('production') ?  '/../../public_html': '/..') . $link;
 
         if (! file_exists($destination)) {
             mkdir($destination, 0777, TRUE);
@@ -50,7 +50,7 @@ class UploadFile extends Controller
         return response()->json([
             'status'  => 1,
             'message' => 'Uploaded successfully.',
-            'link'    => $link . '/' . $imageName
+            'link'    => $link . '/' . $imageName,
         ]);
     }
 }

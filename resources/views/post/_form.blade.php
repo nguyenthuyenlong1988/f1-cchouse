@@ -15,7 +15,7 @@
   <div class="col-md-4">
     <div class="form-group">
       {!! Form::label('post_avatar', 'Ảnh đại diện', ['class' => 'control-label']) !!}
-      :: <a href="javascript:void(0)" onclick="_func.postResetInput('[name=file]')">Xóa</a>
+      <a class="btn btn-danger btn-xs pull-right" href="javascript:void(0)" onclick="_func.postResetInput('[name=file]')">Xóa</a>
       {!! Form::hidden('post_avatar') !!}
       {!! Form::file('file', ['class' => 'form-control', 'onchange' => '_func.postImgAvatar(this)']) !!}
       <div class="post-avatar">

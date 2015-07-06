@@ -10,7 +10,7 @@
   <li class="active">Tin tức - Hoạt động</li>
 </ol>
 
-<div class="container-fluid">
+<div class="ivy-page-wrapper">
 
   <div class="panel panel-primary posts-list">
     <div class="panel-heading">
@@ -24,7 +24,7 @@
         <a href="javascript:void(0)">Đã xóa</a> ({{ $countDeleted }})
       </div>
     </div>
-    <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th style="min-width:40px">#</th>
