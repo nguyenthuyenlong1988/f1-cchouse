@@ -48,14 +48,16 @@
     @endif
   </div>
   @if (Route::currentRouteNamed('admin::@dmin-zone.posts.edit'))
-  <a class="btn btn-danger pull-right" href="javascript:void(0)" onclick="_func.cfmOnDeleteRecord('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">Xóa bài viết</a>
+  <a class="btn btn-danger pull-right" href="javascript:void(0)" onclick="_func.cfmOnDeleteRecord('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">
+    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Xóa
+  </a>
   @endif
 </div>
 
 <script>
-  var post_avatar = jQuery('#post_avatar').val();
+  var postAvatar = jQuery('#post_avatar').val();
 
-  if (post_avatar.length > 0) {
-    jQuery('.post-avatar img').attr('src', post_avatar);
+  if (postAvatar.length > 0) {
+    jQuery('.post-avatar img').attr('src', postAvatar);
   }
 </script>

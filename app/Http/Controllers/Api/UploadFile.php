@@ -40,6 +40,8 @@ class UploadFile extends Controller
 
         $link = $request->getBaseUrl() . '/uploads/' . date('Y') . '-' . date('m');
         $destination = base_path() . (\App::environment('production') ?  '/../../public_html': '/..') . $link;
+//        $link = 'uploads/' . date('Y') . '-' . date('m');
+//        $destination = base_path() . '/public/' . $link;
 
         if (! file_exists($destination)) {
             mkdir($destination, 0777, TRUE);

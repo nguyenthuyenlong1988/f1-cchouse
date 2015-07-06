@@ -16,7 +16,9 @@
     <div class="panel-heading">
       <h2 class="title">
         <span class="literal">Tin tức - Hoạt động</span>
-        <a class="btn btn-danger" href="{{ route('admin::@dmin-zone.posts.create') }}">Bài viết mới</a>
+        <a class="btn btn-danger btn-sm" href="{{ route('admin::@dmin-zone.posts.create') }}">
+          <span class="glyphicon glyphicon-plus" aria-label="Bài viết mới"></span>
+        </a>
       </h2>
       <div class="list-post-status">
         <a href="javascript:void(0)">Đã đăng tải</a> ({{ $countPublished }})

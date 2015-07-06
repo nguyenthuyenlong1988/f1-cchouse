@@ -14,7 +14,7 @@
 Route::get('test', [
     'as'   => 'test',
     'uses' => function () {
-        return Route::is('test') ? 'true' : 'false';
+        return public_path();
     }
 ]);
 
