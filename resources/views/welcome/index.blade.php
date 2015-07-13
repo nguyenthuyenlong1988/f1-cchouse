@@ -9,7 +9,7 @@ id="welcome-page" class="welcome-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="css/welcome.css" media="all" />
+<link rel="stylesheet" href="assets/home/welcome.css" />
 
 @stop
 
@@ -18,7 +18,7 @@ id="welcome-page" class="welcome-page"
 <div class="container-fluid">
 
   <div id="children-intl-1" class="text-center">
-    <img src="img/2015-06-01/mung-ngay-quoc-te-thieu-nhi.jpg" alt="" style="width:100%" />
+    <img src="media/2015-06-01/mung-ngay-quoc-te-thieu-nhi.jpg" alt="" style="width:100%" />
   </div>
 
   <div id="children-intl-2" role="tabpanel">
@@ -32,7 +32,7 @@ id="welcome-page" class="welcome-page"
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane" id="_evt_ngayhoituoitho">
         <div class="text-center">
-          <img src="img/2015-06-01/ngay-hoi-tuoi-tho-2015.jpg" alt="" />
+          <img src="media/2015-06-01/ngay-hoi-tuoi-tho-2015.jpg" alt="" />
           <h2><strong>NGÀY HỘI TUỔI THƠ</strong></h2>
           <h3><strong>CHÀO MỪNG QUỐC TẾ THIẾU NHI 1/6/2015</strong></h3>
         </div>
@@ -67,19 +67,19 @@ id="welcome-page" class="welcome-page"
         </div>
       </div>
       <div role="tabpanel" class="tab-pane active" id="_hoatdongboich">
-        <img src="img/2015-06-01/brochure-01.jpg" alt="" />
+        <img src="media/2015-06-01/brochure-01.jpg" alt="" />
       </div>
       <div role="tabpanel" class="tab-pane" id="_lophocnangkhieu">
-        <img src="img/2015-06-01/brochure-02.jpg" alt="" />
+        <img src="media/2015-06-01/brochure-02.jpg" alt="" />
       </div>
       <div role="tabpanel" class="tab-pane" id="_hinhanh">
-        <img src="img/2015-06-01/hinhanh-02.jpg" alt="" />
+        <img src="media/2015-06-01/hinhanh-02.jpg" alt="" />
         <br />
-        <img src="img/2015-06-01/hinhanh-01.jpg" alt="" />
+        <img src="media/2015-06-01/hinhanh-01.jpg" alt="" />
       </div>
       <div role="tabpanel" class="tab-pane" id="_lichhoc">
         <div class="text-center" style="margin: 30px auto;max-width:200px;">
-          <a class="btn btn-danger btn-lg btn-block" href="img/2015-06-01/Lich_Hoc_1-6.docx" style="color: #fff">Download lịch học</a>
+          <a class="btn btn-danger btn-lg btn-block" href="media/files/Lich_Hoc_20150106.docx" style="color: #fff">Download lịch học</a>
         </div>
         <div style="margin: auto;padding: 15px;max-width: 600px;border: 1px solid #333;">
           <h4 class="text-center"><strong>HOẠT ĐỘNG TRỌNG TÂM HÈ</strong></h4>
@@ -88,7 +88,7 @@ id="welcome-page" class="welcome-page"
           <p>- Chương trình : “Một ngày làm nhà nông” – lần 2.</p>
           <p>- Sân chơi Hè 2015 tổ chức tại các phường – Quận Gò Vấp.</p>
         </div>
-        <img src="img/2015-06-01/bando.jpg" alt="" />
+        <img src="media/2015-06-01/bando.jpg" alt="" />
       </div>
     </div>
   </div>

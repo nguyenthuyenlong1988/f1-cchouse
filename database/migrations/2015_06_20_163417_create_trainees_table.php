@@ -14,13 +14,13 @@ class CreateTraineesTable extends Migration
     {
         Schema::create('trainees', function (Blueprint $table) {
             $table->string('id', 36)->primary();
-            $table->string('first_name', 30);
-            $table->string('last_name', 30);
-            $table->unsignedInteger('birthday');
+            $table->string('first_name', 30)->default('');
+            $table->string('last_name', 30)->default('');
+            $table->unsignedInteger('birthday')->default(0);
             $table->tinyInteger('sex', FALSE, TRUE)->default(0);
-            $table->string('address_line1', 50);
-            $table->string('address_line2', 50);
-            $table->string('note');
+            $table->string('address_line1', 50)->default('');
+            $table->string('address_line2', 50)->default('');
+            $table->string('note')->default('');
 
             $table->unsignedInteger('created_at');
             $table->unsignedInteger('updated_at');

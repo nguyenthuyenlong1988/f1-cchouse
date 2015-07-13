@@ -9,18 +9,7 @@ id="contact-page" class="contact-page"
 @section('page_css')
 @parent
 
-<style>
-
-  .contact-page #detail-section,
-  .contact-page #navbar ul.navbar-nav > li.active > a {
-    background-color: #0a9d97;
-  }
-
-  .contact-page #navbar ul.navbar-nav > li.active > a {
-    color: #fff;
-  }
-
-</style>
+<link rel="stylesheet" href="assets/home/contact.css" />
 
 @stop
 
@@ -63,7 +52,7 @@ id="contact-page" class="contact-page"
         </div>
       </div>
       <div id="simple-map" class="tab-pane fade" role="tabpanel">
-        <img alt="lien-he-nha-thieu-nhi-go-vap" src="img/lien-he/lien-he-01.jpg" />
+        <img src="media/p_lienhe/lien-he-01.jpg" alt="" />
       </div>
     </div>
 

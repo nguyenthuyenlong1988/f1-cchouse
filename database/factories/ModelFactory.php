@@ -64,6 +64,7 @@ $factory->defineAs(NhaThieuNhi\Post::class, 'act_news', function ($faker) {
 
     return [
         'post_author'  => '',
+        // post_date => handled by trigger
         'post_type'    => 'post',
         'post_title'   => $title,
         'post_excerpt' => $faker->text(rand(150, 300)),

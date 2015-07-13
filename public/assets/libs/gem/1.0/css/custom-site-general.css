@@ -1,0 +1,395 @@
+/*=============================================================================
+ | custom-site-general.css
+ =============================================================================*/
+
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+h4, h5, h6 {
+  font-weight: 400;
+}
+
+#page {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+}
+
+.cuztom-row:before,
+.cuztom-row:after {
+  display: table;
+  content: ' ';
+}
+
+.cuztom-row:after {
+  clear: both;
+}
+
+.billy-sep {
+  margin: 1.5em auto 0;
+  padding-bottom: 1.5em;
+  width: 85%;
+  height: 1px;
+  border-top: 4px dotted #ddd;
+}
+
+.billy-copyright {}
+
+.page-header {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 2px solid #e57979;
+  text-transform: uppercase;
+}
+
+.page-header.header-large {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.page-header small {
+  font-weight: 300;
+}
+
+.page-heading {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-heading small {
+  font-weight: 300;
+}
+
+.text-large {
+  font-size: 150%;
+}
+
+/** Search */
+
+#site-search-wrapper {
+  padding: 0 0 8px;
+}
+
+#site-search {
+  position: relative;
+  padding: 10px 8px 0;
+  border-bottom: 1px solid #c4c7cb;
+}
+
+#site-search .search-input,
+#site-search .search-btn {
+  outline: none;
+}
+
+#site-search .search-input {
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-left: 24px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  background-color: transparent;
+  border-width: 0;
+}
+
+#site-search .search-btn {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/find_24.png) no-repeat;
+  border-width: 0;
+  text-indent: -999999px;
+}
+
+/** Page Layout */
+
+/** Info Box Style */
+
+/** Children Page Links */
+
+/** Content Area */
+
+/** Aside Post Format Style */
+
+/** Link Post Format Style */
+
+/** Gallery Post Format Style */
+
+/** Post Style */
+
+/** Post Thumbnail Style */
+
+/*=============================================================================
+ | custom-section-enrolstudents.css
+ =============================================================================*/
+
+#enrolstudents-section h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: inherit;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0,0,0,.1);
+  text-transform: uppercase;
+}
+
+#enrolstudents-section a {
+  display: block;
+  padding: 4px 15px;
+  background: /*#ffd70d*/ url(../img/ui_bg_medium_75_cccccc_40x40.png) center 0;
+  color: #222;
+}
+
+#enrolstudents-section a:hover {
+  background-image: url(../img/enrol_toppage.png);
+  background-size: cover;
+}
+
+
+#enrolstudents-section .glyphicon {
+  color: #f74747;
+}
+
+/*=============================================================================
+ | custom-section-activity.css
+ =============================================================================*/
+
+/** Activity Image Style */
+
+#activity-section {
+  position: relative;
+}
+
+#activity-wrapper {
+}
+
+#activity-wrapper .cuztom-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#activity-image-wrapper {
+}
+
+#activity-image-wrapper img {
+  width: 100%;
+}
+
+#activity-image-slider {
+  position: relative;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/** Activity Menu Styles */
+
+#activity-menu-wrapper {
+  padding: 10px 15px;
+  background-color: #ed9c38;
+  background-image: -webkit-linear-gradient(left top, #ed9c38 , #fe7f28);
+  backgorund-image: -moz-linear-gradient(bottom right, #ed9c38, #fe7f28);
+  background-image: -o-linear-gradient(bottom right, #ed9c38, #fe7f28);
+  background-image: linear-gradient(to bottom right, #ed9c38, #fe7f28);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#activity-menu-wrapper h3 {
+  margin-top: 1px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #463114;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#activity-menu-wrapper .buttons {
+  margin-top: 17px;
+  height: 17px;
+  text-align: center;
+}
+
+#activity-menu-wrapper .buttons a {
+  display: inline-block;
+  overflow: hidden;
+  width: 25px;
+  height: 17px;
+  text-indent: -999em;
+  background: transparent url(../img/quickmenu-arrow.png) no-repeat scroll 0 0;
+}
+
+#activity-menu-wrapper .buttons .prev {
+  background-position: -25px 0;
+}
+
+#activity-menu-wrapper .buttons .next {
+  margin-left: 15px;
+  background-position: 0 0;
+}
+
+@media (max-width: 1199px) {
+
+  #activity-menu-wrapper .buttons {
+    margin-top: 7px;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  #activity-menu-wrapper .buttons {
+    margin-top: 15px;
+  }
+
+}
+
+#activity-menu {
+  position: relative;
+  overflow: hidden;
+  height: 276px;
+}
+
+#activity-menu ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+#activity-menu ul li {
+  position: relative;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+#activity-menu ul .menu-box {
+  display: block;
+  padding: 12px 50px 12px 10px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #f9b562;
+  text-decoration: none;
+}
+
+#activity-menu ul .menu-box:hover {
+  background-color: #f5bf4c;
+}
+
+#activity-menu ul .title {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #463114;
+}
+
+#activity-menu ul p {
+  overflow: hidden;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+#activity-menu ul .arrow {
+  position: absolute;
+  top: 14px;
+  right: 7px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../img/quickmenu-menubox-arrow.png) no-repeat left bottom;
+}
+
+
+/*=============================================================================
+ | custom-section-dreams.css
+ =============================================================================*/
+
+#dreams-section {
+  background-color: #fff;
+}
+
+#dreams-wrapper {
+  background-color: #fff;
+}
+
+#dreams-wrapper .cuztom-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+/*=============================================================================
+ | custom-section-featured.css
+ =============================================================================*/
+
+#featured-wrapper {
+  margin-top: 15px;
+  font-size: 90%;
+  background-color: #fff;
+  border: 2px solid #fe8228;
+}
+
+
+/*=============================================================================
+ | custom-section-detail.css
+ =============================================================================*/
+
+.box-title {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sidebar .box-title,
+#addition-wrapper .box-title {
+  margin-top: 0;
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+#detail-section {
+  padding: 20px 0;
+  background-color: #515a59;
+}
+
+#detail-wrapper {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: #fff; /*f2fffe*/
+  border-top: 1px solid #29a5c2;
+  border-bottom: 1px solid #29a5c2;
+}
+
+#addition-wrapper {
+  margin-top: 15px;
+  background-color: #fff;
+  border: 2px solid #b74ac8;
+}
+
+#addition-wrapper .box-title {
+  margin-top: 5px;
+  text-align: left;
+}
+
+
+/*=============================================================================
+ | custom-copyright.css
+ =============================================================================*/
+
+#copyright {
+  margin: 12px 0;
+}

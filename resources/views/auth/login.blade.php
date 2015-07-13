@@ -3,6 +3,17 @@
 
 @section('page_title', 'Đăng nhập')
 
+{{-- Load resources --}}
+
+@section('page_css')
+@parent
+
+<link rel="stylesheet" href="assets/admin/login.css" />
+
+@stop
+
+{{-- Load content --}}
+
 @section('content')
 
 <div class="container-fluid">
@@ -13,7 +24,7 @@
         <div class="panel-heading">Hệ Thống Quản Lý</div>
         <div class="panel-body">
           <div class="text-center">
-            <img src="img/home_logo_h120.png" alt="Admin logo" style="margin-bottom:15px" />
+            <img src="assets/img/home_logo_h120.png" alt="Admin logo" style="margin-bottom:15px" />
           </div>
 
           @if (count($errors) > 0)

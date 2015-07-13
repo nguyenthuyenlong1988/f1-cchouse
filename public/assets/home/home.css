@@ -1,0 +1,42 @@
+/*=============================================================================
+ | home/home.css
+ =============================================================================*/
+
+.home-page #enrolstudents-section a {
+  display: block;
+  padding: 4px 15px;
+  background-image: url(../img/enrol_toppage.png);
+  background-size: cover;
+  color: #222;
+}
+
+.home-page #detail-section {
+  background-color: #0f9d58;
+}
+
+.home-page .actnews {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px dotted #84cdc7;
+}
+
+.home-page .actnews-first {
+  padding: 10px 0 20px;
+  border-width: 0;
+  border-top: 2px dashed #84cdc7;
+}
+
+.home-page .actnews .actnews-title {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.home-page .actnews-first .actnews-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.home-page .actnews .actnews-title a {
+  color: #222;
+}

@@ -9,40 +9,7 @@ id="enrolstudents-page"
 @section('page_css')
 @parent
 
-<style>
-  #enrolstudents-page #detail-section,
-  #enrolstudents-page #navbar a.navbar-brand.active,
-  #enrolstudents-page #navbar ul.navbar-nav > li.active > a {
-    background-color: #eab645; /*e85656*/
-  }
-
-  #enrolstudents-page #navbar a.navbar-brand.active,
-  #enrolstudents-page #navbar ul.navbar-nav > li.active > a {
-    color: #fff;
-  }
-
-  #enrolstudents-page .content p.level-1 {
-    text-indent: 50px;
-  }
-
-  #enrolstudents-page .content p.level-2 {
-    text-indent: 80px;
-  }
-
-  #enrolstudents-page .content h3 {
-    text-transform: uppercase;
-  }
-
-  #enrolstudents-page .content h3 strong {
-    font-weight: 400;
-  }
-
-  .pg-source {
-    margin-top: 30px;
-    font-weight: bold;
-    text-align: right;
-  }
-</style>
+<link rel="stylesheet" href="assets/home/enrolstudents.css" />
 
 @stop
 
@@ -68,7 +35,7 @@ id="enrolstudents-page"
     Khiêu vũ giao tiếp…</p>
 
     <div class="pg-image pg-image-one">
-      <img src="img/chieu-sinh/chieu-sinh-03.jpg" alt="Nhà thiếu nhi gò vấp chiêu sinh các lớp năng khiếu" width="960" />
+      <img src="media/p_chieusinh/chieu-sinh-03.jpg" alt="Nhà thiếu nhi gò vấp chiêu sinh các lớp năng khiếu" width="960" />
     </div>
 
     <h4>1.2. Bộ môn thể thao: </h4>
@@ -77,7 +44,7 @@ id="enrolstudents-page"
     Võ thuật (võ Thiếu Lâm, Vovinam, Akido, Taekwondo, Vịnh Xuân Quyền)…</p>
 
     <div class="pg-image pg-image-one">
-      <img src="img/chieu-sinh/chieu-sinh-01.jpg" alt="Nhà thiếu nhi gò vấp chiêu sinh các lớp năng khiếu" width="960" />
+      <img src="media/p_chieusinh/chieu-sinh-01.jpg" alt="Nhà thiếu nhi gò vấp chiêu sinh các lớp năng khiếu" width="960" />
     </div>
 
     <h4>1.3. Bộ môn Sáng tạo kỹ thuật: </h4>
@@ -91,7 +58,7 @@ id="enrolstudents-page"
     Búp Sen Hồng, trại hè thiếu nhi...</p>
 
     <div class="pg-image pg-image-one">
-      <img src="img/chieu-sinh/chieu-sinh-02.jpg" alt="Nhà thiếu nhi gò vấp chiêu sinh các lớp năng khiếu" width="960" />
+      <img src="media/p_chieusinh/chieu-sinh-02.jpg" alt="Nhà thiếu nhi gò vấp chiêu sinh các lớp năng khiếu" width="960" />
     </div>
 
     <h3><span class="glyphicon glyphicon-list-alt"></span> <strong>2. Hình thức đào tạo</strong></h3><hr />

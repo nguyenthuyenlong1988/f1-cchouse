@@ -147,6 +147,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Vinkla\Hashids\HashidsServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -205,6 +206,7 @@ return [
         'Uuid'      => Webpatser\Uuid\Uuid::class,
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'Hashids'   => Vinkla\Hashids\Facades\Hashids::class,
+        'Image'     => Intervention\Image\Facades\Image::class,
 
     ],
 

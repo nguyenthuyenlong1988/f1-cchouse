@@ -4,8 +4,8 @@
 @section('page_title', 'Bài viết mới')
 
 @section('page_js_load')
-  @parent
-  <script>_func.cfmOnClose()</script>
+@parent
+<script src="assets/admin/postcreate.js"></script>
 @stop
 
 @section('content')

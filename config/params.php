@@ -15,7 +15,7 @@ return [
   |
   */
 
-  'app_name'           => 'nhathieunhigovap',
+  'app_name'           => 'nhathieunhi',
   'site_name'          => 'Nhà Thiếu Nhi Gò Vấp',
   'site_contact_email' => 'contact@nvhtien.com',
 

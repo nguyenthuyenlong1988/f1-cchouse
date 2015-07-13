@@ -9,7 +9,7 @@ id="actnews-index" class="actnews-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="css/actnews.css" media="all" />
+<link rel="stylesheet" href="assets/home/actnews.css" media="all" />
 
 @stop
 
@@ -47,7 +47,7 @@ id="actnews-index" class="actnews-page"
         @unless(empty($p->post_avatar))
         <div class="post-avatar">
           <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">
-            <img src="{{ $p->post_avatar }}" alt="" />
+            <img src="{{ route('_image.index') }}/{{ $p->post_avatar }}" alt="" />
           </a>
         </div>
         @endunless
@@ -67,7 +67,7 @@ id="actnews-index" class="actnews-page"
         @unless(empty($p->post_avatar))
         <div class="post-avatar">
           <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">
-            <img src="{{ $p->post_avatar }}" alt="" />
+            <img src="{{ route('_image.index') }}/{{ $p->post_avatar }}" alt="" />
           </a>
         </div>
         @endunless

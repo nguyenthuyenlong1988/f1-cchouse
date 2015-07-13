@@ -3,10 +3,21 @@
 
 @section('page_title', 'Sửa bài viết #' . $post->id)
 
+{{-- Load resources --}}
+
 @section('page_js_load')
-  @parent
-  <script>_func.cfmOnClose()</script>
+
+<script src="assets/libs/froala-editor/1.2.7/js/froala_editor.min.js"></script>
+<!--[if lt IE 9]><script src="assets/libs/froala-editor/1.2.7/js/froala_editor_ie8.min.js"></script><![endif]-->
+<script src="assets/libs/froala-editor/1.2.7/js/plugins/char_counter.min.js"></script>
+<script src="assets/libs/froala-editor/1.2.7/js/plugins/fullscreen.min.js"></script>
+<script src="assets/libs/froala-editor/1.2.7/js/plugins/tables.min.js"></script>
+@parent
+<script src="assets/admin/postedit.js"></script>
+
 @stop
+
+{{-- Load content --}}
 
 @section('content')
 

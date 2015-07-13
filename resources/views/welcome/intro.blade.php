@@ -9,51 +9,7 @@ class="intro-page"
 @section('page_css')
 @parent
 
-<style>
-
-  .intro-page #detail-section,
-  .intro-page #navbar ul.navbar-nav > li.active > a {
-    background-color: #6f4c74;
-  }
-
-  .intro-page .content {
-    line-height: 1.7;
-  }
-
-  .intro-page p::first-letter {
-    margin-left: 30px;
-  }
-
-  .pg-bg-skyblue {
-    margin: 0 -15px;
-    padding: 10px 15px;
-    background-color: #7be0dc;
-  }
-
-  .pg-image {
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-
-  .pg-image-one img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .pg-image .img-note {
-    display: block;
-    margin-top: 5px;
-    font-size: 96%;
-    text-align: center;
-  }
-
-  .pg-source {
-    margin-top: 30px;
-    font-weight: bold;
-    text-align: right;
-  }
-</style>
+<link rel="stylesheet" href="assets/home/intro.css" />
 
 @stop
 
@@ -93,7 +49,7 @@ class="intro-page"
     và được đầu tư công phu nhất từ trước đến nay về mọi phương diện.
     </p>
     <div class="pg-image pg-image-one">
-      <img src="img/gioi-thieu/gioi-thieu-01.jpg" alt="Giới thiệu nhà thiếu nhi" />
+      <img src="media/p_gioithieu/gioi-thieu-01.jpg" alt="Giới thiệu nhà thiếu nhi" />
       <span class="img-note">"Sử ca Việt Nam" đã trở thành chương trình thường niên của Nhà thiếu nhi quận</span>
     </div>
     <p>
