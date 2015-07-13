@@ -6,7 +6,7 @@
 [![How to get project](http://img.youtube.com/vi/AvKp40N2hkM/0.jpg)](http://www.youtube.com/watch?v=AvKp40N2hkME)
 
 
-## Chạy project
+## Thiết lập project
 
 #### **Bước 1**: thực thi lệnh sau để tạo thư mục `vendor` và tự động tải về thư viện.
 
