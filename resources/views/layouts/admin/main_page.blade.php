@@ -7,9 +7,6 @@
 
 @section('page_css')
 
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
-<link rel="stylesheet" href="assets/libs/froala-editor/1.2.7/css/froala_editor.min.css" />
-<link rel="stylesheet" href="assets/libs/froala-editor/1.2.7/css/froala_style.min.css" />
 <link rel="stylesheet" href="assets/admin/base.css" media="all" />
 
 @stop

@@ -5,6 +5,15 @@
 
 {{-- Load resources --}}
 
+@section('page_css')
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="assets/libs/froala-editor/1.2.7/css/froala_editor.min.css" />
+<link rel="stylesheet" href="assets/libs/froala-editor/1.2.7/css/froala_style.min.css" />
+@parent
+
+@stop
+
 @section('page_js_load')
 
 <script src="assets/libs/froala-editor/1.2.7/js/froala_editor.min.js"></script>
