@@ -149,7 +149,7 @@ var
 
                     resetInput: function (el)
                     {
-                        var $el = $(el);
+                        var $el = jquery(el);
                         $el.wrap('<form>').closest('form').get(0).reset();
                         $el.unwrap();
                     }
@@ -579,7 +579,7 @@ var
     {
         _func.resetInput(el);
         _$('#post_avatar').val('');
-        _$('.post-avatar img').attr('src', 'img/blank.gif');
+        _$('.post-avatar img').attr('src', 'assets/img/blank.gif');
     };
 
     /**
