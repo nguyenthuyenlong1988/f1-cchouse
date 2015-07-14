@@ -16,8 +16,18 @@ $factory->defineAs(NhaThieuNhi\User::class, 'admin', function () {
     return [
         'id'             => Uuid::generate(),
         'name'           => 'Administrator',
-        'email'          => 'ops@hva.io',
+        'email'          => 'billytien@hva.io',
         'password'       => bcrypt('@Ssecret*7979#'),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->defineAs(NhaThieuNhi\User::class, 'operator', function () {
+    return [
+        'id'             => Uuid::generate(),
+        'name'           => 'Administrator',
+        'email'          => 'ops@hva.io',
+        'password'       => bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
 });
