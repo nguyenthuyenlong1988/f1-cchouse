@@ -15,6 +15,7 @@ class _MkForTest extends Seeder
     Model::unguard();
 
     factory(NhaThieuNhi\User::class, 'admin')->create();
+    factory(NhaThieuNhi\User::class, 'operator')->create();
     factory(NhaThieuNhi\User::class, 'auth_user', 20)->create();
 
     factory(NhaThieuNhi\Post::class, 'act_news', 18)->create();
