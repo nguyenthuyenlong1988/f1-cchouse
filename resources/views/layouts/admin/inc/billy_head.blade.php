@@ -52,7 +52,7 @@
       client_time            : new Date().getTime(),
       site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),
       page_base_url          : '{{ Request::getBaseUrl() }}',
-      page_assets_url        : '{{ Request::getBaseUrl() }}',
+      page_assets_url        : '{{ Request::getBaseUrl() }}/assets',
       page_getimage          : '{{ route('_image.index') }}',
       page_title             : decodeURIComponent('{{ rawurlencode(config('params.page_title')) }}'),
       page_charset           : '{{ config('params.page_charset') }}',

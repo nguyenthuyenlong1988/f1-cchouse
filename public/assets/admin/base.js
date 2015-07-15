@@ -5,54 +5,26 @@
  * Created by Tien Nguyen on 2015/07/09 16:40.
  */
 
-(function (global, factory)
-{
-    'use strict';
-
-    if (_hasModule) {
-        module.exports = factory(global);
-    }
-    else {
-        factory(global);
-    }
-
-}(_tienScope, function (global)
-{
-    'use strict';
-
-    var
-        _TienJS = global.TienJS,
-        factory = function (TienJS)
-        {
-            if (!TienJS) {
-                throw new Error('Application requires Angular and TienJS. Check out library is missing.');
-            }
-
-            var
-                appName = TienJS.config['app_name'] + '_admin',
-                app = {};
-
-
-            return app;
-        };
-
-    if (typeof define === 'function' && define.amd) {
-        define('adminApp', ['tienjs'], function (tienJS)
-        {
-            return factory(tienJS);
-        });
-    }
-    else {
-        return factory(_TienJS);
-    }
-}));
-
 (function (global)
 {
     'use strict';
 
     var
-        TienJS = global.TienJS,
+        _goog = global.goog,
+        _angular = global.angular,
+        _TienJS = global.TienJS;
+
+    if (!_goog || !_angular || !_TienJS) {
+        throw Error('Application requires Google Closure Library, AngularJS and TienJS. Check out library is missing.');
+    }
+
+}(_tienScope));
+
+(function (global, TienJS)
+{
+    'use strict';
+
+    var
         cfg = TienJS.config,
         $ = global.jQuery;
 
@@ -92,5 +64,4 @@
         });
     }
 
-}(_tienScope));
-
+}(_tienScope, _tienScope.TienJS));
