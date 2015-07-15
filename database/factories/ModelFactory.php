@@ -37,7 +37,7 @@ $factory->defineAs(NhaThieuNhi\User::class, 'auth_user', function ($faker) {
         'id'             => Uuid::generate(),
         'name'           => $faker->name,
         'email'          => $faker->email,
-        'password'       => str_random(10),
+        'password'       => bcrypt('demo'),
         'remember_token' => str_random(10),
     ];
 });
