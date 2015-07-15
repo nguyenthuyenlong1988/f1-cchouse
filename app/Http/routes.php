@@ -11,12 +11,16 @@
 |
 */
 
+
+// Test URL
 Route::get('test', [
     'as'   => 'test',
     'uses' => function () {
-        return public_path();
+        return 'This URL is only for testing!';
     }
 ]);
+
+// Pages URL
 
 Route::get('/', [
     'as'   => 'home',
@@ -112,9 +116,11 @@ Route::group([
         'as'         => 'func::',
         'middleware' => 'auth'
     ], function () {
+
+        // api/_upload_image.py
         Route::match(['post', 'put'], '_upload_image.py', [
             'as'   => '_upload_image.store',
-            'uses' => 'UploadFile@storeImage'
+            'uses' => 'FileController@storeImage'
         ]);
         Route::get('_upload_image.py', [
             'as'   => '_upload_image.index',
@@ -126,6 +132,12 @@ Route::group([
     });
 
 });
+
+// image
+Route::get('image/{name?}', [
+    'as'   => '_image.index',
+    'uses' => 'Api\FileController@indexImage'
+])->where('name', '^[a-z0-9_-]+(/[a-z0-9_-]+)*\.(jpg|png|gif)$');
 
 // Default controllers
 

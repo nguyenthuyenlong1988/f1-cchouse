@@ -9,7 +9,7 @@ id="actnews-show" class="actnews-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="css/actnews.css" media="all" />
+<link rel="stylesheet" href="assets/home/actnews.css" media="all" />
 
 @stop
 
@@ -21,7 +21,7 @@ id="actnews-show" class="actnews-page"
   <h1 class="page-header header-large">{{ $actNews->post_title }}</h1>
   @unless(empty($actNews->post_avatar))
   <div class="post-avatar">
-    <img src="{{ $actNews->post_avatar }}" alt="" />
+    <img src="{{ route('_image.index') }}/{{ $actNews->post_avatar }}" alt="" />
   </div>
   @endunless
   <div class="row">

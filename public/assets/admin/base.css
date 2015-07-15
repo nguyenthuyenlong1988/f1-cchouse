@@ -1,0 +1,152 @@
+@import '../libs/gem/1.0/css/ivy-override.css';
+@import '../libs/gem/1.0/css/ivy-base.css';
+@import '../libs/gem/1.0/css/ivyA-override.css';
+@import '../libs/gem/1.0/css/customA-base.css';
+
+.ivy-topbar-left {
+  float: left;
+}
+
+.ivy-topbar-right {
+  float: right;
+}
+
+.ivy-topbar-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+a {
+  color: #1c4386;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  background-color: #26292e; /*1d1e23,026649,94a5a0,026649*/
+}
+
+#header, .breadcrumb {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.login-panel, .admin-panel {
+  margin-top: 20px;
+}
+
+#topbar {
+  font-size: 16px;
+  background-color: #01addf;
+  color: #fff;
+}
+
+#topbar a.item {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#topbar ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#topbar ul li.topbar-item {
+  float: left;
+}
+
+#topbar .ivy-page-wrapper {
+}
+
+#topbar .item {
+  display: block;
+  padding: 20px 22px;
+  cursor: pointer;
+}
+
+#topbar .item:hover {
+  background-color: #4cc4f8;
+}
+
+.panel {
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 20px rgba(0,0,0,.1)
+}
+
+.panel-primary .panel-heading {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+}
+
+.panel.panel-dark > .panel-heading {
+  background-color: #2a2d34;
+}
+
+.panel-primary > .panel-heading {
+  color: #c3e0ff;
+}
+
+.breadcrumb {
+  background-color: #26292e;
+}
+
+.breadcrumb a {
+  color: #00add2;
+  text-transform: uppercase;
+}
+
+.posts-list.panel-primary .list-post-status a {
+  color: #a7bad8;
+}
+
+.posts-list.panel-primary .list-post-status a:hover {
+  color: #c0eaff;
+}
+
+.posts-list h2.title {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.posts-list h2.title .literal {
+  margin-right: 15px;
+}
+
+.panel .post-avatar {
+  overflow: hidden;
+  margin-top: 15px;
+  height: 250px;
+  border: 1px dashed #ccc;
+}
+
+.panel .post-avatar img {
+  max-width: 100%;
+}
+
+.panel .post-content table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.panel .post-content table thead th {
+  padding: 3px 5px;
+  border: 1px solid #aaa;
+  border-bottom-width: 2px;
+}
+
+.panel .post-content table tbody td {
+  padding: 3px 5px;
+  border: 1px solid #bbb;
+}
+
+.froala-box:after {
+  bottom: -30px;
+  font-size: 24px;
+  color: #666;
+}
+
+.menu-profile,
+.menu-notification,
+.menu-preference {
+  position: relative;
+}

@@ -1,26 +1,42 @@
 {{-- Created at 2015/06/01 04:00 htien Exp $ --}}
 
 <section id="activity-section" class="ivy-section">
-  <div>
+  @if (! Route::is('enrolstudents'))
+  <div class="ivy-page-wrapper">
+    <section id="enrolstudents-section" class="ivy-section">
+    <div>
+      <h2>
+        <a href="{{ route('enrolstudents') }}">
+          <span class="glyphicon glyphicon-star"></span>
+          Chiêu sinh khóa mới 2015
+          <span class="glyphicon glyphicon-star"></span>
+        </a>
+      </h2>
+    </div>
+    </section>
+  </div>
+  @endif
+
+  <div class="ivy-page-wrapper">
     <h2 class="hidden">Activities</h2>
     <div id="activity-wrapper">
       <div class="cuztom-row">
 
         <div id="activity-image-wrapper">
           <div class="ribbon"></div>
-          <img class="cover-image" src="img/demo/slide-image-4.jpg" alt="" />
+          <img class="cover-image" src="assets/img/demo/slide-image-4.jpg" alt="" />
           <div id="activity-image-slider" class="owl-carousel">
             <div class="item">
-              <img class="lazyOwl" data-src="img/all/giaoducthieunhi-trochoi-dangian-1.jpg" src="img/blank.gif" alt="" >
+              <img class="lazyOwl" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-1.jpg" src="assets/img/blank.gif" alt="" >
             </div>
             <div class="item">
-              <img class="lazyOwl" data-src="img/all/giaoducthieunhi-trochoi-dangian-2.jpg" src="img/blank.gif" alt="" />
+              <img class="lazyOwl" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-2.jpg" src="assets/img/blank.gif" alt="" />
             </div>
             <div class="item">
-              <img class="lazyOwl" data-src="img/all/giaoducthieunhi-trochoi-dangian-3.jpg" src="img/blank.gif" alt="" />
+              <img class="lazyOwl" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-3.jpg" src="assets/img/blank.gif" alt="" />
             </div>
             <div class="item">
-              <img class="lazyOwl" data-src="img/all/giaoducthieunhi-trochoi-dangian-4.jpg" src="img/blank.gif" alt="" />
+              <img class="lazyOwl" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-4.jpg" src="assets/img/blank.gif" alt="" />
             </div>
           </div>
         </div>

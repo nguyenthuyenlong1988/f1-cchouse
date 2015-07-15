@@ -19,15 +19,16 @@
       {!! Form::hidden('post_avatar') !!}
       {!! Form::file('file', ['class' => 'form-control', 'onchange' => '_func.postImgAvatar(this)']) !!}
       <div class="post-avatar">
-        <img src="img/blank.gif" alt="" />
+        <img src="assets/img/blank.gif" alt="" />
       </div>
     </div>
   </div>
 </div>
-  <div class="form-group">
-    {!! Form::label('post_content', 'NỘI DUNG BÀI VIẾT', ['class' => 'control-label']) !!}
-    {!! Form::textarea('post_content', null, ['id' => 'post_content', 'class' => 'form-control froala', 'placeholder' => 'Nhập nội dung', 'required' => 'true']) !!}
-  </div>
+
+<div class="form-group">
+  {!! Form::label('post_content', 'NỘI DUNG BÀI VIẾT', ['class' => 'control-label']) !!}
+  {!! Form::textarea('post_content', null, ['id' => 'post_content', 'class' => 'form-control froala', 'placeholder' => 'Nhập nội dung', 'required' => 'true']) !!}
+</div>
 
 {{--<div class="form-group">--}}
   {{--{!! Form::label('post_content', 'NỘI DUNG BÀI VIẾT', [ 'class' => 'control-label' ]) !!}--}}
@@ -44,20 +45,12 @@
     </a>
     @endif
     @if (in_array(Route::currentRouteName(), ['admin::@dmin-zone.posts.create', 'admin::@dmin-zone.posts.edit']))
-    {!! Form::submit($button_name, ['class' => 'btn btn-success', 'onclick' => '_func.setFormSubmitting()']) !!}
+    {!! Form::submit($button_name, ['class' => 'btn btn-success', 'onclick' => '_func.cfmOnX.deactive()']) !!}
     @endif
   </div>
   @if (Route::currentRouteNamed('admin::@dmin-zone.posts.edit'))
-  <a class="btn btn-danger pull-right" href="javascript:void(0)" onclick="_func.cfmOnDeleteRecord('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">
+  <a class="btn btn-danger pull-right" href="javascript:void(0)" onclick="_func.cfmOnDeletePost('{{ $post->id }}', '{{ $post->post_title }}', '{{ csrf_token() }}')">
     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Xóa
   </a>
   @endif
 </div>
-
-<script>
-  var postAvatar = jQuery('#post_avatar').val();
-
-  if (postAvatar.length > 0) {
-    jQuery('.post-avatar img').attr('src', postAvatar);
-  }
-</script>

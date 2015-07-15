@@ -1,7 +1,6 @@
 /.idea
 /.settings
 /node_modules
-/public/designs
 /vendor
 
 /public/.htaccess

@@ -1,0 +1,36 @@
+/*=============================================================================
+ | home/enrolstudents.css
+ =============================================================================*/
+
+#enrolstudents-page #detail-section,
+#enrolstudents-page #navbar a.navbar-brand.active,
+#enrolstudents-page #navbar ul.navbar-nav > li.active > a {
+  background-color: #eab645; /*e85656*/
+}
+
+#enrolstudents-page #navbar a.navbar-brand.active,
+#enrolstudents-page #navbar ul.navbar-nav > li.active > a {
+  color: #fff;
+}
+
+#enrolstudents-page .content p.level-1 {
+  text-indent: 50px;
+}
+
+#enrolstudents-page .content p.level-2 {
+  text-indent: 80px;
+}
+
+#enrolstudents-page .content h3 {
+  text-transform: uppercase;
+}
+
+#enrolstudents-page .content h3 strong {
+  font-weight: 400;
+}
+
+.pg-source {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: right;
+}

@@ -7,7 +7,7 @@
       <div class="cuztom-row">
         <div class="cuztom-col col-sm-4">
           <div id="dreams-intro-wrapper">
-            <img src="img/demo/h1.png" alt="" />
+            <img src="assets/img/demo/chap_canh_uoc_mo.png" alt="" />
             <p><strong>Nhà Thiếu nhi Gò Vấp – ngôi nhà của tuổi thơ.</strong> Nơi đã dang rộng vòng tay chăm sóc,
             vun trồng biết bao bạn nhỏ, đã đào tạo được những tài năng về thẩm mỹ nghệ thuật, thể dục thể thao,
             khoa học kỹ thuật, ngoại ngữ và các lãnh vực khác...</p>

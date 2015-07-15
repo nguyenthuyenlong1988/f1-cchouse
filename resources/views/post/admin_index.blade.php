@@ -17,7 +17,7 @@
       <h2 class="title">
         <span class="literal">Tin tức - Hoạt động</span>
         <a class="btn btn-danger btn-sm" href="{{ route('admin::@dmin-zone.posts.create') }}">
-          <span class="glyphicon glyphicon-plus" aria-label="Bài viết mới"></span>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Mới
         </a>
       </h2>
       <div class="list-post-status">

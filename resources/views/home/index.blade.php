@@ -5,6 +5,27 @@
 class="home-page"
 @stop
 
+{{-- Load resources --}}
+
+@section('page_css')
+
+<link rel="stylesheet" href="assets/libs/owl-carousel/1.3.3/owl.carousel.css" />
+<link rel="stylesheet" href="assets/libs/owl-carousel/1.3.3/owl.theme.css" />
+@parent
+<link rel="stylesheet" href="assets/home/home.css" />
+
+@stop
+
+@section('page_js_load')
+
+<script src="assets/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
+<script src="assets/libs/jquery-jcarousel/0.3.3/js/jquery.jcarousel.js"></script>
+@parent
+
+@stop
+
+{{-- Load content --}}
+
 @section('content_before')
 
 @include('partials.home.activity_section')
@@ -22,9 +43,9 @@ class="home-page"
     <div style="margin-bottom:10px;padding:10px;color:#fff;background-color:#1b837b;border:0 solid #1b837b;border-radius:2px;
       background-image:linear-gradient(to top, #14814c, #49b860);">
       <h4 class="box-title">
-        <img src="img/florish-left.png" alt="" width="45" />
+        <img src="assets/img/florish-left.png" alt="" width="45" />
         <strong>Giới Thiệu</strong>
-        <img src="img/florish-right.png" alt="" width="45" /><br />
+        <img src="assets/img/florish-right.png" alt="" width="45" /><br />
         <strong>Nhà Thiếu Nhi Gò Vấp</strong>
       </h4>
       <p>
@@ -38,7 +59,7 @@ class="home-page"
     <div style="margin-bottom:10px;padding:10px;background-color:#f8a22f;border-radius:2px;
       background-image:linear-gradient(to top, #f8a22f, #fcddb2)">
       <h4 class="box-title">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</h4>
-      <img src="img/demo/hcm.jpg" alt="" />
+      <img src="assets/img/demo/hcm.jpg" alt="" />
     </div>
 
     <div style="margin-bottom:10px;padding:10px;background-color:#f3d3f4;border:0 solid #eaaeae;border-radius:2px">
@@ -48,9 +69,9 @@ class="home-page"
   <div class="col-sm-6">
     <div>
       <h2 class="box-title">
-        <img src="img/florish-left.png" alt="" />
+        <img src="assets/img/florish-left.png" alt="" />
         Tin Tức Hoạt Động
-        <img src="img/florish-right.png" alt="" />
+        <img src="assets/img/florish-right.png" alt="" />
       </h2>
     </div>
     @forelse ($actNews as $key => $p)
@@ -61,8 +82,8 @@ class="home-page"
       <h3 class="actnews-title">
         <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
       </h3>
-      <a href="{{ route('actnews.show', $postUri) }}">
-        <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-bottom:8px" />
+      <a href="{{ route('actnews.show', $postUri) }}" style="display: block;text-align: center">
+        <img src="{{ empty($p->post_avatar) ? 'assets/img/blank.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" style="margin-bottom:8px" />
       </a>
       {{ $p->post_excerpt }}
     </div>
@@ -74,7 +95,7 @@ class="home-page"
         <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
       </h3>
       <a href="{{ route('actnews.show', $postUri) }}">
-        <img src="{{ empty($p->post_avatar) ? 'img/blank.gif' : $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:150px;max-height:150px" />
+        <img src="{{ empty($p->post_avatar) ? 'assets/img/blank.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:150px;max-height:150px" />
       </a>
       {{ $p->post_excerpt }}
     </div>
@@ -83,7 +104,7 @@ class="home-page"
     @empty
     <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
       <h3 style="margin-top:0">Chưa có tin tức.</h3>
-      <img src="img/demo/demo_100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
+      <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
       Hãy cập nhật thêm bài viết trong hệ thống quản lý!
     </div>
     @endforelse
@@ -134,7 +155,7 @@ class="home-page"
     </div>
     <div class="col-xs-12 col-md-3">
       <h4 class="box-title">Liên Hệ</h4>
-      <a href="{{ route('contact') }}"><img src="img/lien-he/lien-he-01.jpg" alt="lien-he-nha-thieu-nhi-go-vap" /></a>
+      <a href="{{ route('contact') }}"><img src="media/p_lienhe/lien-he-01.jpg" alt="" /></a>
     </div>
   </div>
 </div>

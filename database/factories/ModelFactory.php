@@ -16,8 +16,18 @@ $factory->defineAs(NhaThieuNhi\User::class, 'admin', function () {
     return [
         'id'             => Uuid::generate(),
         'name'           => 'Administrator',
-        'email'          => 'ops@hva.io',
+        'email'          => 'billytien@hva.io',
         'password'       => bcrypt('@Ssecret*7979#'),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->defineAs(NhaThieuNhi\User::class, 'operator', function () {
+    return [
+        'id'             => Uuid::generate(),
+        'name'           => 'Administrator',
+        'email'          => 'ops@hva.io',
+        'password'       => bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
 });
@@ -64,9 +74,8 @@ $factory->defineAs(NhaThieuNhi\Post::class, 'act_news', function ($faker) {
 
     return [
         'post_author'  => '',
-        'post_date'    => time(),
-        'post_type'    => 'act_news',
-        'post_status'  => 'publish',
+        // post_date => handled by trigger
+        'post_type'    => 'post',
         'post_title'   => $title,
         'post_excerpt' => $faker->text(rand(150, 300)),
         'post_content' => $faker->text(rand(1000, 2000)),

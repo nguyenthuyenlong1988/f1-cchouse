@@ -30,16 +30,18 @@
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500&amp;subset=latin,vietnamese,latin-ext" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&amp;subset=latin,vietnamese,latin-ext" />
-<!--[if lt IE 9]><script src="vendor/html5shiv/3.7.2/js/html5shiv.min.js"></script><![endif]-->
-<link rel="stylesheet" href="vendor/bootstrap/3.3.5/css/bootstrap.min.css" />
+<!--[if lt IE 9]><script src="assets/libs/html5shiv/3.7.2/js/html5shiv.min.js"></script><![endif]-->
+<link rel="stylesheet" href="assets/libs/bootstrap/3.3.5/css/bootstrap.min.css" />
 
 @yield('page_css')
 
-<link rel="stylesheet" href="css/stupid-google-fix.css" />
+<link rel="stylesheet" href="assets/libs/gem/1.0/css/stupid-google-fix.css" />
 
-<script src="vendor/modernizr/2.8.3/js/modernizr.min.js"></script>
-<script src="vendor/jquery/1.11.1/js/jquery.min.js"></script>
-<script src="vendor/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+<script src="assets/libs/html5shiv/3.7.2/js/html5shiv.min.js"></script>
+<script src="assets/libs/respond/1.4.2/js/respond.min.js"></script>
+<![endif]-->
+
 <script>
 //<![CDATA[
   var
@@ -51,6 +53,7 @@
       site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),
       page_base_url          : '{{ Request::getBaseUrl() }}',
       page_assets_url        : '{{ Request::getBaseUrl() }}',
+      page_getimage          : '{{ route('_image.index') }}',
       page_title             : decodeURIComponent('{{ rawurlencode(config('params.page_title')) }}'),
       page_charset           : '{{ config('params.page_charset') }}',
       js_debug               : true,
@@ -61,6 +64,7 @@
       is_login               : {{ ($isLogin = Auth::check()) ? 1 : 0 }},
       uid                    : '{{ $isLogin ? Auth::user()->id : ''  }}'
     },
+
     dc = function(a,b,c,d,e,f){if(e=function(a){return(b>a?"":e(parseInt(a/b)))+(35<(a%=b)?String.fromCharCode(a+29):a.toString(36))},!"".replace(/^/,String)){for(;c--;)f[e(c)]=d[c]||e(c);d=[function(a){return f[a]}],e=function(){return"\\w+"},c=1}for(;c--;)d[c]&&(a=a.replace(RegExp("\\b"+e(c)+"\\b","g"),d[c]));return a},up=eval;
 //]]>
 </script>
