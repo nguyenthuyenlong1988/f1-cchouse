@@ -32,7 +32,7 @@ var
         _module.exports = global.document ? factory(global) : function (_window)
         {
             if (!_window.document) {
-                throw new Error('TienJS requires a window with a document.');
+                throw Error('TienJS requires a window with a document.');
             }
             return factory(_window);
         };
