@@ -13,10 +13,17 @@
 
 
 // Test URL
-Route::get('test', [
+Route::get('test/{page}', [
     'as'   => 'test',
-    'uses' => function () {
-        return 'This URL is only for testing!';
+    'uses' => function ($page) {
+        switch ($page) {
+            case 'admin':
+                return view('_testview/admin_index');
+            case 'home':
+                return view('_testview/home_index');
+            default:
+                return 'This URL is only for testing!';
+        }
     }
 ]);
 

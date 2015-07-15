@@ -22,6 +22,8 @@
 
 <script src="assets/js/base.js"></script>
 <script src="assets/admin/base.js"></script>
+<script src="app-admin/app.js"></script>
+<script src="assets/admin/bootstrap.js"></script>
 
 @stop
 

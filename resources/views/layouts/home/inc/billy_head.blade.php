@@ -48,6 +48,7 @@
 //<![CDATA[
   var
     _cfg = {
+      // Base configuration
       app_name               : '{{ config('params.app_name') }}',
       client_time            : new Date().getTime(),
       site_name              : decodeURIComponent('{{ rawurlencode(config('params.site_name')) }}'),

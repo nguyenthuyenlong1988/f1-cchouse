@@ -51,10 +51,10 @@ var
         _factory = function (jquery, tweenMax)
         {
             if (!jquery) {
-                throw new Error('TienJS requires jQuery library (http://jquery.com).');
+                throw Error('TienJS requires jQuery library (http://jquery.com).');
             }
             if (!tweenMax) {
-                throw new Error('TienJS requires TweenMax library (http://www.greensock.com).');
+                throw Error('TienJS requires TweenMax library (http://www.greensock.com).');
             }
 
             var
