@@ -55,6 +55,7 @@ Mở tập tin `.env` bằng text editor, sau đó cập nhật các thông số
 
         artisan migrate --seeder=_MkForTest
 
+#### **Bước 7**: tự tìm hiểu.
 
 ##### Hoàn thành cấu hình.
 
