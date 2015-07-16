@@ -22,7 +22,7 @@
 <script src="assets/libs/froala-editor/1.2.7/js/plugins/fullscreen.min.js"></script>
 <script src="assets/libs/froala-editor/1.2.7/js/plugins/tables.min.js"></script>
 @parent
-<script src="assets/admin/postedit.js"></script>
+<script src="app-admin/postedit.js"></script>
 
 @stop
 

@@ -6,6 +6,7 @@
 <script src="assets/libs/gsap/1.17.0/js/TweenMax.min.js"></script>
 <script src="assets/libs/closure-library/closure/goog/base.js"></script>
 <script src="assets/libs/angular/1.4.2/js/angular.min.js"></script>
+<script src="assets/libs/angular-ui-router/0.2.15/js/angular-ui-router.min.js"></script>
 <script src="assets/libs/gem/1.0/js/tien.js"></script>
 
 @yield('page_js_load')

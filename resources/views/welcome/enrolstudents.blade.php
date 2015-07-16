@@ -9,7 +9,7 @@ id="enrolstudents-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="assets/home/enrolstudents.css" />
+<link rel="stylesheet" href="app-home/enrolstudents.css" />
 
 @stop
 

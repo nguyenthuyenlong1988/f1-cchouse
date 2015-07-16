@@ -14,7 +14,28 @@
         config = TienJS.config,
         appNamespace = config['app_name'] + '.admin',
         appLocation = '/app-admin',
-        app = angular.module(appNamespace, [appNamespace + '.testmodule']),
+        appConfig = [
+            '$urlRouterProvider',
+            '$stateProvider',
+            '$locationProvider',
+            function ($urlRouterProvider, $stateProvider, $locationProvider)
+            {
+                // For any unmatched url, redirect to /
+                $urlRouterProvider.otherwise('/');
+
+                // Set up the states
+
+                $locationProvider
+                    .html5Mode(true)
+                    .hashPrefix('!');
+            }],
+        app = angular.module(
+            appNamespace,
+            [
+                'ui.router',
+                appNamespace + '.testmodule'
+            ]
+        ),
         resolveDep = function (path)
         {
             return '../../../../..' + appLocation + '/' + path;
@@ -25,6 +46,8 @@
 
             return app;
         };
+
+    app.config(appConfig);
 
     // binding path and namespace
     _goog.addDependency(resolveDep('testmodule.js'), [appNamespace + '.testmodule'], []);

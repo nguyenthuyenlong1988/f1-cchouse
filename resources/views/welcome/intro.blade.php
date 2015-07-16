@@ -9,7 +9,7 @@ class="intro-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="assets/home/intro.css" />
+<link rel="stylesheet" href="app-home/intro.css" />
 
 @stop
 

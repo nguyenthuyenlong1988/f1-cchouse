@@ -9,7 +9,7 @@ id="contact-page" class="contact-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="assets/home/contact.css" />
+<link rel="stylesheet" href="app-home/contact.css" />
 
 @stop
 

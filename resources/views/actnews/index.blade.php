@@ -9,7 +9,7 @@ id="actnews-index" class="actnews-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="assets/home/actnews.css" media="all" />
+<link rel="stylesheet" href="app-home/actnews.css" media="all" />
 
 @stop
 

@@ -1,0 +1,19 @@
+@import '../assets/libs/gem/1.0/css/ivy-override.css';
+@import '../assets/libs/gem/1.0/css/ivy-override.css';
+@import '../assets/libs/gem/1.0/css/ivy-base.css';
+@import '../assets/libs/gem/1.0/css/ivy-effects.css';
+@import '../assets/libs/gem/1.0/css/ivy-site-layout.css';
+@import '../assets/libs/gem/1.0/css/ivy-keyframes.css';
+@import '../assets/libs/gem/1.0/css/bonus-style.css';
+@import '../assets/libs/gem/1.0/css/custom-base.css';
+@import '../assets/libs/gem/1.0/css/custom-site-header.css';
+@import '../assets/libs/gem/1.0/css/custom-site-footer.css';
+@import '../assets/libs/gem/1.0/css/custom-site-general.css';
+
+/*=============================================================================
+ | home/base.css
+ =============================================================================*/
+
+html.has-background body.image {
+  background-image: url(../assets/img/bg3.jpg);
+}

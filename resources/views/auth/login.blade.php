@@ -8,7 +8,7 @@
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="assets/admin/login.css" />
+<link rel="stylesheet" href="app-admin/login.css" />
 
 @stop
 

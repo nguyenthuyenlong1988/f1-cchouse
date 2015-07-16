@@ -5,7 +5,7 @@
 .home-page #enrolstudents-section a {
   display: block;
   padding: 4px 15px;
-  background-image: url(../img/enrol_toppage.png);
+  background-image: url(../assets/img/enrol_toppage.png);
   background-size: cover;
   color: #222;
 }

@@ -12,7 +12,7 @@ class="home-page"
 <link rel="stylesheet" href="assets/libs/owl-carousel/1.3.3/owl.carousel.css" />
 <link rel="stylesheet" href="assets/libs/owl-carousel/1.3.3/owl.theme.css" />
 @parent
-<link rel="stylesheet" href="assets/home/home.css" />
+<link rel="stylesheet" href="app-home/home.css" />
 
 @stop
 

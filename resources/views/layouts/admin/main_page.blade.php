@@ -7,23 +7,23 @@
 
 @section('page_css')
 
-<link rel="stylesheet" href="assets/admin/base.css" media="all" />
+<link rel="stylesheet" href="app-admin/base.css" media="all" />
 
 @stop
 
 @section('page_js_preload')
 
 <script src="assets/js/base_c.js"></script>
-<script src="assets/admin/base_c.js"></script>
+<script src="app-admin/base_c.js"></script>
 
 @stop
 
 @section('page_js_load')
 
 <script src="assets/js/base.js"></script>
-<script src="assets/admin/base.js"></script>
+<script src="app-admin/base.js"></script>
 <script src="app-admin/app.js"></script>
-<script src="assets/admin/bootstrap.js"></script>
+<script src="app-admin/bootstrap.js"></script>
 
 @stop
 

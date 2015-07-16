@@ -1,7 +1,7 @@
-@import '../libs/gem/1.0/css/ivy-override.css';
-@import '../libs/gem/1.0/css/ivy-base.css';
-@import '../libs/gem/1.0/css/ivyA-override.css';
-@import '../libs/gem/1.0/css/customA-base.css';
+@import '../assets/libs/gem/1.0/css/ivy-override.css';
+@import '../assets/libs/gem/1.0/css/ivy-base.css';
+@import '../assets/libs/gem/1.0/css/ivyA-override.css';
+@import '../assets/libs/gem/1.0/css/customA-base.css';
 
 .ivy-topbar-left {
   float: left;

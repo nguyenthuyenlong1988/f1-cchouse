@@ -9,7 +9,7 @@ id="welcome-page" class="welcome-page"
 @section('page_css')
 @parent
 
-<link rel="stylesheet" href="assets/home/welcome.css" />
+<link rel="stylesheet" href="app-home/welcome.css" />
 
 @stop
 

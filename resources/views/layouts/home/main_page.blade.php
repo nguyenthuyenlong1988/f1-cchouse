@@ -7,14 +7,14 @@
 
 @section('page_css')
 
-<link rel="stylesheet" href="assets/home/base.css" media="all" />
+<link rel="stylesheet" href="app-home/base.css" media="all" />
 
 @stop
 
 @section('page_js_preload')
 
 <script src="assets/js/base_c.js"></script>
-<script src="assets/home/base_c.js"></script>
+<script src="app-home/base_c.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,7 +31,7 @@
 @section('page_js_load')
 
 <script src="assets/js/base.js"></script>
-<script src="assets/home/base.js"></script>
+<script src="app-home/base.js"></script>
 
 @stop
 
