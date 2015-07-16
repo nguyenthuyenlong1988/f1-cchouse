@@ -62,46 +62,46 @@ Mở tập tin `.env` bằng text editor, sau đó cập nhật các thông số
 ## Cấu trúc 'chủ yếu' thư mục project
 
     /
-    |--- app/                            =>
-    |    |--- Http/                      =>
-    |    |    |--- Controllers/          =>
-    |    |    |--- Middleware/           =>
-    |    |    |--- Request/              =>
-    |    |    |--- helpers.php           =>
-    |    |    |--- routes.php            =>
-    |    |
-    |    |--- Jobs/                      =>
-    |    |--- Listeners/                 =>
-    |    |--- Providers/                 =>
-    |    |--- (...Model classes...)      =>
-    |
-    |--- bootstrap/                      =>
-    |--- config/                         =>
-    |--- database/                       =>
-    |--- public/                         =>
-    |    |--- app-admin/                 =>
-    |    |--- app-home/                  =>
-    |    |--- assets/                    =>
-    |    |    |--- img/                  =>
-    |    |    |--- js/                   =>
-    |    |    |--- libs/                 =>
-    |    |
-    |    |--- media/                     =>
-    |    |--- uploads/                   =>
-    |    |--- user-media/                =>
-    |    |--- .htaccess                  =>
-    |
-    |--- resources/                      =>
-    |    |--- views/                     =>
-    |         |--- errors/               =>
-    |         |--- layouts/              =>
-    |         |--- partials/             =>
-    |         |--- (...Page views...)    =>
-    |
-    |--- storage/                        =>
-    |--- tests/                          =>
-    |--- vendor/                         =>
-    |--- .env                            =>
+    ├── app/                            =>
+    │    ├── Http/                      =>
+    │    │    ├── Controllers/          =>
+    │    │    ├── Middleware/           =>
+    │    │    ├── Request/              =>
+    │    │    ├── helpers.php           =>
+    │    │    └── routes.php            =>
+    │    │
+    │    ├── Jobs/                      =>
+    │    ├── Listeners/                 =>
+    │    ├── Providers/                 =>
+    │    └── (...Model classes...)      =>
+    │
+    ├── bootstrap/                      =>
+    ├── config/                         =>
+    ├── database/                       =>
+    ├── public/                         =>
+    │    ├── app-admin/                 =>
+    │    ├── app-home/                  =>
+    │    ├── assets/                    =>
+    │    │    ├── img/                  =>
+    │    │    ├── js/                   =>
+    │    │    └── libs/                 =>
+    │    │
+    │    ├── media/                     =>
+    │    ├── uploads/                   =>
+    │    ├── user-media/                =>
+    │    └── .htaccess                  =>
+    │
+    ├── resources/                      =>
+    │    └── views/                     =>
+    │         ├── errors/               =>
+    │         ├── layouts/              =>
+    │         ├── partials/             =>
+    │         └── (...Page views...)    =>
+    │
+    ├── storage/                        =>
+    ├── tests/                          =>
+    ├── vendor/                         =>
+    ├── .env                            =>
     ...
       
 
