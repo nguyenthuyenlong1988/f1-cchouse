@@ -33,7 +33,7 @@ Thực hiện lệnh:
 
     artisan key:generate
 
-#### **Bước 4**: Tạo database.
+#### **Bước 4**: tạo database.
 
 Hãy tạo 1 database (tên đặt tùy ý). Đây phải là database rỗng.
 
@@ -41,7 +41,7 @@ Hãy tạo 1 database (tên đặt tùy ý). Đây phải là database rỗng.
 
 Mở tập tin `.env` bằng text editor, sau đó cập nhật các thông số kết nối.
 
-#### **Bước 6**: Tự động tạo các table và dữ liệu demo vào database.
+#### **Bước 6**: tự động tạo các table và dữ liệu demo vào database.
 
 * Thực thi lệnh sau để tự động tạo các table:
 
@@ -105,6 +105,7 @@ Mở tập tin `.env` bằng text editor, sau đó cập nhật các thông số
     ...
       
 
+(...Updating)
 
 ## License
 
