@@ -114,7 +114,7 @@ Route::group([
 // Route name: api::...
 Route::group([
     'as'        => 'api::',
-    'prefix'    => 'api',
+    'prefix'    => '_api',
     'namespace' => 'Api'
 ], function () {
 
@@ -124,13 +124,13 @@ Route::group([
         'middleware' => 'auth'
     ], function () {
 
-        // api/_upload_image.py
-        Route::match(['post', 'put'], '_upload_image.py', [
-            'as'   => '_upload_image.store',
+        // _api/upload_image.py
+        Route::match(['post', 'put'], 'upload_image.py', [
+            'as'   => 'upload_image.store',
             'uses' => 'FileController@storeImage'
         ]);
-        Route::get('_upload_image.py', [
-            'as'   => '_upload_image.index',
+        Route::get('upload_image.py', [
+            'as'   => 'upload_image.index',
             'uses' => function () {
                 return '<code>PUT your image :)</code>';
             }

@@ -35,7 +35,7 @@
             inlineMode       : false,
             theme            : 'custom',
             buttons          : $.merge(['fullscreen'], $.Editable.DEFAULTS.buttons),
-            imageUploadURL   : cfg['page_base_url'] + '/api/_upload_image.py',
+            imageUploadURL   : cfg['page_base_url'] + '/_api/upload_image.py',
             imageUploadParams: {}
         });
     }

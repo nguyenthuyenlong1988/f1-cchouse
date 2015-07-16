@@ -614,7 +614,7 @@ var
         formData.append('file', input.files[0]);
 
         _$.ajax({
-            url        : _cfg['api_url'] + '/_upload_image.py',
+            url        : _cfg['api_url'] + '/upload_image.py',
             type       : 'POST',
             data       : formData,
             dataType   : 'json',

@@ -12,6 +12,6 @@ class VerifyCsrfToken extends BaseVerifier
    * @var array
    */
   protected $except = [
-    'api/_upload_image.py'
+    '_api/upload_image.py'
   ];
 }
