@@ -11,14 +11,8 @@ use NhaThieuNhi\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-//  public function __construct()
-//  {
-//    $this->middleware('adminzone');
-//    $this->middleware('auth');
-//  }
-
-  public function index()
-  {
-    return view('dashboard.admin_index');
-  }
+    public function index()
+    {
+        return view('dashboard.admin_index');
+    }
 }

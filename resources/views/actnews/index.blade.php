@@ -80,8 +80,8 @@ id="actnews-index" class="actnews-page"
       @endforelse
     </div>
     <div class="col-md-3">
-      <div>
-        <div class="fb-page" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="220" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+      <div style="width:100%">
+        <div class="fb-page" data-href="https://www.facebook.com/nhathieunhigovap2004" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
           <div class="fb-xfbml-parse-ignore"></div>
         </div>
       </div>

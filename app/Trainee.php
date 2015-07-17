@@ -9,26 +9,26 @@ namespace NhaThieuNhi;
 
 class Trainee extends AModel
 {
-  /**
-   * The database table used by the model.
-   *
-   * @var string
-   */
-  protected $table = 'trainees';
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'trainees';
 
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var array
-   */
-  protected $fillable = [
-    'id',
-    'first_name',
-    'last_name',
-    'birthday',
-    'sex',
-    'address_line1',
-    'address_line2',
-    'note',
-  ];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'id',
+        'first_name',
+        'last_name',
+        'birthday',
+        'sex',
+        'address_line1',
+        'address_line2',
+        'note',
+    ];
 }

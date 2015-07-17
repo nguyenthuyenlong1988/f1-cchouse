@@ -82,21 +82,27 @@ class="home-page"
       <h3 class="actnews-title">
         <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
       </h3>
-      <a href="{{ route('actnews.show', $postUri) }}" style="display: block;text-align: center">
-        <img src="{{ empty($p->post_avatar) ? 'assets/img/blank.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" style="margin-bottom:8px" />
+      <a href="{{ route('actnews.show', $postUri) }}" style="display: block;margin-bottom: 8px;text-align: center">
+        <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
       </a>
       {{ $p->post_excerpt }}
     </div>
 
-    @else  {{-- Continue posts --}}
+    @else  {{-- next posts --}}
 
     <div class="actnews clearfix">
+      @if (empty($p->post_avatar))
+      <a class="post-avatar no-post-avatar" href="{{ route('actnews.show', $postUri) }}">
+        <img src="assets/img/transparent.gif" alt="" />
+      </a>
+      @else
+      <a class="post-avatar" href="{{ route('actnews.show', $postUri) }}">
+        <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+      </a>
+      @endif
       <h3 class="actnews-title">
         <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
       </h3>
-      <a href="{{ route('actnews.show', $postUri) }}">
-        <img src="{{ empty($p->post_avatar) ? 'assets/img/blank.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" style="float:left;margin-right:7px;max-width:150px;max-height:150px" />
-      </a>
       {{ $p->post_excerpt }}
     </div>
 

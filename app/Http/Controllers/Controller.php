@@ -8,5 +8,5 @@ use Illuminate\Routing\Controller as BaseController;
 
 abstract class Controller extends BaseController
 {
-  use DispatchesJobs, ValidatesRequests;
+    use DispatchesJobs, ValidatesRequests;
 }

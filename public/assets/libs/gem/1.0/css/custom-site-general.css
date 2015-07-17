@@ -150,12 +150,6 @@ h4, h5, h6 {
   color: #222;
 }
 
-#enrolstudents-section a:hover {
-  background-image: url(../img/enrol_toppage.png);
-  background-size: cover;
-}
-
-
 #enrolstudents-section .glyphicon {
   color: #f74747;
 }
@@ -168,9 +162,12 @@ h4, h5, h6 {
 
 #activity-section {
   position: relative;
+  background-color: #0f9d58;
+  padding: 20px 0;
 }
 
 #activity-wrapper {
+  margin-top: 20px;
 }
 
 #activity-wrapper .cuztom-col {

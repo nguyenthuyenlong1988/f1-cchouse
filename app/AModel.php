@@ -12,12 +12,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 abstract class AModel extends Model
 {
-  use SoftDeletes;
+    use SoftDeletes;
 
-  /**
-   * The storage format of the model's date columns.
-   *
-   * @var string
-   */
-  protected $dateFormat = 'U';
+    /**
+     * The storage format of the model's date columns.
+     *
+     * @var string
+     */
+    protected $dateFormat = 'U';
 }

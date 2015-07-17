@@ -6,36 +6,36 @@
  */
 
 return [
-  /*
-  |--------------------------------------------------------------------------
-  | Site Parameters
-  |--------------------------------------------------------------------------
-  |
-  | This contains the application parameters.
-  |
-  */
 
-  'app_name'           => 'nhathieunhi',
-  'site_name'          => 'Nhà Thiếu Nhi Gò Vấp',
-  'site_contact_email' => 'contact@nvhtien.com',
+    /*
+    |--------------------------------------------------------------------------
+    | Site Parameters
+    |--------------------------------------------------------------------------
+    |
+    | This contains the application parameters.
+    |
+    */
 
-  /*
-  |--------------------------------------------------------------------------
-  | Page Parameters
-  |--------------------------------------------------------------------------
-  |
-  | This contains the page parameters.
-  |
-  */
+    'app_name'           => 'nhathieunhi',
+    'site_name'          => 'Nhà Thiếu Nhi Gò Vấp',
+    'site_contact_email' => 'contact@nvhtien.com',
 
-  'page_charset'       => 'UTF-8',
-  'page_title'         => 'Nhà Thiếu Nhi Gò Vấp',
-  'page_description'   => 'Nhà Văn Hóa Thiếu Nhi &mdash; Quận Gò Vấp &mdash; TP.HCM',
-  'page_keywords'      => 'nha van hoa, thieu nhi, quan go vap, ho chi minh',
+    /*
+    |--------------------------------------------------------------------------
+    | Page Parameters
+    |--------------------------------------------------------------------------
+    |
+    | This contains the page parameters.
+    |
+    */
 
-  'admin_manage_time'  => 60,
+    'page_charset'       => 'UTF-8',
+    'page_title'         => 'Nhà Thiếu Nhi Gò Vấp',
+    'page_description'   => 'Nhà Văn Hóa Thiếu Nhi &mdash; Quận Gò Vấp &mdash; TP.HCM',
+    'page_keywords'      => 'nha van hoa, thieu nhi, quan go vap, ho chi minh',
+    'admin_manage_time'  => 60,
+    'user_dateformat'    => 'Y-m-d H:i:s',
+    'user_hourformat'    => 'H:i',
+    'user_timezone'      => 'Asia/Ho_Chi_Minh',
 
-  'user_dateformat'    => 'Y-m-d H:i:s',
-  'user_hourformat'    => 'H:i',
-  'user_timezone'      => 'Asia/Ho_Chi_Minh',
 ];

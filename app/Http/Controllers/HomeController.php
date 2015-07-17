@@ -11,17 +11,17 @@ use NhaThieuNhi\Post;
 
 class HomeController extends Controller
 {
-  public function index()
-  {
-    // Gets 4 last posts (post_type='act_news)
-    $actNews = Post::where([
-      'post_type'   => 'act_news',
-      'post_status' => 'publish'
-    ])
-                 ->orderBy('id', 'DESC')
-                 ->take(4)
-                 ->get();
+    public function index()
+    {
+        // Gets 4 last posts (post_type='act_news)
+        $actNews = Post::where([
+            'post_type'   => 'act_news',
+            'post_status' => 'publish'
+        ])
+                       ->orderBy('id', 'DESC')
+                       ->take(4)
+                       ->get();
 
-    return view('home.index', compact('actNews'));
-  }
+        return view('home.index', compact('actNews'));
+    }
 }

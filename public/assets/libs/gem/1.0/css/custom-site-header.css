@@ -86,7 +86,7 @@ html.has-background #header {
 
 #navbar a.navbar-brand.active,
 #navbar ul.navbar-nav > li.active > a {
-  background-color: #4cc4f8;
+  background-color: #0f9d58; /*4cc4f8*/
   color: #000;
 }
 

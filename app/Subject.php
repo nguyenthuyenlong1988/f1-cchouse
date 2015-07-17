@@ -9,27 +9,27 @@ namespace NhaThieuNhi;
 
 class Subject extends AModel
 {
-  /**
-   * The database table used by the model.
-   *
-   * @var string
-   */
-  protected $table = 'subjects';
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'subjects';
 
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var array
-   */
-  protected $fillable = [
-    'id',
-    'subject_name',
-  ];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'id',
+        'subject_name',
+    ];
 
-  /**
-   * The attributes that should be mutated to dates.
-   *
-   * @var array
-   */
-  protected $dates = ['deleted_at'];
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
 }
