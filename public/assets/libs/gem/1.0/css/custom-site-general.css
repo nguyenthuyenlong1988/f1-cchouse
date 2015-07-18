@@ -367,19 +367,26 @@ h4, h5, h6 {
   padding-top: 10px;
   padding-bottom: 15px;
   background-color: #fff; /*f2fffe*/
-  border-top: 1px solid #29a5c2;
-  border-bottom: 1px solid #29a5c2;
+  border-top: 0 solid #29a5c2;
+  border-bottom: 0 solid #29a5c2;
 }
 
 #addition-wrapper {
   margin-top: 15px;
   background-color: #fff;
-  border: 2px solid #b74ac8;
+}
+
+#addition-wrapper .box ul a {
+  color: #444;
 }
 
 #addition-wrapper .box-title {
-  margin-top: 5px;
+  margin-top: 15px;
   text-align: left;
+}
+
+#addition-wrapper .fb-page {
+  margin-top: 10px;
 }
 
 

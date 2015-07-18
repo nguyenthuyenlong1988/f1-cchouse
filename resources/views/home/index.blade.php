@@ -40,7 +40,7 @@ class="home-page"
 
 <div class="cuztom-row">
   <div class="sidebar col-sm-3">
-    <div style="margin-bottom:10px;padding:10px;color:#fff;background-color:#1b837b;border:0 solid #1b837b;border-radius:2px;
+    <div style="margin-bottom:30px;padding:10px;color:#fff;background-color:#1b837b;border:0 solid #1b837b;border-radius:2px;
       background-image:linear-gradient(to top, #14814c, #49b860);">
       <h4 class="box-title">
         <img src="assets/img/florish-left.png" alt="" width="45" />
@@ -56,8 +56,7 @@ class="home-page"
       </p>
     </div>
 
-    <div style="margin-bottom:10px;padding:10px;background-color:#f8a22f;border-radius:2px;
-      background-image:linear-gradient(to top, #f8a22f, #fcddb2)">
+    <div style="margin-bottom: 30px;">
       <h4 class="box-title">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</h4>
       <img src="assets/img/demo/hcm.jpg" alt="" />
     </div>
@@ -90,20 +89,26 @@ class="home-page"
 
     @else  {{-- next posts --}}
 
-    <div class="actnews clearfix">
+    <div class="actnews media clearfix">
       @if (empty($p->post_avatar))
-      <a class="post-avatar no-post-avatar" href="{{ route('actnews.show', $postUri) }}">
-        <img src="assets/img/transparent.gif" alt="" />
-      </a>
+      <div class="media-left">
+        <a class="post-avatar no-post-avatar" href="{{ route('actnews.show', $postUri) }}">
+          <img class="media-object" src="assets/img/transparent.gif" alt="" />
+        </a>
+      </div>
       @else
-      <a class="post-avatar" href="{{ route('actnews.show', $postUri) }}">
-        <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-      </a>
+      <div class="media-left">
+        <a class="post-avatar" href="{{ route('actnews.show', $postUri) }}">
+          <img class="media-object" src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+        </a>
+      </div>
       @endif
-      <h3 class="actnews-title">
-        <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
-      </h3>
-      {{ $p->post_excerpt }}
+      <div class="media-body">
+        <h3 class="actnews-title">
+          <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
+        </h3>
+        {{ $p->post_excerpt }}
+      </div>
     </div>
 
     @endif
@@ -116,7 +121,7 @@ class="home-page"
     @endforelse
   </div>
   <div class="sidebar col-sm-3">
-    <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
+    <div style="margin-bottom:20px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
       <h4 class="box-title">Slide hình</h4>
       <ul class="no-bullets">
         @for ($i = 0; $i < 12; $i++)
@@ -125,14 +130,14 @@ class="home-page"
       </ul>
     </div>
 
-    <div style="margin-bottom:10px;padding:10px;background-color:#c3d339;border:3px solid #c3d339;border-radius:2px">
+    <div style="margin-bottom:20px;padding:10px;background-color:#d4dbd8;border-radius:2px">
       <h4 class="box-title">Phòng Chiếu Phim 3D</h4>
       @for ($i = 0; $i < 5; $i++)
       <br />
       @endfor
     </div>
 
-    <div style="margin-bottom:10px;padding:10px;background-color:#f0f2b6;border:1px solid #c3d339;border-radius:2px">
+    <div style="margin-bottom:20px;padding:10px;background-color:#d4dbd8;border-radius:2px">
       <h4 class="box-title">Quảng cáo</h4>
       @for ($i = 0; $i < 5; $i++)
       <br />
@@ -146,7 +151,7 @@ class="home-page"
 
 <div id="addition-wrapper">
   <div class="cuztom-row">
-    <div class="col-xs-12 col-md-3">
+    <div class="box col-xs-12 col-md-3">
       <h4 class="box-title">Văn Nghệ Thiếu Nhi</h4>
       <ul class="no-bullets with-arrow">
         <li><a href="javascript:void(0)">Donec ut vestibulum nunc</a></li>
@@ -154,12 +159,12 @@ class="home-page"
         <li><a href="javascript:void(0)">Suspendisse non est ut augue dapibus pulvinar</a></li>
       </ul>
     </div>
-    <div class="col-xs-12 col-md-6">
-      <div class="fb-page hidden-xs" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+    <div class="col-xs-12 col-md-6 text-center">
+      <div class="fb-page hidden-xs" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
         <div class="fb-xfbml-parse-ignore"></div>
       </div>
     </div>
-    <div class="col-xs-12 col-md-3">
+    <div class="box col-xs-12 col-md-3">
       <h4 class="box-title">Liên Hệ</h4>
       <a href="{{ route('contact') }}"><img src="media/p_lienhe/lien-he-01.jpg" alt="" /></a>
     </div>

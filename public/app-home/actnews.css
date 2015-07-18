@@ -11,10 +11,6 @@
   color: #fff;
 }
 
-.actnews-page .page-header {
-  text-transform: none;
-}
-
 .actnews-page .post {
   margin: 30px 0;
   border-top: 1px solid #ccc;
@@ -64,6 +60,10 @@
 /*=============================================================================
  | home/actnews-show.css
  =============================================================================*/
+
+#actnews-show .page-header {
+  text-transform: none;
+}
 
 #actnews-show .post-avatar {
   margin-left: -15px;

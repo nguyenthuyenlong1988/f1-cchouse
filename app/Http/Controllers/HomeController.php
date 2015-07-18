@@ -19,7 +19,7 @@ class HomeController extends Controller
             'post_status' => 'publish'
         ])
                        ->orderBy('id', 'DESC')
-                       ->take(4)
+                       ->take(3)
                        ->get();
 
         return view('home.index', compact('actNews'));
