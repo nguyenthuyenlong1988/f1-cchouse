@@ -107,6 +107,14 @@ Route::group([
     ], function () {
         Route::resource('posts', 'PostController');
     });
+    
+    // Whisper routes
+    Route::group([
+    		'as'     => '',
+    		'middle' => 'auth',
+    ], function () {
+    	Route::resource('whisper', 'WhisperController');
+    });
 
 });
 
