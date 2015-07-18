@@ -1,7 +1,7 @@
 {{-- Created at 2015/06/21 06:05 htien Exp $ --}}
 @extends('layouts.admin.main_page')
 
-@section('page_title', 'Vùng quản lý)
+@section('page_title', 'Vùng quản lý')
 
 {{-- ======================================================= LOAD RESOURCES --}}
 
