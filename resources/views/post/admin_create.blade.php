@@ -3,6 +3,8 @@
 
 @section('page_title', 'Bài viết mới')
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
 @section('page_css')
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
@@ -23,6 +25,8 @@
 <script src="app-admin/postcreate.js"></script>
 
 @stop
+
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 

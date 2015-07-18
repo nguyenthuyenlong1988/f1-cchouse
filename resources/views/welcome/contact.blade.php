@@ -6,12 +6,16 @@
 id="contact-page" class="contact-page"
 @stop
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
 @section('page_css')
 @parent
 
 <link rel="stylesheet" href="app-home/contact.css" />
 
 @stop
+
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 

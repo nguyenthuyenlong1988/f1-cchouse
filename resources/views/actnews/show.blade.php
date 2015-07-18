@@ -6,12 +6,16 @@
 id="actnews-show" class="actnews-page"
 @stop
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
 @section('page_css')
 @parent
 
 <link rel="stylesheet" href="app-home/actnews.css" media="all" />
 
 @stop
+
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 

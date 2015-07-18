@@ -6,20 +6,20 @@
 id="schedule-page"
 @stop
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
 @section('page_css')
 @parent
 
-<style>
-  /* Tạm thời cập nhật CSS tĩnh tại đây */
-</style>
-
 @stop
+
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 
 <div class="container-fluid">
 
-  {{-- Cập nhật nội dung giới thiệu tại đây! --}}
+
 
 </div>
 

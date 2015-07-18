@@ -5,7 +5,7 @@
 class="home-page"
 @stop
 
-{{-- Load resources --}}
+{{-- ======================================================= LOAD RESOURCES --}}
 
 @section('page_css')
 
@@ -24,7 +24,7 @@ class="home-page"
 
 @stop
 
-{{-- Load content --}}
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content_before')
 

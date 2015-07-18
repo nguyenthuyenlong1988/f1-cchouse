@@ -3,7 +3,7 @@
 
 @section('page_title', 'Đăng nhập')
 
-{{-- Load resources --}}
+{{-- ======================================================= LOAD RESOURCES --}}
 
 @section('page_css')
 @parent
@@ -12,7 +12,7 @@
 
 @stop
 
-{{-- Load content --}}
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 

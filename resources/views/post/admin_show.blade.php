@@ -3,6 +3,10 @@
 
 @section('page_title', 'Bài viết #' . $post->id)
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
+{{-- ========================================================= LOAD CONTENT --}}
+
 @section('content')
 
 <ol class="breadcrumb">

@@ -1,5 +1,6 @@
 /.idea
 /.settings
+/nbproject
 /node_modules
 /vendor
 

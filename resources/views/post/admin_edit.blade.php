@@ -3,7 +3,7 @@
 
 @section('page_title', 'Sửa bài viết #' . $post->id)
 
-{{-- Load resources --}}
+{{-- ======================================================= LOAD RESOURCES --}}
 
 @section('page_css')
 
@@ -26,7 +26,7 @@
 
 @stop
 
-{{-- Load content --}}
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 

@@ -6,12 +6,16 @@
 class="intro-page"
 @stop
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
 @section('page_css')
 @parent
 
 <link rel="stylesheet" href="app-home/intro.css" />
 
 @stop
+
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('content')
 

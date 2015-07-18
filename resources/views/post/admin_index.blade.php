@@ -3,6 +3,10 @@
 
 @section('page_title', 'Tin tức - Hoạt động')
 
+{{-- ======================================================= LOAD RESOURCES --}}
+
+{{-- ========================================================= LOAD CONTENT --}}
+
 @section('content')
 
 <ol class="breadcrumb">

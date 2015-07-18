@@ -3,7 +3,7 @@
 
 @section('page_title', '[Không tiêu đề]')
 
-{{-- Load resources --}}
+{{-- ======================================================= LOAD RESOURCES --}}
 
 @section('page_css')
 
@@ -27,7 +27,7 @@
 
 @stop
 
-{{-- Load content --}}
+{{-- ========================================================= LOAD CONTENT --}}
 
 @section('main_content')
 
