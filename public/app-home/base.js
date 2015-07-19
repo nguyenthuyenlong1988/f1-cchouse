@@ -5,11 +5,14 @@
  * Created by Tien Nguyen on 2015/07/09 16:30.
  */
 
-(function (global)
+(function (global, TienJS)
 {
     'use strict';
 
-    var $ = global.jQuery;
+    var
+        doc = global.document,
+        google = global['google'],
+        $ = global.jQuery;
 
     function playActivitySlider()
     {
@@ -43,6 +46,41 @@
             });
         }
     }
+
+    function loadMap(latitude, longitude)
+    {
+        if (google && google.maps) {
+            var
+                myLatlng = new google.maps.LatLng(latitude, longitude);
+
+            var
+                mapCanvas = doc.getElementById('google-map'),
+                mapOptions = {
+                    mapTypeId  : google.maps.MapTypeId.ROADMAP,
+                    center     : myLatlng,
+                    scrollwheel: false,
+                    zoom       : 12
+                },
+                map = new google.maps.Map(mapCanvas, mapOptions);
+
+            new google.maps.Marker({
+                map      : map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position : myLatlng
+            });
+
+            google.maps.event.addDomListener(window, 'resize', function ()
+            {
+                map.setCenter(myLatlng);
+            });
+        }
+        else {
+            TienJS.log('Google Map load failed.');
+        }
+    }
+
+
 
     //function playMenuAutoscroll()
     //{
@@ -122,8 +160,11 @@
     // SLIDER
     playActivitySlider();
 
+    // MAP
+    loadMap(10.843628, 106.668256);
+
     // QUICKMENU
     //playMenuAutoscroll();
 
-}(_tienScope));
+}(_tienScope, _tienScope.TienJS));
 

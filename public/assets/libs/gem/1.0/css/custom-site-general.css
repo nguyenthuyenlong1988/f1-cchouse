@@ -163,11 +163,10 @@ h4, h5, h6 {
 #activity-section {
   position: relative;
   background-color: #0f9d58;
-  padding: 20px 0;
 }
 
 #activity-wrapper {
-  margin-top: 20px;
+  margin-top: 1px;
 }
 
 #activity-wrapper .cuztom-col {
@@ -372,7 +371,6 @@ h4, h5, h6 {
 }
 
 #addition-wrapper {
-  margin-top: 15px;
   background-color: #fff;
 }
 
@@ -389,11 +387,10 @@ h4, h5, h6 {
   margin-top: 10px;
 }
 
+@media (max-width: 768px) {
 
-/*=============================================================================
- | custom-copyright.css
- =============================================================================*/
+  #detail-section {
+    background-color: #fff !important;
+  }
 
-#copyright {
-  margin: 12px 0;
 }

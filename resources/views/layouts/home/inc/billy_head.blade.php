@@ -43,7 +43,7 @@
 <script src="assets/libs/html5shiv/3.7.2/js/html5shiv.min.js"></script>
 <script src="assets/libs/respond/1.4.2/js/respond.min.js"></script>
 <![endif]-->
-
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
 //<![CDATA[
   var

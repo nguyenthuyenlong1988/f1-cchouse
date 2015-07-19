@@ -24,20 +24,20 @@ id="contact-page" class="contact-page"
   <h1 class="page-header"><span class="glyphicon glyphicon-envelope"></span> Liên Hệ</h1>
   <h2 class="page-heading">Bộ phận Giáo vụ & Đào Tạo<br /><small>Nhà Thiếu Nhi Q.Gò Vấp</small></h2>
   <p class="text-center">
-  	<strong><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Địa Chỉ</strong>: Số 27, Đường số 9, Phường 16, Quận Gò Vấp, TP.HCM
-  	<a href="https://www.google.com/maps/place/Nh%C3%A0+Thi%E1%BA%BFu+Nhi+G%C3%B2+V%E1%BA%A5p/@10.8434307,106.6689625,17z/data=!4m2!3m1!1s0x0000000000000000:0xd8ed5f922d17dbd3" target="_blank">
-  	  <span class="glyphicon glyphicon-link"></span>
-  	</a>
+    <strong><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Địa Chỉ</strong>: Số 27, Đường số 9, Phường 16, Quận Gò Vấp, TP.HCM
+    <a href="https://www.google.com/maps/place/Nh%C3%A0+Thi%E1%BA%BFu+Nhi+G%C3%B2+V%E1%BA%A5p/@10.8434307,106.6689625,17z/data=!4m2!3m1!1s0x0000000000000000:0xd8ed5f922d17dbd3" target="_blank">
+      <span class="glyphicon glyphicon-link"></span>
+    </a>
   </p>
   <p class="text-center">
-  	<strong><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Điện thoại</strong>: 08.39163089
+    <strong><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Điện thoại</strong>: 08.39163089
   </p>
   <p class="text-center">
-  	<strong><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Facebook</strong>: Nhà Thiếu nhi Gò Vấp
-  	<a href="https://www.facebook.com/nhathieunhigovap2004" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
+    <strong><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Facebook</strong>: Nhà Thiếu nhi Gò Vấp
+    <a href="https://www.facebook.com/nhathieunhigovap2004" target="_blank"><span class="glyphicon glyphicon-link"></span></a>
   </p>
   <p class="text-center">
-  	<strong><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Website</strong>: www.NhaThieuNhiGoVap.com
+    <strong><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Website</strong>: www.NhaThieuNhiGoVap.com
   </p>
   <hr />
   <h2 class="page-heading">Bản đồ</h2>

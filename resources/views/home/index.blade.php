@@ -21,6 +21,7 @@ class="home-page"
 <script src="assets/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
 <script src="assets/libs/jquery-jcarousel/0.3.3/js/jquery.jcarousel.js"></script>
 @parent
+<script src="app-home/home.js"></script>
 
 @stop
 
@@ -49,10 +50,10 @@ class="home-page"
         <strong>Nhà Thiếu Nhi Gò Vấp</strong>
       </h4>
       <p>
-      	Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
-      	và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
-      	đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
-      	<a class="peekaboo-btn" href="{{ route('intro') }}">Xem tiếp...</a>
+        Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
+        và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
+        đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
+        <a class="peekaboo-btn" href="{{ route('intro') }}">Xem tiếp...</a>
       </p>
     </div>
 
@@ -66,59 +67,63 @@ class="home-page"
     </div>
   </div>
   <div class="col-sm-6">
-    <div>
-      <h2 class="box-title">
-        <img src="assets/img/florish-left.png" alt="" />
-        Tin Tức Hoạt Động
-        <img src="assets/img/florish-right.png" alt="" />
-      </h2>
-    </div>
-    @forelse ($actNews as $key => $p)
-    <?php $postUri = $p->post_name . '-' . Hashids::encode($p->id); ?>
-    @if ($key == 0)  {{-- First post --}}
+    <h2 class="box-title">
+      <img src="assets/img/florish-left.png" alt="" />
+      Tin Tức Hoạt Động
+      <img src="assets/img/florish-right.png" alt="" />
+    </h2>
+    <div class="actnews-list-content">
+      @forelse ($actNews as $key => $p)
+      <?php $postUri = $p->post_name . '-' . Hashids::encode($p->id); ?>
+      @if ($key == 0)  {{-- First post --}}
 
-    <div class="actnews actnews-first clearfix">
-      <h3 class="actnews-title">
-        <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
-      </h3>
-      <a href="{{ route('actnews.show', $postUri) }}" style="display: block;margin-bottom: 8px;text-align: center">
-        <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-      </a>
-      {{ $p->post_excerpt }}
-    </div>
+      <article class="actnews actnews-first clearfix">
+        <header class="entry-header">
+          <h3 class="entry-title">
+            <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
+          </h3>
+          <a href="{{ route('actnews.show', $postUri) }}" style="display: block;margin-bottom: 8px;text-align: center">
+            <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+          </a>
+        </header>
+        <div class="entry-summary">
+          {{ $p->post_excerpt }}
+        </div>
+      </article>
 
-    @else  {{-- next posts --}}
+      @else  {{-- next posts --}}
 
-    <div class="actnews media clearfix">
-      @if (empty($p->post_avatar))
-      <div class="media-left">
-        <a class="post-avatar no-post-avatar" href="{{ route('actnews.show', $postUri) }}">
-          <img class="media-object" src="assets/img/transparent.gif" alt="" />
-        </a>
-      </div>
-      @else
-      <div class="media-left">
-        <a class="post-avatar" href="{{ route('actnews.show', $postUri) }}">
-          <img class="media-object" src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-        </a>
-      </div>
+      <article class="actnews clearfix">
+        <header class="entry-header">
+          @if (empty($p->post_avatar))
+          <div class="entry-thumbnail no-thumbnail">
+            <img src="assets/img/transparent.gif" alt="" />
+            <a href="{{ route('actnews.show', $postUri) }}"></a>
+          </div>
+          @else
+          <div class="entry-thumbnail">
+            <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+            <a href="{{ route('actnews.show', $postUri) }}"></a>
+          </div>
+          @endif
+          <h3 class="entry-title">
+            <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
+          </h3>
+        </header>
+        <div class="entry-summary">
+          {{ $p->post_excerpt }}
+        </div>
+      </article>
+
       @endif
-      <div class="media-body">
-        <h3 class="actnews-title">
-          <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
-        </h3>
-        {{ $p->post_excerpt }}
+      @empty
+      <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
+        <h3 style="margin-top:0">Chưa có tin tức.</h3>
+        <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
+        Hãy cập nhật thêm bài viết trong hệ thống quản lý!
       </div>
+      @endforelse
     </div>
-
-    @endif
-    @empty
-    <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
-      <h3 style="margin-top:0">Chưa có tin tức.</h3>
-      <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
-      Hãy cập nhật thêm bài viết trong hệ thống quản lý!
-    </div>
-    @endforelse
   </div>
   <div class="sidebar col-sm-3">
     <div style="margin-bottom:20px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
@@ -147,28 +152,32 @@ class="home-page"
 </div>
 @stop
 
-@section('detail_after')
+@section('content_after')
 
-<div id="addition-wrapper">
-  <div class="cuztom-row">
-    <div class="box col-xs-12 col-md-3">
-      <h4 class="box-title">Văn Nghệ Thiếu Nhi</h4>
-      <ul class="no-bullets with-arrow">
-        <li><a href="javascript:void(0)">Donec ut vestibulum nunc</a></li>
-        <li><a href="javascript:void(0)">Ut malesuada suscipit augue accumsan rutrum</a></li>
-        <li><a href="javascript:void(0)">Suspendisse non est ut augue dapibus pulvinar</a></li>
-      </ul>
-    </div>
-    <div class="col-xs-12 col-md-6 text-center">
-      <div class="fb-page hidden-xs" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
-        <div class="fb-xfbml-parse-ignore"></div>
+<section id="addition-section">
+  <div class="ivy-page-wrapper">
+    <div id="addition-wrapper">
+      <div class="cuztom-row">
+        <div class="box col-xs-12 col-md-3">
+          <h4 class="box-title">Văn Nghệ Thiếu Nhi</h4>
+          <ul class="no-bullets with-arrow">
+            <li><a href="javascript:void(0)">Donec ut vestibulum nunc</a></li>
+            <li><a href="javascript:void(0)">Ut malesuada suscipit augue accumsan rutrum</a></li>
+            <li><a href="javascript:void(0)">Suspendisse non est ut augue dapibus pulvinar</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6 text-center">
+          <div class="fb-page hidden-xs" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+            <div class="fb-xfbml-parse-ignore"></div>
+          </div>
+        </div>
+        <div class="box col-xs-12 col-md-3">
+          <h4 class="box-title">Liên Hệ</h4>
+          <a href="{{ route('contact') }}"><img src="media/p_lienhe/lien-he-01.jpg" alt="" /></a>
+        </div>
       </div>
     </div>
-    <div class="box col-xs-12 col-md-3">
-      <h4 class="box-title">Liên Hệ</h4>
-      <a href="{{ route('contact') }}"><img src="media/p_lienhe/lien-he-01.jpg" alt="" /></a>
-    </div>
   </div>
-</div>
+</section>
 
 @stop

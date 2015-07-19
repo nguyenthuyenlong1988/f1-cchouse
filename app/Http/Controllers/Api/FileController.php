@@ -16,10 +16,10 @@ class FileController extends Controller
     public function indexImage($name = NULL)
     {
         try {
-            $img = \Image::make(public_path('uploads/' . ($name ?: '../img/blank.gif')));
+            $img = \Image::make(public_path('uploads/' . ($name ?: '../assets/img/blank.gif')));
         }
         catch (NotReadableException $e) {
-            return \Image::make(public_path('img/blank.gif'))->response();
+            return \Image::make(public_path('assets/img/blank.gif'))->response();
         }
 
         return $img->response();
