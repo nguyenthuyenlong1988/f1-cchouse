@@ -2,7 +2,7 @@
 
 <div id="diva" class="ivy-site-diva">
   <div class="ivy-page-wrapper">
-    <a href="{{ route('welcome') }}" title="Chào mừng" data-tooltip data-placement="bottom" style="display:inline-block;">
+    <a href="{{ route('welcome') }}" title="Chào mừng" data-tooltip data-placement="bottom" style="display: inline-block;border-width: 0;">
       <img src="assets/img/home_logo_h120.png" alt="Logo" />
     </a>
     <img src="assets/img/beside_logo_h100.png" alt="Hoạt động bổ ích" />

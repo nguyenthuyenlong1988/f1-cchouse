@@ -160,12 +160,12 @@
 
                 <div>
                   <div>
-                    <img class="logo" itemprop="logo" src="assets/img/logo_140x140.png" alt="Logo" />
+                    <a href="{{ route('intro') }}"><img class="logo" itemprop="logo" src="assets/img/logo_140x140.png" alt="Logo" /></a>
                     <p>
                       Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
                       và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
                       đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
-                      <a href="{{ route('intro') }}">(Xem tiếp)</a>
+                      <a href="{{ route('intro') }}"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a>
                     </p>
                     <ul class="social-links circle animated-effect-1">
                       <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
@@ -179,7 +179,7 @@
                     <ul class="list-icons">
                       <li>
                         <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                          <span class="glyphicon glyphicon-map-marker"></span>
+                          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                           <span itemprop="streetAddress">Số 27, Đường số 9</span>,
                           <span itemprop="addressLocality">P.16, Q.Gò Vấp</span>,
                           <span itemprop="addressRegion">TP.HCM</span>
@@ -187,13 +187,13 @@
                       </li>
                       <li>
                         <div>
-                          <span class="glyphicon glyphicon-earphone"></span>
+                          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                           <span itemprop="telephone"><a href="tel:+84839163089">08-3916-30-89</a></span>
                         </div>
                       </li>
                       <li>
                         <div>
-                          <span class="glyphicon glyphicon-envelope"></span>
+                          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                           <span><a href="mailto:lienhe@nhathieunhigovap.com">lienhe@nhathieunhigovap.com</a></span>
                         </div>
                       </li>
@@ -240,7 +240,8 @@
   </div> {{-- #footer-map --}}
 
   <div id="copyright" class="billy-copyright">
-    <span>&copy; 2015</span> &ndash; <span>Bản quyền thuộc về Nhà Thiếu Nhi Gò Vấp. Phát triển bởi HVA Group.</span>
+    <span>&copy; 2015</span> &ndash;
+    <span>Bản quyền thuộc về Nhà Thiếu Nhi Gò Vấp. Phát triển bởi <a href="http://hva.io">HVA Team</a>.</span>
   </div>
 
 </div> {{-- #bottom-bar --}}

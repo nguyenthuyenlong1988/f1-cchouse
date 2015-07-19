@@ -14,7 +14,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand{!! Illuminate\Support\Str::is('home', $menuActive) ? ' active' : '' !!}" href="{{ route('home') }}">
-          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <i class="fa fa-university"></i>
         </a>
       </div>
 
@@ -27,7 +27,9 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li{!! Illuminate\Support\Str::is('contact', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a></li>
+          <li{!! Illuminate\Support\Str::is('contact', $menuActive) ? ' class="active"' : '' !!}>
+            <a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">

@@ -40,7 +40,7 @@ h4, h5, h6 {
   margin-top: 25px;
   font-size: 16px;
   font-weight: 400;
-  border-bottom: 2px solid #e57979;
+  border-bottom: 1px solid #999;
   text-transform: uppercase;
 }
 
@@ -377,6 +377,7 @@ h4, h5, h6 {
 
 #addition-wrapper .box ul a {
   color: #444;
+  border-color: #444;
 }
 
 #addition-wrapper .box-title {

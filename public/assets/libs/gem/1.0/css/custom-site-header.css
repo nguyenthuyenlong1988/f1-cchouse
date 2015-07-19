@@ -65,8 +65,12 @@ html.has-background #header {
   border-width: 0; /* override Bootstrap */
 }
 
+#navbar a {
+  border-bottom: 0;
+}
+
 #navbar a.navbar-brand {
-  padding-top: 10px;
+  padding-top: 11px;
   padding-bottom: 11px;
   height: auto;
 }
@@ -87,7 +91,7 @@ html.has-background #header {
 #navbar a.navbar-brand.active,
 #navbar ul.navbar-nav > li.active > a {
   background-color: #0f9d58; /*4cc4f8*/
-  color: #000;
+  color: #fff;
 }
 
 #navbar-menu-wrapper {

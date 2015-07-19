@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=2cefbcd3142da46998d8)
- * Config saved to config.json and https://gist.github.com/2cefbcd3142da46998d8
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=165cb193eb30da075f75)
+ * Config saved to config.json and https://gist.github.com/165cb193eb30da075f75
  */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -1091,7 +1091,7 @@ body {
   font-family: 'Open Sans', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #555555;
   background-color: #ffffff;
 }
 input,
@@ -2914,7 +2914,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #959595;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5074,7 +5074,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #555555;
 }
 .alert {
   padding: 15px;

@@ -114,6 +114,10 @@ html.has-transition .ivy-site-navbar li a {
   transition: background-color .08s ease-in;
 }
 
+a:hover {
+  border-bottom: 1px solid #08c;
+}
+
 ul.no-bullets, ol.no-bullets {
   margin: 0;
   padding: 0;

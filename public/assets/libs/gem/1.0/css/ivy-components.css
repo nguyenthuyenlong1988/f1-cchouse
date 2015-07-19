@@ -1,0 +1,13 @@
+/*=============================================================================
+ | ivy-components.css
+ =============================================================================*/
+
+.ivy-table-center {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.ivy-table-center > tbody > tr > td {
+  border-top-width: 0;
+}

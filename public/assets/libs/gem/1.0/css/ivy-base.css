@@ -6,21 +6,41 @@
   outline-width: 0;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder { /* WebKit browsers */
+  font-style: italic;
   font-weight: 300;
   color: #aaa;
 }
+
+  :focus::-webkit-input-placeholder {
+    text-align: center;
+  }
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   font-weight: 300;
   color: #666;
 }
+
+  :focus:-moz-placeholder {
+    text-align: center;
+  }
+
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   font-weight: 300;
   color: #666;
 }
-:-ms-input-placeholder {
+
+  :focus::-moz-placeholder {
+    text-align: center;
+  }
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #bbb !important;
 }
+
+  :focus:-ms-input-placeholder {
+    text-align: center;
+  }
 
 a {
   cursor: pointer;

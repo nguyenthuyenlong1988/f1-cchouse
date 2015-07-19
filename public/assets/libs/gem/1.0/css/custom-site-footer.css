@@ -22,6 +22,7 @@
 .btn-animated {
   position: relative;
   border-color: #777;
+  color: #fff;
   -webkit-border-radius: 30px;
      -moz-border-radius: 30px;
           border-radius: 30px;
@@ -30,13 +31,16 @@
           transition: all .2s ease-in-out;
 }
 
-  .btn-animated, .btn-animated:focus {
+  .btn-animated:focus {
+    background-color: rgba(255,255,255,.1);
+    border-color: #fff;
     color: #fff;
   }
 
-  .btn-animated:hover {
+  .btn-animated:hover, .btn-animated:active {
     background-color: #fff;
     border-color: #fff;
+    color: #333;
   }
 
   .btn-animated:after {
@@ -179,13 +183,32 @@
   width: 12.5%;
 }
 
+#footer-gallery .image-feed li img {
+  width: 100%;
+}
+
 #google-map {
   height: 300px;
 }
 
 .quick-contact .form-control {
-  background-color: rgba(0,0,0,.1);
+  padding-left: 0;
+  background-color: transparent;
+  border-color: rgba(255,255,255,.2);
+  border-width: 0 0 1px;
+  color: #dedede;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.quick-contact .form-control:focus {
+  border-color: #08c;
   color: #fff;
+}
+
+.quick-contact textarea.form-control {
+  resize: none;
 }
 
 .quick-contact .button-submit {
@@ -193,6 +216,11 @@
   border: 1px solid rgba(255,255,255,.2);
   padding: 10px 25px;
   text-transform: uppercase;
+}
+
+.quick-contact .button-submit:hover {
+  background-color: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.4);
 }
 
 @media (max-width: 767px) {
@@ -225,6 +253,8 @@
   color: #89a6b3;
 }
 
+/* .social-links */
+
 .social-links {
   margin: 20px 0;
   font-size: 0;
@@ -239,14 +269,16 @@
   width: 40px;
   height: 40px;
   font-size: 18px;
+  border: 1px solid rgba(255,255,255,.2);
   color: #cdcdcd;
-  border: 1px solid #e7e7e7;
   text-align: center;
 }
 
 .social-links li a i {
   line-height: 40px;
 }
+
+/* .social-links.animated-effect-1 */
 
 .social-links.animated-effect-1 li a {
   position: relative;
@@ -312,6 +344,254 @@
      -moz-border-radius: 100%;
           border-radius: 100%
 }
+
+/* .social-links .facebook */
+
+.social-links.animated-effect-1 li.facebook a:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.social-links.animated-effect-1 li.facebook a:after,
+.social-links:not(.animated-effect-1) li.facebook a:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  color: #fff
+}
+
+/* .social-links .twitter */
+
+.social-links.animated-effect-1 li.twitter a:hover {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.social-links.animated-effect-1 li.twitter a:after,
+.social-links:not(.animated-effect-1) li.twitter a:hover {
+  background-color: #55acee;
+  border-color: #55acee;
+  color: #fff;
+}
+
+/* .social-links .google-plus */
+
+.social-links.animated-effect-1 li.googleplus a:hover {
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.social-links.animated-effect-1 li.googleplus a:after,
+.social-links:not(.animated-effect-1) li.googleplus a:hover {
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+  color: #fff;
+}
+
+/* .social-links .linkedin */
+
+.social-links.animated-effect-1 li.linkedin a:hover {
+  background-color: #0976b4;
+  border-color: #0976b4;
+}
+
+.social-links.animated-effect-1 li.linkedin a:after,
+.social-links:not(.animated-effect-1) li.linkedin a:hover {
+  background-color: #0976b4;
+  border-color: #0976b4;
+  color: #fff;
+}
+
+/* .social-links .skype */
+
+.social-links.animated-effect-1 li.skype a:hover {
+  background-color: #00aff0;
+  border-color: #00aff0;
+}
+
+.social-links.animated-effect-1 li.skype a:after,
+.social-links:not(.animated-effect-1) li.skype a:hover {
+  background-color: #00aff0;
+  border-color: #00aff0;
+  color: #fff;
+}
+
+/* .social-links .youtube */
+
+.social-links.animated-effect-1 li.youtube a:hover {
+  background-color: #b31217;
+  border-color: #b31217;
+}
+
+.social-links.animated-effect-1 li.youtube a:after,
+.social-links:not(.animated-effect-1) li.youtube a:hover {
+  background-color: #b31217;
+  border-color: #b31217;
+  color: #fff;
+}
+
+/* .social-links .flickr */
+
+.social-links.animated-effect-1 li.flickr a:hover {
+  background-color: #ff0084;
+  border-color: #ff0084;
+}
+
+.social-links.animated-effect-1 li.flickr a:after,
+.social-links:not(.animated-effect-1) li.flickr a:hover {
+  background-color: #ff0084;
+  border-color: #ff0084;
+  color: #fff;
+}
+
+/* .social-links .pinterest */
+
+.social-links.animated-effect-1 li.pinterest a:hover {
+  background-color: #cb2027;
+  border-color: #cb2027;
+}
+
+.social-links.animated-effect-1 li.pinterest a:after,
+.social-links:not(.animated-effect-1) li.pinterest a:hover {
+  background-color: #cb2027;
+  border-color: #cb2027;
+  color: #fff
+}
+
+/* .social-links .instagram */
+
+.social-links.animated-effect-1 li.instagram a:hover {
+  background-color: #517fa4;
+  border-color: #517fa4;
+}
+
+.social-links.animated-effect-1 li.instagram a:after,
+.social-links:not(.animated-effect-1) li.instagram a:hover {
+  background-color: #517fa4;
+  border-color: #517fa4;
+  color: #fff;
+}
+
+/* .social-links .vimeo */
+
+.social-links.animated-effect-1 li.vimeo a:hover {
+  background-color: #aad450;
+  border-color: #aad450;
+}
+
+.social-links.animated-effect-1 li.vimeo a:after,
+.social-links:not(.animated-effect-1) li.vimeo a:hover {
+  background-color: #aad450;
+  border-color: #aad450;
+  color: #fff;
+}
+
+/* .social-links .tumblr */
+
+.social-links.animated-effect-1 li.tumblr a:hover {
+  background-color: #32506d;
+  border-color: #32506d;
+}
+
+.social-links.animated-effect-1 li.tumblr a:after,
+.social-links:not(.animated-effect-1) li.tumblr a:hover {
+  background-color: #32506d;
+  border-color: #32506d;
+  color: #fff;
+}
+
+/* .social-links .soundcloud */
+
+.social-links.animated-effect-1 li.soundcloud a:hover {
+  border-color: #ff3a00;
+}
+
+.social-links.animated-effect-1 li.soundcloud a:after,
+.social-links:not(.animated-effect-1) li.soundcloud a:hover {
+  background-color: #ff3a00;
+  border-color: #ff3a00;
+  color: #fff;
+}
+
+/* .social-links .foursquare */
+
+.social-links.animated-effect-1 li.foursquare a:hover {
+  background-color: #0072b1;
+  border-color: #0072b1;
+}
+
+.social-links.animated-effect-1 li.foursquare a:after,
+.social-links:not(.animated-effect-1) li.foursquare a:hover {
+  background-color: #0072b1;
+  border-color: #0072b1;
+  color: #fff;
+}
+
+/* .social-links .dribbble */
+
+.social-links.animated-effect-1 li.dribbble a:hover {
+  background-color: #ea4c89;
+  border-color: #ea4c89;
+}
+
+.social-links.animated-effect-1 li.dribbble a:after,
+.social-links:not(.animated-effect-1) li.dribbble a:hover {
+  background-color: #ea4c89;
+  border-color: #ea4c89;
+  color: #fff;
+}
+
+/* .social-links .behance,
+   .social-links .xing */
+
+.social-links.animated-effect-1 li.behance a:hover,
+.social-links.animated-effect-1 li.xing a:hover {
+  background-color: #126567;
+  border-color: #126567;
+}
+
+.social-links.animated-effect-1 li.behance a:after,
+.social-links:not(.animated-effect-1) li.behance a:hover {
+  background-color: #053eff;
+  border-color: #053eff;
+  color: #fff;
+}
+
+.social-links.animated-effect-1 li.xing a:after,
+.social-links:not(.animated-effect-1) li.xing a:hover {
+  background-color: #126567;
+  border-color: #126567;
+  color: #fff;
+}
+
+/* .social-links .vine */
+
+.social-links.animated-effect-1 li.vine a:hover {
+  background-color: #00a478;
+  border-color: #126567;
+}
+
+.social-links.animated-effect-1 li.vine a:after,
+.social-links:not(.animated-effect-1) li.vine a:hover {
+  background-color: #00a478;
+  border-color: #00a478;
+  color: #fff;
+}
+
+/* .social-links .stumbleupon */
+
+.social-links.animated-effect-1 li.stumbleupon a:hover {
+  background-color: #f74425;
+  border-color: #126567;
+}
+
+.social-links.animated-effect-1 li.stumbleupon a:after,
+.social-links:not(.animated-effect-1) li.stumbleupon a:hover {
+  background-color: #f74425;
+  border-color: #f74425;
+  color: #fff;
+}
+
+/* #localbusiness .social-links */
 
 #localbusiness .social-links li {
   margin: 0 5px 5px 0;

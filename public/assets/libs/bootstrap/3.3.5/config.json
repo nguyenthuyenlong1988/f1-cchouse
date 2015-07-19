@@ -1,6 +1,6 @@
 {
   "vars": {
-    "@gray-base": "#222",
+    "@gray-base": "#555",
     "@gray-darker": "lighten(#000, 13.5%)",
     "@gray-dark": "lighten(#000, 20%)",
     "@gray": "lighten(#000, 33.5%)",
@@ -12,7 +12,7 @@
     "@brand-warning": "#ec971f",
     "@brand-danger": "#d9534f",
     "@body-bg": "#fff",
-    "@text-color": "@gray-dark",
+    "@text-color": "@gray-base",
     "@link-color": "#08c",
     "@link-hover-color": "@link-color",
     "@link-hover-decoration": "none",
@@ -430,5 +430,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=2cefbcd3142da46998d8"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=165cb193eb30da075f75"
 }
