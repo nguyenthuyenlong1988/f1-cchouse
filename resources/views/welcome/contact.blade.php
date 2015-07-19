@@ -56,7 +56,9 @@ id="contact-page" class="contact-page"
         </div>
       </div>
       <div id="simple-map" class="tab-pane fade" role="tabpanel">
-        <img src="media/p_lienhe/lien-he-01.jpg" alt="" />
+        <div class="text-center">
+          <img src="media/p_lienhe/lien-he-01.jpg" alt="" />
+        </div>
       </div>
     </div>
 

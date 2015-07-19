@@ -34,6 +34,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=latin,vietnamese,latin-ext" />
 <!--[if lt IE 9]><script src="assets/libs/html5shiv/3.7.2/js/html5shiv.min.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/libs/bootstrap/3.3.5/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 @yield('page_css')
 
