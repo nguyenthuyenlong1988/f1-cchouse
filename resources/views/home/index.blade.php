@@ -9,8 +9,7 @@ class="home-page"
 
 @section('page_css')
 
-<link rel="stylesheet" href="assets/libs/owl-carousel/1.3.3/owl.carousel.css" />
-<link rel="stylesheet" href="assets/libs/owl-carousel/1.3.3/owl.theme.css" />
+<link rel="stylesheet" href="assets/libs/owl-carousel/2.0.0/css/owl.carousel.css" />
 @parent
 <link rel="stylesheet" href="app-home/home.css" />
 
@@ -18,8 +17,7 @@ class="home-page"
 
 @section('page_js_load')
 
-<script src="assets/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
-<script src="assets/libs/jquery-jcarousel/0.3.3/js/jquery.jcarousel.js"></script>
+<script src="assets/libs/owl-carousel/2.0.0/js/owl.carousel.js"></script>
 @parent
 <script src="app-home/home.js"></script>
 
@@ -53,7 +51,7 @@ class="home-page"
         Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
         và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
         đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
-        <a class="peekaboo-btn" href="{{ route('intro') }}">Xem tiếp...</a>
+        <a class="peekaboo3-btn" href="{{ route('intro') }}">Xem tiếp <span class="fa fa-plus-circle" aria-hidden="true"></span></a>
       </p>
     </div>
 
