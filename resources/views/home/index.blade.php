@@ -37,38 +37,46 @@ class="home-page"
 
 @section('content')
 
+<h2 class="section-topline text-center hidden-xs" style="margin-top: 20px;margin-bottom: 30px;padding-bottom: 15px;">
+  <img class="hidden-xs" src="assets/img/florish-left.png" alt="" />Tin Tức Hoạt Động<img class="hidden-xs" src="assets/img/florish-right.png" alt="" />
+</h2>
 <div class="cuztom-row">
   <div class="sidebar col-sm-3">
-    <div style="margin-bottom:30px;padding:10px;color:#fff;background-color:#1b837b;border:0 solid #1b837b;border-radius:2px;
-      background-image:linear-gradient(to top, #14814c, #49b860);">
-      <h4 class="box-title">
+    <style>
+      #danhngon-box {
+        margin-bottom: 30px;
+        padding: 10px;
+        color: #fff;
+        background: #24a7ad linear-gradient(to top, #2ecc71, #229e57);
+        border-radius: 2px;
+      }
+    </style>
+    <div id="danhngon-box" class="box box-style-1">
+      <h4 class="box-title text-center">
         <img src="assets/img/florish-left.png" alt="" width="45" />
-        <strong>Giới Thiệu</strong>
+        <span>Câu nói hay</span>
         <img src="assets/img/florish-right.png" alt="" width="45" /><br />
-        <strong>Nhà Thiếu Nhi Gò Vấp</strong>
+        <span>Mỗi ngày một danh ngôn</span>
       </h4>
-      <p>
-        Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
-        và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
-        đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
-        <a class="peekaboo3-btn" href="{{ route('intro') }}">Xem tiếp <span class="fa fa-plus-circle" aria-hidden="true"></span></a>
-      </p>
+      <p class="text-center" style="font-size: 120%;">Rễ của sự học tập thì đắng, quả của sự học tập thì ngọt.</p>
+      <p class="text-center">&mdash; Ngạn ngữ Nga &mdash;</p>
+      <p class="text-center"><a class="peekaboo3-btn" href="{{ route('intro') }}">Xem tiếp <span class="fa fa-plus-circle" aria-hidden="true"></span></a></p>
     </div>
 
-    <div style="margin-bottom: 30px;">
-      <h4 class="box-title">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</h4>
-      <img src="assets/img/demo/hcm.jpg" alt="" />
+    <div class="text-center hidden-xs" style="margin-bottom: 30px;">
+      <img src="assets/img/hcm.jpg" alt="" style="width: 100%;" />
     </div>
 
-    <div style="margin-bottom:10px;padding:10px;background-color:#f3d3f4;border:0 solid #eaaeae;border-radius:2px">
-      <h4 class="box-title">Hỗ Trợ Trực Tuyến</h4>
+    <div class="box">
+      <h4 class="box-title"><span>Văn bản Nhà thiếu nhi</span></h4>
+      @for ($i = 0; $i < 5; $i++)
+        <br />
+      @endfor
     </div>
   </div>
   <div class="col-sm-6">
-    <h2 class="box-title">
-      <img src="assets/img/florish-left.png" alt="" />
-      Tin Tức Hoạt Động
-      <img src="assets/img/florish-right.png" alt="" />
+    <h2 class="section-topline text-center visible-xs" style="margin-top: 40px;margin-bottom: 30px;padding-bottom: 15px;">
+      <img class="hidden-xs" src="assets/img/florish-left.png" alt="" />Tin Tức Hoạt Động<img class="hidden-xs" src="assets/img/florish-right.png" alt="" />
     </h2>
     <div class="actnews-list-content">
       @forelse ($actNews as $key => $p)
@@ -78,11 +86,11 @@ class="home-page"
       <article class="actnews actnews-first clearfix">
         <header class="entry-header">
           <h3 class="entry-title">
-            <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
+            <a href="{{ route('actnews.show', $postUri) }}">
+              <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+              {{ $p->post_title }}
+            </a>
           </h3>
-          <a href="{{ route('actnews.show', $postUri) }}" style="display: block;margin-bottom: 8px;text-align: center">
-            <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-          </a>
         </header>
         <div class="entry-summary">
           {{ $p->post_excerpt }}
@@ -99,7 +107,7 @@ class="home-page"
             <a href="{{ route('actnews.show', $postUri) }}"></a>
           </div>
           @else
-          <div class="entry-thumbnail">
+          <div class="entry-thumbnail img-circle">
             <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
             <a href="{{ route('actnews.show', $postUri) }}"></a>
           </div>
@@ -124,8 +132,8 @@ class="home-page"
     </div>
   </div>
   <div class="sidebar col-sm-3">
-    <div style="margin-bottom:20px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
-      <h4 class="box-title">Slide hình</h4>
+    <div class="box">
+      <h4 class="box-title"><span>Ảnh hoạt động</span></h4>
       <ul class="no-bullets">
         @for ($i = 0; $i < 12; $i++)
         <li>&nbsp;</li>
@@ -133,15 +141,15 @@ class="home-page"
       </ul>
     </div>
 
-    <div style="margin-bottom:20px;padding:10px;background-color:#d4dbd8;border-radius:2px">
-      <h4 class="box-title">Phòng Chiếu Phim 3D</h4>
+    <div class="box">
+      <h4 class="box-title"><span>Phòng Chiếu Phim 3D</span></h4>
       @for ($i = 0; $i < 5; $i++)
       <br />
       @endfor
     </div>
 
-    <div style="margin-bottom:20px;padding:10px;background-color:#d4dbd8;border-radius:2px">
-      <h4 class="box-title">Quảng cáo</h4>
+    <div class="box">
+      <h4 class="box-title"><span>Quảng cáo</span></h4>
       @for ($i = 0; $i < 5; $i++)
       <br />
       @endfor
@@ -152,26 +160,66 @@ class="home-page"
 
 @section('content_after')
 
-<section id="addition-section">
+<section id="addition-section" class="ivy-section">
+  <div class="__bg__overlay"></div>
   <div class="ivy-page-wrapper">
     <div id="addition-wrapper">
       <div class="cuztom-row">
         <div class="box col-xs-12 col-md-3">
-          <h4 class="box-title">Văn Nghệ Thiếu Nhi</h4>
+          <h4 class="box-title"><span>Chuyên mục</span></h4>
           <ul class="no-bullets with-arrow">
             <li><a href="javascript:void(0)">Donec ut vestibulum nunc</a></li>
             <li><a href="javascript:void(0)">Ut malesuada suscipit augue accumsan rutrum</a></li>
             <li><a href="javascript:void(0)">Suspendisse non est ut augue dapibus pulvinar</a></li>
           </ul>
         </div>
-        <div class="col-xs-12 col-md-6 text-center">
-          <div class="fb-page hidden-xs" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
-            <div class="fb-xfbml-parse-ignore"></div>
-          </div>
+        <div class="col-xs-12 col-md-6">
+          <h4 class="box-title"><span>Tiêu điểm</span></h4>
         </div>
         <div class="box col-xs-12 col-md-3">
-          <h4 class="box-title">Liên Hệ</h4>
-          <a href="{{ route('contact') }}"><img src="media/p_lienhe/lien-he-01.jpg" alt="" /></a>
+          <h4 class="box-title"><span>Chat trực tuyến</span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter-area" class="ivy-section footerwidget-section">
+  <div class="ivy-page-wrapper">
+    <div class="inner-area clearfix">
+      <div id="newsletter-wrapper" class="widget-wrapper col-md-6">
+        <div id="newsletter-widget" class="widget">
+          <h2 class="title"><span>Đăng ký bản tin</span></h2>
+          <div class="widget-content">
+            <br />
+            <div class="text-center">
+              <img src="assets/img/demo/sketch-subscribe.png" alt="" />
+            </div>
+            <br />
+            <div id="btnEmailsub">
+              <form id="subscribe" action="./" method="post">
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                  <input id="subbox" class="form-control" type="text" placeholder="Nhập email của bạn..." />
+                  <span class="input-group-btn">
+                    <button id="subbutton" class="btn btn-info" type="button">
+                      <span class="hidden-xs">Đăng ký nhận tin</span> <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="facebook-wrapper" class="widget-wrapper col-md-6 hidden-xs">
+        <div id="facebook-widget" class="widget">
+          <h2 class="title"><span>Theo dõi trên Facebook</span></h2>
+          <div class="widget-content text-center">
+            <div class="fb-page" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="390" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+              <div class="fb-xfbml-parse-ignore"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

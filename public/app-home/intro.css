@@ -7,10 +7,6 @@
   background-color: #6f4c74;
 }
 
-.intro-page .content {
-  line-height: 1.7;
-}
-
 .intro-page p::first-letter {
   margin-left: 30px;
 }

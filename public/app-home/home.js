@@ -26,13 +26,13 @@
                 autoplay          : true,
                 autoplayTimeout   : 5e3,
                 autoplayHoverPause: true,
-                autoHeight        : true,
+                autoHeight        : false,
                 loop              : true,
 
                 // Speed
 
-                autoplaySpeed : 5e2,
-                dragEndSpeed  : 3e2,
+                autoplaySpeed : 2e2,
+                dragEndSpeed  : 2e2,
                 goToFirstSpeed: 2e3,
 
                 pullDrag: false,

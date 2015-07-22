@@ -2,39 +2,30 @@
  | home/home.css
  =============================================================================*/
 
-.home-page #enrolstudents-section {
-  margin-top: 1px;
-}
-
-.home-page #enrolstudents-section a {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4px 15px;
-  max-width: 800px;
-  background-image: url(../assets/libs/gem/1.0/img/ui_bg_medium_75_ffd70d_40x40.png);
-  border-radius: 24px;
-  color: #222;
-}
-
 .home-page #detail-section {
-  background-color: #0f9d58;
+  background-color: #fff;
 }
 
 .home-page .actnews {
   margin: 0;
   padding: 20px 0;
   background-color: #fff;
-  border-top: 1px solid #0f9f58; /*84cdc7*/
+  border-top: 1px solid #c5e2c4; /*84cdc7*/
 }
 
 .home-page .actnews .entry-title {
   margin-top: 0;
   font-size: 20px;
+  line-height: 1.4;
 }
 
 .home-page .actnews .entry-title a {
-  color: #222;
+  color: #555;
+  border-color: #555;
+}
+
+.home-page .actnews .entry-title a:hover {
+  color: #333;
 }
 
 .home-page .actnews .entry-thumbnail {
@@ -42,7 +33,7 @@
   float: left;
   margin-bottom: 15px;
   margin-right: 15px;
-  background-color: #0f9d58;
+  background-color: #c5e2c4;
   text-align: center;
 }
 
@@ -52,7 +43,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0,0,0,.05);
 }
 
 .home-page .actnews .entry-thumbnail img {
@@ -70,15 +61,21 @@
 }
 
 .home-page .actnews-first {
-  padding: 10px 0 20px;
+  padding: 0 0 20px;
   border-width: 0;
-  border-top: 1px solid #0f9f58;
+  border-top: 1px solid transparent;
 }
 
 .home-page .actnews-first .entry-title {
   font-size: 24px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.home-page .actnews-first .entry-title img {
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 @media (max-width: 430px) {

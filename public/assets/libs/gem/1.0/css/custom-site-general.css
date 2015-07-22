@@ -10,6 +10,29 @@ h4, h5, h6 {
   font-weight: 400;
 }
 
+.section-topline:before {
+  content: ' ';
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 8px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAEAQMAAACTPww9AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURf///7+/v6NDdjkAAAAQSURBVAjXY2hgEGBQYHAAAAR4APGA2fwfAAAAAElFTkSuQmCC);
+}
+
+
+
+.__bg__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(73,184,96,.79);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(60%,transparent),to(rgba(15,157,88,.9)));
+  background-image: linear-gradient(to bottom,transparent 60%,rgba(15,157,88,.9));
+}
+
 #page {
   position: absolute;
   margin: auto;
@@ -40,7 +63,7 @@ h4, h5, h6 {
   margin-top: 25px;
   font-size: 16px;
   font-weight: 400;
-  border-bottom: 1px solid #999;
+  border-bottom: .1rem solid rgba(0,0,0,.15);
   text-transform: uppercase;
 }
 
@@ -162,11 +185,9 @@ h4, h5, h6 {
 
 #activity-section {
   position: relative;
-  background-color: #0f9d58;
 }
 
 #activity-wrapper {
-  margin-top: 1px;
 }
 
 #activity-wrapper .cuztom-col {
@@ -200,8 +221,17 @@ h4, h5, h6 {
   display: block !important;
   width: 200%;
   height: 100%;
-  background-color: rgba(15,157,88,.55);
+  background-color: rgba(255,255,255,.75);
   color: #fff;
+  -webkit-transition: background-color .3s ease-out;
+     -moz-transition: background-color .3s ease-out;
+      -ms-transition: background-color .3s ease-out;
+       -o-transition: background-color .3s ease-out;
+          transition: background-color .3s ease-out;
+}
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: rgba(255,255,255,.45);
 }
 
 .owl-prev .set-middle, .owl-next .set-middle {
@@ -216,8 +246,13 @@ h4, h5, h6 {
 }
 
 .owl-prev i, .owl-next i {
-  font-size: 100px;
-  color: rgba(255,255,255,.5);
+  font-size: 72px;
+  color: #555;
+  -webkit-transition: margin .2s ease-out;
+     -moz-transition: margin .2s ease-out;
+      -ms-transition: margin .2s ease-out;
+       -o-transition: margin .2s ease-out;
+          transition: margin .2s ease-out;
 }
 
 .owl-prev {
@@ -227,6 +262,10 @@ h4, h5, h6 {
 }
 
 .owl-prev i {
+  margin-right: 30px;
+}
+
+.owl-prev:hover i {
   margin-right: 50px;
 }
 
@@ -237,7 +276,53 @@ h4, h5, h6 {
 }
 
 .owl-next i {
+  margin-left: 30px;
+}
+
+.owl-next:hover i {
   margin-left: 50px;
+}
+
+.act-item__tile__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(60%,transparent),to(#000));
+  background-image: linear-gradient(to bottom,transparent 60%,#000);
+}
+
+.act-item__tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4%;
+  width: 100%;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.6);
+}
+
+.act-item__tile__details__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+
+  .act-item__tile__overlay {
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(20%,transparent),to(#000));
+    background-image: linear-gradient(to bottom,transparent 20%,#000);
+  }
+
+  .act-item__tile__details {
+    font-size: 12px;
+  }
+
+  .act-item__tile__details__title {
+    font-size: 2rem;
+  }
+
 }
 
 /** Activity Menu Styles */
@@ -377,6 +462,10 @@ h4, h5, h6 {
   padding-bottom: 20px;
 }
 
+#dreams-wrapper .cuztom-col {
+  margin-bottom: 15px;
+}
+
 
 /*=============================================================================
  | custom-section-featured.css
@@ -395,50 +484,50 @@ h4, h5, h6 {
  =============================================================================*/
 
 .box-title {
-  margin-top: 5px;
+  margin-top: 0;
   font-size: 14px;
-  font-weight: bold;
-  text-align: center;
+  font-weight: 300;
+  border-bottom: 1px solid #49b860;
   text-transform: uppercase;
+}
+
+.box-title span {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #49b860;
+  color: #fff;
+}
+
+.box-style-1 .box-title span {
+  background-color: transparent;
+}
+
+.sidebar .box {
+  margin-bottom: 20px;
 }
 
 .sidebar .box-title,
 #addition-wrapper .box-title {
   margin-top: 0;
   line-height: 1.3;
-  font-weight: normal;
 }
 
 #detail-section {
-  padding: 20px 0;
+  padding-top: 2px;
   background-color: #333c41;
 }
 
 #detail-wrapper {
   padding-top: 10px;
   padding-bottom: 15px;
-  background-color: #fff; /*f2fffe*/
+  background-color: #fff;
   border-top: 0 solid #29a5c2;
   border-bottom: 0 solid #29a5c2;
 }
 
-#addition-wrapper {
-  padding: 30px 0;
-  background-color: #fff;
-}
-
-#addition-wrapper .box ul a {
-  color: #444;
-  border-color: #444;
-}
-
-#addition-wrapper .box-title {
-  margin-top: 15px;
-  text-align: left;
-}
-
-#addition-wrapper .fb-page {
-  margin-top: 10px;
+#detail-wrapper .content {
+  font-size: 110%;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -447,4 +536,161 @@ h4, h5, h6 {
     background-color: #fff !important;
   }
 
+}
+
+/*=============================================================================
+ | custom-section-addition.css
+ =============================================================================*/
+
+#addition-section {
+  position: relative;
+  background: #49b860 url(../../../../img/section_addition_bg.jpg) center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  color: #eee;
+}
+
+#addition-section a {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+#addition-wrapper {
+  padding: 30px 0;
+}
+
+#addition-wrapper .box-title {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #fff;
+  text-align: left;
+}
+
+#addition-wrapper .box-title span {
+  display: inline-block;
+  padding: 4px 10px 3px;
+  background-color: #fff;
+  color: #555;
+}
+
+/*=============================================================================
+ | custom-section-newsletter.css
+ =============================================================================*/
+
+#newsletter-area {
+  padding-bottom: 50px;
+}
+
+#newsletter-area .inner-area:before {
+  margin-bottom: 50px;
+}
+
+#newsletter-area .widget {
+  padding: 25px;
+  border: 4px double #efefef;
+  border-color: rgba(200,200,200,.79);
+}
+
+#newsletter-area h2.title {
+  overflow: hidden;
+  margin-top: -45px;
+  padding: 12px 14px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#newsletter-area h2.title span {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #fff;
+}
+
+#newsletter-wrapper {
+  margin-bottom: 30px;
+}
+
+#subbox {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*=============================================================================
+ | custom-act-newest.css
+ =============================================================================*/
+
+#act-newest ul a {
+  display: block;
+  overflow: hidden;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+  color: #666;
+  -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#act-newest ul a:hover {
+  border-bottom: 0;
+  color: #333;
+}
+
+.topheadline-container {
+  position: relative;
+  min-height: 15rem;
+}
+
+.topheadline-container img.thumb {
+  width: 100%;
+}
+
+.topheadline-container .headline-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5rem 2rem 2rem 5.6rem;
+  width: 100%;
+  background-image: -webkit-linear-gradient(bottom,rgba(0,0,0,.95) 0,rgba(0,0,0,0) 100%);
+  background-image: linear-gradient(0deg,rgba(0,0,0,.95) 0,rgba(0,0,0,0) 100%);
+  color: #fff;
+}
+
+.topheadline-container .headline-container span {
+  display: block;
+  overflow: hidden;
+  max-height: 5.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.topheadline-container .headline-container .truncate {
+  white-space: normal;
+}
+
+.topheadline-container .headline-container .attribution {
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.384;
+}
+
+.topheadline-container .ranking {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin-left: 1.8rem;
+  padding-bottom: 4rem;
+  font-size: 6rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.167;
 }

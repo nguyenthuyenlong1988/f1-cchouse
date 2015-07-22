@@ -9,7 +9,7 @@
 </div>
 @endif
 
-<nav id="topbar" class="ivy-site-topbar">
+<nav id="topbar" class="ivy-site-topbar hidden">
   <div class="ivy-page-wrapper">
 
     <div class="col-md-6 col-md-push-6">

@@ -1,21 +1,21 @@
 {{-- Created at 2015/06/01 04:00 htien Exp $ --}}
 
 <section id="activity-section" class="ivy-section">
-  @if (! Route::is('enrolstudents'))
-  <div class="ivy-page-wrapper">
-    <section id="enrolstudents-section" class="ivy-section">
-    <div>
-      <h2>
-        <a href="{{ route('enrolstudents') }}">
-          <span class="glyphicon glyphicon-star"></span>
-          Chiêu sinh khóa mới 2015
-          <span class="glyphicon glyphicon-star"></span>
-        </a>
-      </h2>
-    </div>
-    </section>
-  </div>
-  @endif
+  {{--@if (! Route::is('enrolstudents'))--}}
+  {{--<div class="ivy-page-wrapper">--}}
+    {{--<section id="enrolstudents-section" class="ivy-section">--}}
+    {{--<div>--}}
+      {{--<h2>--}}
+        {{--<a href="{{ route('enrolstudents') }}">--}}
+          {{--<span class="glyphicon glyphicon-star"></span>--}}
+          {{--Chiêu sinh khóa mới 2015--}}
+          {{--<span class="glyphicon glyphicon-star"></span>--}}
+        {{--</a>--}}
+      {{--</h2>--}}
+    {{--</div>--}}
+    {{--</section>--}}
+  {{--</div>--}}
+  {{--@endif--}}
 
   <h2 class="hidden">Activities</h2>
   <div id="activity-wrapper">
@@ -30,18 +30,46 @@
           <div class="item">
             {{--<img class="owl-lazy" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-1.jpg" alt="" >--}}
             <img src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-1.jpg" alt="" />
+            <div class="act-item__tile__overlay"></div>
+            <div class="act-item__tile__details">
+              <h3 class="act-item__tile__details__title">Hoạt động ngoại khóa 1</h3>
+              <div class="act-item__tile__supplementary">
+                <div class="act-item__tile__description">Học tập, vui chơi, vận động thể chất, giải trí lành mạnh và bổ ích.</div>
+              </div>
+            </div>
           </div>
           <div class="item">
             {{--<img class="owl-lazy" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-2.jpg" alt="" />--}}
             <img src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-2.jpg" alt="" />
+            <div class="act-item__tile__overlay"></div>
+            <div class="act-item__tile__details">
+              <h3 class="act-item__tile__details__title">Hoạt động ngoại khóa 2</h3>
+              <div class="act-item__tile__supplementary">
+                <div class="act-item__tile__description">Học tập, vui chơi, vận động thể chất, giải trí lành mạnh và bổ ích.</div>
+              </div>
+            </div>
           </div>
           <div class="item">
             {{--<img class="owl-lazy" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-3.jpg" alt="" />--}}
             <img src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-3.jpg" alt="" />
+            <div class="act-item__tile__overlay"></div>
+            <div class="act-item__tile__details">
+              <h3 class="act-item__tile__details__title">Hoạt động ngoại khóa 3</h3>
+              <div class="act-item__tile__supplementary">
+                <div class="act-item__tile__description">Học tập, vui chơi, vận động thể chất, giải trí lành mạnh và bổ ích.</div>
+              </div>
+            </div>
           </div>
           <div class="item">
             {{--<img class="owl-lazy" data-src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-4.jpg" alt="" />--}}
             <img src="media/s_hoatdong/giaoducthieunhi-trochoi-dangian-4.jpg" alt="" />
+            <div class="act-item__tile__overlay"></div>
+            <div class="act-item__tile__details">
+              <h3 class="act-item__tile__details__title">Hoạt động ngoại khóa 4</h3>
+              <div class="act-item__tile__supplementary">
+                <div class="act-item__tile__description">Học tập, vui chơi, vận động thể chất, giải trí lành mạnh và bổ ích.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
