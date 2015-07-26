@@ -82,7 +82,7 @@ html.has-background #header {
 #navbar ul.navbar-nav > li > a,
 #navbar ul.navbar-nav > li > a:focus {
   background-color: transparent;
-  color: #333;
+  color: #555;
 }
 
 #navbar a.navbar-brand:hover,
@@ -98,12 +98,6 @@ html.has-background #header {
 }
 
 #navbar-menu-wrapper {
-}
-
-#navbar .dropdown-menu > li > a:hover,
-#navbar .dropdown-menu > li > a:focus {
-  background-color: #eb7404;
-  color: #fff;
 }
 
 #navbar .navbar-toggle {

@@ -6,11 +6,15 @@
   background-color: #fff;
 }
 
+/*=============================================================================
+ | home/home-actnews.css
+ =============================================================================*/
+
 .home-page .actnews {
   margin: 0;
-  padding: 20px 0;
+  padding: 0 0 20px;
   background-color: #fff;
-  border-top: 1px solid #c5e2c4; /*84cdc7*/
+  border-top: 0 solid #c5e2c4; /*84cdc7*/
 }
 
 .home-page .actnews .entry-title {

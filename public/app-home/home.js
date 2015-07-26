@@ -7,9 +7,10 @@
     'use strict';
 
     var
-        $ = global.jQuery;
+        $ = global.jQuery,
+        _func = global._func;
 
-    function playActivitySlider()
+    function _playActivitySlider()
     {
         if ($.fn.owlCarousel) {
             var
@@ -55,36 +56,10 @@
 
                 onInitialized: _callback_onInitialized
             });
-
-            //$actImageSlider.owlCarousel({
-            //    autoPlay: 5000,
-            //
-            //    items: 1,
-            //
-            //    singleItem: false,
-            //    slideSpeed: 200,
-            //
-            //    pagination     : false,
-            //    paginationSpeed: 200,
-            //
-            //    rewindNav  : true,
-            //    rewindSpeed: 200,
-            //
-            //    stagePadding: 50,
-            //
-            //    lazyLoad   : true,
-            //    navigation : false,
-            //    stopOnHover: true,
-            //
-            //    afterInit: function ()
-            //    {
-            //        $('.cover-image', $actImageWrapper).remove();
-            //    }
-            //});
         }
     }
 
-    //function playMenuAutoscroll()
+    //function _playMenuAutoscroll()
     //{
     //    if ($.fn['jcarousel']) {
     //        var
@@ -160,9 +135,12 @@
     //}
 
     // SLIDER
-    playActivitySlider();
+    _playActivitySlider();
 
     // QUICKMENU
-    //playMenuAutoscroll();
+    //_playMenuAutoscroll();
+
+    // VERICAL IMAGE SLIDER
+    _func.playCarousel('.UISlider', '.slideList');
 
 }(_tienScope, _tienScope.TienJS));

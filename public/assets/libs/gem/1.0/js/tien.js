@@ -178,7 +178,7 @@ var
             {
                 _TienJS.version = version;
                 _TienJS.global = global;
-                _TienJS.config = global['cfg'] || {};
+                _TienJS.config = global['_cfg'] || {};
                 _TienJS.debug = _TienJS.config['js_debug'] || false;
                 _TienJS.log = log;
                 _TienJS.error = error;

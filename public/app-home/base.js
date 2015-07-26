@@ -11,9 +11,11 @@
 
     var
         doc = global.document,
-        google = global['google'];
+        google = global['google'],
+        $ = global.jQuery,
+        _func = global._func;
 
-    function loadMap(latitude, longitude)
+    function _loadMap(latitude, longitude)
     {
         if (google && google.maps) {
             var
@@ -42,12 +44,65 @@
             });
         }
         else {
-            TienJS.log('Google Map load failed.');
+            TienJS.log('Google Map has not been loaded.');
         }
     }
+    _func.loadMap = _loadMap;
+
+    function _playCarousel(rootName, listName)
+    {
+        if ($.fn.jcarousel) {
+            var $carousel = $(rootName);
+
+            if ($.fn.jcarouselAutoscroll) {
+                $carousel.on('jcarousel:createend', function (e, carousel)
+                {
+                    var self = $(this);
+                    self.hover(
+                        function ()
+                        {
+                            self.jcarouselAutoscroll('stop');
+                        },
+                        function ()
+                        {
+                            self.jcarouselAutoscroll('start');
+                        }
+                    );
+                });
+            }
+
+            $carousel.jcarousel({
+                list       : listName,
+                vertical   : true,
+                wrap       : 'circular',
+                animation  : {
+                    duration: 500,
+                    easing  : 'linear'
+                }
+                ,
+                transitions: (Modernizr && Modernizr.csstransitions) ? {
+                    transforms  : Modernizr.csstransforms,
+                    transforms3d: Modernizr.csstransform3d,
+                    easing      : 'ease-in-out'
+                } : false
+            });
+
+            if ($.fn.jcarouselAutoscroll) {
+                $carousel.jcarouselAutoscroll({
+                    autostart: true,
+                    interval : 2000,
+                    target   : '+=2'
+                });
+
+            }
+        }
+        else {
+            TienJS.log('jCarousel has not been loaded.');
+        }
+    }
+    _func.playCarousel = _playCarousel;
 
     // MAP
-    loadMap(10.843628, 106.668256);
+    _loadMap(10.843628, 106.668256);
 
 }(_tienScope, _tienScope.TienJS));
-

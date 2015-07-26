@@ -54,28 +54,6 @@ id="actnews-show" class="actnews-page"
           <div class="fb-xfbml-parse-ignore"></div>
         </div>
       </div>
-      <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
-        <h4>Slide hình</h4>
-        <ul class="no-bullets">
-          @for ($i = 0; $i < 12; $i++)
-          <li>&nbsp;</li>
-          @endfor
-        </ul>
-      </div>
-
-      <div style="margin-bottom:10px;padding:10px;background-color:#c3d339;border:3px solid #c3d339;border-radius:2px">
-        <h4>Phòng Chiếu Phim 3D</h4>
-        @for ($i = 0; $i < 5; $i++)
-        <br />
-        @endfor
-      </div>
-
-      <div style="margin-bottom:10px;padding:10px;background-color:#f0f2b6;border:1px solid #c3d339;border-radius:2px">
-        <h4>Đặt quảng cáo nhà tài trợ</h4>
-        @for ($i = 0; $i < 5; $i++)
-        <br />
-        @endfor
-      </div>
     </div>
   </div>
 </div>

@@ -30,20 +30,14 @@
             </div>
           </div>
 
-          <style>
-            .qc-section {
-              margin: 15px 0 30px;
-              padding: 50px 15px;
-              background-color: rgba(0,0,0,.05);
-              border: .1rem solid rgba(0,0,0,.1);
-              text-align: center;
-            }
-          </style>
-          <div class="qc-section">
+          {{-- Ads --}}
+          <div class="box qc-section">
+            <h4 class="box-title"><span>Quảng cáo</span></h4>
             <div>
               <span>Quảng cáo</span>
             </div>
           </div>
+
         </div>
 
         <div class="cuztom-col col-md-3">
@@ -56,7 +50,7 @@
                     <li>
                       <a href="javascript:void(0)">
                         <div class="topheadline-container">
-                          <img class="thumb" src="http://2.bp.blogspot.com/-AvOz8o1h4pQ/VZBz9csMI7I/AAAAAAAAF8w/RbUIxf0yk_s/s420-p/pf-9.jpg"
+                          <img class="thumb" src="assets/img/photos/event/aside_bg_1.jpg"
                                alt="" />
                           <div class="ranking">1</div>
                           <div class="headline-container">
@@ -69,7 +63,7 @@
                     <li>
                       <a href="javascript:void(0)">
                         <div class="topheadline-container">
-                          <img class="thumb" src="http://2.bp.blogspot.com/-AvOz8o1h4pQ/VZBz9csMI7I/AAAAAAAAF8w/RbUIxf0yk_s/s420-p/pf-9.jpg"
+                          <img class="thumb" src="assets/img/photos/event/aside_bg_1.jpg"
                                alt="" />
                           <div class="ranking">2</div>
                           <div class="headline-container">

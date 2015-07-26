@@ -136,21 +136,21 @@ hr.sepace {
   border-color: transparent;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {*/
 
-  .ivy-page-wrapper {
-    width: 750px;
-  }
+  /*.ivy-page-wrapper {*/
+    /*width: 750px;*/
+  /*}*/
 
-}
+/*}*/
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {*/
 
-  .ivy-page-wrapper {
-    width: 970px;
-  }
+  /*.ivy-page-wrapper {*/
+    /*width: 970px;*/
+  /*}*/
 
-}
+/*}*/
 
 @media (min-width: 1200px) {
 

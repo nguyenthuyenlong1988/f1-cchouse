@@ -9,9 +9,17 @@ id="actnews-index" class="actnews-page"
 {{-- ======================================================= LOAD RESOURCES --}}
 
 @section('page_css')
-@parent
 
+@parent
 <link rel="stylesheet" href="app-home/actnews.css" media="all" />
+
+@stop
+
+@section('page_js_load')
+
+<script src="assets/libs/jquery-jcarousel/0.3.3/js/jquery.jcarousel.min.js"></script>
+@parent
+<script src="app-home/actnews.js"></script>
 
 @stop
 
@@ -83,34 +91,14 @@ id="actnews-index" class="actnews-page"
       <p>Chưa có dữ liệu.</p>
       @endforelse
     </div>
-    <div class="col-md-3">
-      <div style="width:100%">
-        <div class="fb-page" data-href="https://www.facebook.com/nhathieunhigovap2004" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
-          <div class="fb-xfbml-parse-ignore"></div>
-        </div>
-      </div>
-      <div style="margin-bottom:10px;padding:10px;background-color:#fff;border:1px solid #e2e2e2;border-radius:2px">
-        <h4>Slide hình</h4>
-        <ul class="no-bullets">
-          @for ($i = 0; $i < 12; $i++)
-          <li>&nbsp;</li>
-          @endfor
-        </ul>
-      </div>
+    <div class="sidebar col-md-3">
 
-      <div style="margin-bottom:10px;padding:10px;background-color:#c3d339;border:3px solid #c3d339;border-radius:2px">
-        <h4>Phòng Chiếu Phim 3D</h4>
-        @for ($i = 0; $i < 5; $i++)
-        <br />
-        @endfor
-      </div>
+      @include('_shared.common.facebook_fanpage')
 
-      <div style="margin-bottom:10px;padding:10px;background-color:#f0f2b6;border:1px solid #c3d339;border-radius:2px">
-        <h4>Đặt quảng cáo nhà tài trợ</h4>
-        @for ($i = 0; $i < 5; $i++)
-        <br />
-        @endfor
-      </div>
+      @include('_shared.home.actpics')
+
+      @include('_shared.home.film3d')
+
     </div>
   </div>
 </div>

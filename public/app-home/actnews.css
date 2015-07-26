@@ -26,6 +26,7 @@
 
 .actnews-page .post-title {
   line-height: 1.4;
+  text-align: center;
 }
 
 .actnews-page .post-title a:hover {
@@ -34,7 +35,8 @@
 }
 
 .actnews-page .post-info {
-  text-align: right;
+  font-size: .9em;
+  text-align: center;
 }
 
 .actnews-page .post-date,

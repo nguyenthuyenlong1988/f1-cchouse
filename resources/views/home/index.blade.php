@@ -12,11 +12,20 @@ class="home-page"
 <link rel="stylesheet" href="assets/libs/owl-carousel/2.0.0/css/owl.carousel.css" />
 @parent
 <link rel="stylesheet" href="app-home/home.css" />
+<style>
+  #danhngon-box {
+    padding: 10px;
+    color: #fff;
+    background: #24a7ad linear-gradient(to top, #2ecc71, #229e57);
+    border-radius: 2px;
+  }
+</style>
 
 @stop
 
 @section('page_js_load')
 
+<script src="assets/libs/jquery-jcarousel/0.3.3/js/jquery.jcarousel.min.js"></script>
 <script src="assets/libs/owl-carousel/2.0.0/js/owl.carousel.js"></script>
 @parent
 <script src="app-home/home.js"></script>
@@ -37,20 +46,97 @@ class="home-page"
 
 @section('content')
 
-<h2 class="section-topline text-center hidden-xs" style="margin-top: 20px;margin-bottom: 30px;padding-bottom: 15px;">
-  <img class="hidden-xs" src="assets/img/florish-left.png" alt="" />Tin Tức Hoạt Động<img class="hidden-xs" src="assets/img/florish-right.png" alt="" />
-</h2>
+{{-- ROW --}}
+
 <div class="cuztom-row">
+  <div class="col-sm-6">
+
+    {{-- Column Header --}}
+
+    <h2 class="section-topline text-center visible-xs" style="margin-top: 40px;margin-bottom: 30px;padding-bottom: 15px;">
+      <img class="hidden-xs" src="assets/img/florish-left.png" alt="" />Tin Tức Hoạt Động<img class="hidden-xs" src="assets/img/florish-right.png" alt="" />
+    </h2>
+
+    {{-- Activity News --}}
+
+    <div class="actnews-list-content">
+      <h2 class="box-title"><span>Tin tức Hoạt động</span></h2>
+      @forelse ($actNews as $key => $p)
+        <?php $postUri = $p->post_name . '-' . Hashids::encode($p->id); ?>
+        @if ($key == 0)  {{-- First post --}}
+
+        <article class="actnews actnews-first clearfix">
+          <header class="entry-header">
+            <h3 class="entry-title">
+              <a href="{{ route('actnews.show', $postUri) }}">
+                <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                {{ $p->post_title }}
+              </a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @else  {{-- next posts --}}
+
+        <article class="actnews clearfix">
+          <div class="__divider-style-1"></div>
+          <header class="entry-header">
+            @if (empty($p->post_avatar))
+              <div class="entry-thumbnail no-thumbnail">
+                <img src="assets/img/transparent.gif" alt="" />
+                <a href="{{ route('actnews.show', $postUri) }}"></a>
+              </div>
+            @else
+              <div class="entry-thumbnail img-circle">
+                <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                <a href="{{ route('actnews.show', $postUri) }}"></a>
+              </div>
+            @endif
+            <h3 class="entry-title">
+              <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @endif
+      @empty
+        <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
+          <h3 style="margin-top:0">Chưa có tin tức.</h3>
+          <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
+          Hãy cập nhật thêm bài viết trong hệ thống quản lý!
+        </div>
+      @endforelse
+
+      <div class="__divider-style-1"></div>
+      <div class="headline-template">
+        <div>
+          <ul class="col">
+            @for ($i = 0; $i < 4; $i++)
+              <li class="headlines">
+                <a href="javascript:void(0)">
+                  <img src="assets/img/transparent.gif" alt="" />
+                  <h4>Tạp chí Mỹ tiết lộ lý do ông Putin được yêu mến ở Nga Tàu Khựa</h4>
+                  <span class="sourcename">Nhà Thiếu Nhi</span>
+                </a>
+              </li>
+            @endfor
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
   <div class="sidebar col-sm-3">
-    <style>
-      #danhngon-box {
-        margin-bottom: 30px;
-        padding: 10px;
-        color: #fff;
-        background: #24a7ad linear-gradient(to top, #2ecc71, #229e57);
-        border-radius: 2px;
-      }
-    </style>
+
+    {{-- Danh Ngôn --}}
+
     <div id="danhngon-box" class="box box-style-1">
       <h4 class="box-title text-center">
         <img src="assets/img/florish-left.png" alt="" width="45" />
@@ -63,97 +149,59 @@ class="home-page"
       <p class="text-center"><a class="peekaboo3-btn" href="{{ route('intro') }}">Xem tiếp <span class="fa fa-plus-circle" aria-hidden="true"></span></a></p>
     </div>
 
-    <div class="text-center hidden-xs" style="margin-bottom: 30px;">
+    {{-- HCM --}}
+
+    <div class="box text-center hidden-xs">
       <img src="assets/img/hcm.jpg" alt="" style="width: 100%;" />
     </div>
 
-    <div class="box">
+    {{-- Văn bản Nhà Thiếu Nhi --}}
+
+    <div id="doc-widget" class="box widget">
       <h4 class="box-title"><span>Văn bản Nhà thiếu nhi</span></h4>
-      @for ($i = 0; $i < 5; $i++)
-        <br />
-      @endfor
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <h2 class="section-topline text-center visible-xs" style="margin-top: 40px;margin-bottom: 30px;padding-bottom: 15px;">
-      <img class="hidden-xs" src="assets/img/florish-left.png" alt="" />Tin Tức Hoạt Động<img class="hidden-xs" src="assets/img/florish-right.png" alt="" />
-    </h2>
-    <div class="actnews-list-content">
-      @forelse ($actNews as $key => $p)
-      <?php $postUri = $p->post_name . '-' . Hashids::encode($p->id); ?>
-      @if ($key == 0)  {{-- First post --}}
-
-      <article class="actnews actnews-first clearfix">
-        <header class="entry-header">
-          <h3 class="entry-title">
-            <a href="{{ route('actnews.show', $postUri) }}">
-              <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-              {{ $p->post_title }}
-            </a>
-          </h3>
-        </header>
-        <div class="entry-summary">
-          {{ $p->post_excerpt }}
-        </div>
-      </article>
-
-      @else  {{-- next posts --}}
-
-      <article class="actnews clearfix">
-        <header class="entry-header">
-          @if (empty($p->post_avatar))
-          <div class="entry-thumbnail no-thumbnail">
-            <img src="assets/img/transparent.gif" alt="" />
-            <a href="{{ route('actnews.show', $postUri) }}"></a>
-          </div>
-          @else
-          <div class="entry-thumbnail img-circle">
-            <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-            <a href="{{ route('actnews.show', $postUri) }}"></a>
-          </div>
-          @endif
-          <h3 class="entry-title">
-            <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
-          </h3>
-        </header>
-        <div class="entry-summary">
-          {{ $p->post_excerpt }}
-        </div>
-      </article>
-
-      @endif
-      @empty
-      <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
-        <h3 style="margin-top:0">Chưa có tin tức.</h3>
-        <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
-        Hãy cập nhật thêm bài viết trong hệ thống quản lý!
-      </div>
-      @endforelse
-    </div>
-  </div>
-  <div class="sidebar col-sm-3">
-    <div class="box">
-      <h4 class="box-title"><span>Ảnh hoạt động</span></h4>
-      <ul class="no-bullets">
-        @for ($i = 0; $i < 12; $i++)
-        <li>&nbsp;</li>
-        @endfor
+      <ul>
+        <li class="item">
+          <a href="media/files/Lich_Hoc_20150106.docx">
+            <div class="__container">
+              <img class="thumb" src="assets/img/photos/event/aside_bg_1.jpg" alt="" />
+              <div class="title-container"><span>Thông tin lịch học</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <a href="javascript:void(0)">
+            <div class="__container">
+              <img class="no-thumb" src="assets/img/transparent.gif" alt="" />
+              <div class="title-container"><span>Văn bản số 2</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <a href="javascript:void(0)">
+            <div class="__container">
+              <img class="no-thumb" src="assets/img/transparent.gif" alt="" />
+              <div class="title-container"><span>Văn bản số 3</span></div>
+            </div>
+          </a>
+        </li>
       </ul>
     </div>
 
-    <div class="box">
-      <h4 class="box-title"><span>Phòng Chiếu Phim 3D</span></h4>
-      @for ($i = 0; $i < 5; $i++)
-      <br />
-      @endfor
-    </div>
+  </div>
+  <div class="sidebar col-sm-3">
 
-    <div class="box">
-      <h4 class="box-title"><span>Quảng cáo</span></h4>
-      @for ($i = 0; $i < 5; $i++)
-      <br />
-      @endfor
-    </div>
+    {{-- Activity Pictures (vertical slider) --}}
+
+    @include('_shared.home.actpics')
+
+    {{-- Film 3D --}}
+
+    @include('_shared.home.film3d')
+
+    {{-- Advertises --}}
+
+    @include('_shared.home.ads')
+
   </div>
 </div>
 @stop
@@ -216,9 +264,7 @@ class="home-page"
         <div id="facebook-widget" class="widget">
           <h2 class="title"><span>Theo dõi trên Facebook</span></h2>
           <div class="widget-content text-center">
-            <div class="fb-page" data-href="https://www.facebook.com/nhathieunhigovap2004" data-width="390" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
-              <div class="fb-xfbml-parse-ignore"></div>
-            </div>
+            @include('_shared.common.facebook_fanpage')
           </div>
         </div>
       </div>

@@ -31,118 +31,120 @@
       <h2 class="title sr-only">Flickr Gallery</h2>
     </div>
     <div class="image-feed clearfix">
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/445d_Wr1uU/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11410467_141215162876609_451938025_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4rncdmr1uD/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11378371_820670988015022_542682935_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4fW3_gL1sB/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e15/10665434_1430945717231141_1018474445_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/42Kq6Hr1sL/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11410382_1586410081627728_993316827_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4iBPsHr1lf/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11377781_708480969280897_1960143242_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4sL6VhL1ro/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11410532_1460649154231584_1124506980_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4sTMbBr1p0/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/s640x640/e35/sh0.08/10881873_432895720245574_1464067569_n.jpg">
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4-YV7Wr1g7/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11378476_1462944060690668_2073942757_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/4fT-IsL1lo/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11249273_800899020017893_1195159662_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5NwVFAr1p2/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11417432_761031737356528_781657792_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5DFIibr1gE/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11296773_427462764107058_1318127137_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5DZhL7L1um/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xpa1/t51.2885-15/s640x640/e35/sh0.08/10949038_1532740783647923_1521944310_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5F4L-Lr1og/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11420862_961734173878957_336346418_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5XFWYBr1h5/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11313368_868458339901208_1146465493_n.jpg">
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5LEsknL1m8/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11242848_1612693885637624_594183513_n.jpg" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <a target="_blank" href="https://instagram.com/p/5QUbB2L1ou/">
-            <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11378476_391960854339346_18563506_n.jpg" />
-          </a>
-        </div>
-      </li>
+      <ul>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/445d_Wr1uU/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11410467_141215162876609_451938025_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4rncdmr1uD/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11378371_820670988015022_542682935_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4fW3_gL1sB/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e15/10665434_1430945717231141_1018474445_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/42Kq6Hr1sL/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11410382_1586410081627728_993316827_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4iBPsHr1lf/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11377781_708480969280897_1960143242_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4sL6VhL1ro/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11410532_1460649154231584_1124506980_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4sTMbBr1p0/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/s640x640/e35/sh0.08/10881873_432895720245574_1464067569_n.jpg"  alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4-YV7Wr1g7/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11378476_1462944060690668_2073942757_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/4fT-IsL1lo/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11249273_800899020017893_1195159662_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5NwVFAr1p2/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11417432_761031737356528_781657792_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5DFIibr1gE/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11296773_427462764107058_1318127137_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5DZhL7L1um/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xpa1/t51.2885-15/s640x640/e35/sh0.08/10949038_1532740783647923_1521944310_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5F4L-Lr1og/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11420862_961734173878957_336346418_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5XFWYBr1h5/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/e35/sh0.08/11313368_868458339901208_1146465493_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5LEsknL1m8/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11242848_1612693885637624_594183513_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a target="_blank" href="https://instagram.com/p/5QUbB2L1ou/">
+              <img src="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e35/sh0.08/11378476_391960854339346_18563506_n.jpg" alt="" />
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -213,20 +215,20 @@
             <div class="quick-contact">
               <h2 class="title">Liên Hệ</h2>
               <br />
-              <form role="form" novalidate="novalidate">
+              <form novalidate="novalidate">
                 <div class="form-group has-feedback">
-                  <label class="sr-only" for="name">Họ &amp; Tên</label>
-                  <input class="form-control" type="text" name="name" placeholder="Họ &amp; Tên" />
+                  <label class="sr-only" for="senderName">Họ &amp; Tên</label>
+                  <input id="senderName" class="form-control" type="text" name="name" placeholder="Họ &amp; Tên" />
                   <span class="form-control-feedback glyphicon glyphicon-user"></span>
                 </div>
                 <div class="form-group has-feedback">
-                  <label class="sr-only" for="email">E-mail</label>
-                  <input class="form-control" type="text" name="email" placeholder="E-mail" />
+                  <label class="sr-only" for="senderEmail">E-mail</label>
+                  <input id="senderEmail" class="form-control" type="text" name="email" placeholder="E-mail" />
                   <span class="form-control-feedback glyphicon glyphicon-envelope"></span>
                 </div>
                 <div class="form-group has-feedback">
-                  <label class="sr-only" for="message">Nội dung</label>
-                  <textarea class="form-control" name="message" placeholder="Nội dung" rows="6"></textarea>
+                  <label class="sr-only" for="senderMessage">Nội dung</label>
+                  <textarea id="senderMessage" class="form-control" name="message" placeholder="Nội dung" rows="6"></textarea>
                   <span class="form-control-feedback glyphicon glyphicon-pencil"></span>
                 </div>
                 <input class="button-submit" type="submit" value="Gửi" />

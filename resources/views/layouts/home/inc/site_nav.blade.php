@@ -4,8 +4,6 @@
   <div class="ivy-page-wrapper">
 
     <div id="navbar-menu-wrapper">
-      <?php $menuActive = Route::currentRouteName(); ?>
-
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -13,21 +11,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand{!! Illuminate\Support\Str::is('home', $menuActive) ? ' active' : '' !!}" href="{{ route('home') }}">
+        <a class="navbar-brand{!! Route::is('home') ? ' active' : '' !!}" href="{{ route('home') }}">
           <i class="fa fa-university"></i>
         </a>
       </div>
 
       <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li{!! Illuminate\Support\Str::is('actnews.*', $menuActive) ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động</a></li>
+          <li{!! Route::is('actnews.*') ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động</a></li>
           <li><a href="javascript:void(0)">Phòng Ban</a></li>
           <li><a href="javascript:void(0)">Hoạt Động Thanh Thiếu Nhi</a></li>
           <li><a href="javascript:void(0)">Góc Măng Non</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li{!! Illuminate\Support\Str::is('contact', $menuActive) ? ' class="active"' : '' !!}>
+          <li{!! Route::is('contact') ? ' class="active"' : '' !!}>
             <a href="{{ route('contact') }}"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Liên Hệ</a>
           </li>
           <li class="dropdown">
