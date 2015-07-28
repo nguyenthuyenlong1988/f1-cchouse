@@ -1,9 +1,11 @@
-<?php namespace NhaThieuNhi;
+<?php
 
 /**
  * @author: Tien Nguyen
  * @version: $Id: Post.php,v 1.0 2015/06/21 03:29 htien Exp $
  */
+
+namespace NhaThieuNhi;
 
 class Post extends AModel
 {
@@ -45,5 +47,13 @@ class Post extends AModel
     public function author()
     {
         return $this->belongsTo(User::class, 'post_author');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function taxonomy()
+    {
+        return $this->belongsToMany(TermTaxonomy::class, 'post_taxonomy', 'object_id');
     }
 }

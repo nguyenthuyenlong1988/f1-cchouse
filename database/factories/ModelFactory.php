@@ -15,30 +15,39 @@
 $factory->defineAs(NhaThieuNhi\User::class, 'admin', function () {
     return [
         'id'             => Uuid::generate(),
-        'name'           => 'Administrator',
-        'email'          => 'billytien@hva.io',
-        'password'       => bcrypt('@Ssecret*7979#'),
+        'name'           => 'Quản trị viên',
+        'email'          => 'quanly@nhathieunhigovap.com',
+        'password'       => bcrypt('*secret345#'),
         'remember_token' => str_random(10),
     ];
 });
 
-$factory->defineAs(NhaThieuNhi\User::class, 'operator', function () {
-    return [
-        'id'             => Uuid::generate(),
-        'name'           => 'Administrator',
-        'email'          => 'ops@hva.io',
-        'password'       => bcrypt('secret'),
-        'remember_token' => str_random(10),
-    ];
-});
-
-$factory->defineAs(NhaThieuNhi\User::class, 'auth_user', function ($faker) {
+$factory->defineAs(NhaThieuNhi\User::class, 'demo_user', function ($faker) {
     return [
         'id'             => Uuid::generate(),
         'name'           => $faker->name,
         'email'          => $faker->email,
         'password'       => bcrypt('demo'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->defineAs(NhaThieuNhi\User::class, 'special', function () {
+    return [
+        'id'             => Uuid::generate(),
+        'name'           => 'Special User',
+        'email'          => 'billytien@hva.io',
+        'password'       => bcrypt('@Ssecret*979#'),
+        'remember_token' => str_random(10),
+    ];
+});
+
+// Term Taxonomy model
+
+$factory->define(NhaThieuNhi\TermTaxonomy::class, function ($faker) {
+    return [
+        'term_id'     => 1,
+        'taxonomy'    => 'category',
     ];
 });
 
@@ -68,7 +77,7 @@ $factory->define(NhaThieuNhi\Trainee::class, function ($faker) {
 
 // Post model
 
-$factory->defineAs(NhaThieuNhi\Post::class, 'act_news', function ($faker) {
+$factory->defineAs(NhaThieuNhi\Post::class, 'demo_post', function ($faker) {
     $title = $faker->sentence(6);
     $name  = str_slug($title, '-');
 

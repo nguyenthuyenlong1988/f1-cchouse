@@ -14,14 +14,55 @@ class _MkForTest extends Seeder
     {
         Model::unguard();
 
-        factory(NhaThieuNhi\User::class, 'admin')->create();
-        factory(NhaThieuNhi\User::class, 'operator')->create();
-        factory(NhaThieuNhi\User::class, 'auth_user', 20)->create();
+        $this->call(DataSeeder::class);
 
-        factory(NhaThieuNhi\Post::class, 'act_news', 18)->create();
-        factory(NhaThieuNhi\Subject::class, 10)->create();
-        factory(NhaThieuNhi\Trainee::class, 20)->create();
+        $this->_createDefaultPost();
+
+        $this->_createAdmin();
+
+        $this->_createUsers();
+
+        $this->_createSpUser();
+
+        $this->_createSomethingElse();
 
         Model::reguard();
+    }
+
+    private function _createDefaultPost()
+    {
+        factory(NhaThieuNhi\Post::class, 'demo_post')
+            ->create()
+            ->taxonomy()
+            ->attach(1); // attach default taxonomy 'uncategorized'
+    }
+
+    private function _createAdmin()
+    {
+        factory(NhaThieuNhi\User::class, 'admin')
+            ->create()
+            ->posts()
+            ->save(factory(NhaThieuNhi\Post::class, 'demo_post')->make());
+    }
+
+    private function _createUsers()
+    {
+        factory(NhaThieuNhi\User::class, 'demo_user', 5)
+            ->create()
+            ->each(function ($u) {
+                $u->posts()
+                  ->saveMany(factory(NhaThieuNhi\Post::class, 'demo_post', 2)->make());
+            });
+    }
+
+    private function _createSpUser()
+    {
+        factory(NhaThieuNhi\User::class, 'special')->create();
+    }
+
+    private function _createSomethingElse()
+    {
+        factory(NhaThieuNhi\Subject::class, 10)->create();
+        factory(NhaThieuNhi\Trainee::class, 20)->create();
     }
 }

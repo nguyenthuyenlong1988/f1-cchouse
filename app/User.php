@@ -19,6 +19,13 @@ class User extends AModel implements AuthenticatableContract, CanResetPasswordCo
     protected $table = 'users';
 
     /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -44,6 +51,6 @@ class User extends AModel implements AuthenticatableContract, CanResetPasswordCo
      */
     public function posts()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Post::class, 'post_author');
     }
 }
