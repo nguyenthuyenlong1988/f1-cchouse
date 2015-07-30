@@ -38,11 +38,11 @@ class DataSeeder extends Seeder
                     'nghiep-vu'  => [
                         'name'   => 'Phòng nghiệp vụ',
                         'subcat' => [
-                            'khoa-tham-my-nghe-thuat' => 'Khoa thẩm mỹ nghệ thuật',
-                            'khoa-the-duc-the-thao'   => 'Khoa thể dục thể thao',
-                            'khoa-sang-tao-ky-thuat'  => 'Khoa sáng tạo kỹ thuật',
-                            'khoa-phuong-phap-doi'    => 'Khoa phương pháp đội',
-                            'to-chuc-su-kien'         => 'Tổ chức sự kiện',
+                            'khoa-tmnt'  => 'Khoa thẩm mỹ nghệ thuật',
+                            'khoa-tdtt'  => 'Khoa thể dục thể thao',
+                            'khoa-stkt'  => 'Khoa sáng tạo kỹ thuật',
+                            'khoa-ppd'   => 'Khoa phương pháp đội',
+                            'tc-su-kien' => 'Tổ chức sự kiện',
                         ],
                     ],
                     'hanh-chinh' => [
@@ -91,16 +91,17 @@ class DataSeeder extends Seeder
         $this->_createTerms($categories);
     }
 
-    private function _createTerms($arr, $parent = 0)
+    private function _createTerms($arr, $parentSlug = '', $parent = 0)
     {
         if (is_array($arr)) {
-            foreach ($arr as $slug => $v) {
+            foreach ($arr as $slugName => $v) {
                 $hasSubcat = is_array($v);
-                $name      = $hasSubcat ? $v['name'] : $v;
+                $newName      = $hasSubcat ? $v['name'] : $v;
+                $newSlug      = ($parent == 0 ? $slugName : $parentSlug . '/' . $slugName);
 
                 $newTerm = NhaThieuNhi\Term::create([
-                    'term_name' => $name,
-                    'term_slug' => $slug
+                    'term_name' => $newName,
+                    'term_slug' => $newSlug
                 ]);
 
                 $newTerm->taxonomy()
@@ -109,7 +110,7 @@ class DataSeeder extends Seeder
                         ]));
 
                 if ($hasSubcat) {
-                    $this->_createTerms($v['subcat'], $newTerm->getAttribute('id'));
+                    $this->_createTerms($v['subcat'], $newSlug, $newTerm->getAttribute('id'));
                 }
             }
         }

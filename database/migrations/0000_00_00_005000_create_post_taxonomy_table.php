@@ -14,15 +14,13 @@ class CreatePostTaxonomyTable extends Migration
     {
         Schema::create('post_taxonomy', function (Blueprint $table) {
             $table->unsignedBigInteger('object_id')->default(0);
-            $table->foreign('object_id')->references('id')->on('posts')->onDelete('cascade');
-
             $table->unsignedBigInteger('term_taxonomy_id')->default(0);
-            $table->foreign('term_taxonomy_id')->references('id')->on('term_taxonomy')->onDelete('cascade');
-
             $table->integer('term_order')->default(0);
 
             $table->primary(['object_id', 'term_taxonomy_id']);
             $table->index('term_taxonomy_id');
+            $table->foreign('object_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('term_taxonomy_id')->references('id')->on('term_taxonomy')->onDelete('cascade');
         });
     }
 

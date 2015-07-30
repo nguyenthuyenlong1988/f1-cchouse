@@ -15,12 +15,15 @@ class CreateTermsTable extends Migration
         Schema::create('terms', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('term_name', 200)->default('');
-            $table->string('term_slug', 200)->default('');
+            $table->string('term_slug', 191)->default(''); // length = 191 is max for unique key in MYSQL.
             $table->bigInteger('term_group')->default(0);
 
             $table->unsignedInteger('created_at');
             $table->unsignedInteger('updated_at');
             $table->unsignedInteger('deleted_at')->nullable();
+
+            $table->index('term_name');
+            $table->unique('term_slug');
         });
 
         // add column

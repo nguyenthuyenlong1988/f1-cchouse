@@ -23,6 +23,9 @@ class CreateTermTaxonomyTable extends Migration
             $table->unsignedInteger('created_at');
             $table->unsignedInteger('updated_at');
             $table->unsignedInteger('deleted_at')->nullable();
+
+            $table->unique(['term_id', 'taxonomy']);
+            $table->index('taxonomy');
         });
 
         // add columns
