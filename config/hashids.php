@@ -38,7 +38,7 @@ return [
     'connections' => [
 
         'main' => [
-            // sha256->base64
+            // sha256 base64
             'salt' => 'hva.io/salt-yFsEe0usNDeflt5h3Pr02b/GV6GlxZ0rmsDYpU7NQqE=',
             'length' => '3',
             'alphabet' => 'abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
