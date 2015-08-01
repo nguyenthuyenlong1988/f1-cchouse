@@ -36,11 +36,11 @@ class="home-page"
 
 @section('content_before')
 
-@include('partials.home.activity_section')
+@include('_shared.home.activity_section')
 
-@include('partials.home.dreams_section')
+@include('_shared.home.dreams_section')
 
-{{--@include('partials.home.featured_section')--}}
+{{--@include('_shared.home.featured_section')--}}
 
 @stop
 
