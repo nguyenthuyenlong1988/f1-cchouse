@@ -16,7 +16,7 @@
                 vun trồng biết bao bạn nhỏ, đã đào tạo được những tài năng về thẩm mỹ nghệ thuật, thể dục thể thao,
                 khoa học kỹ thuật, ngoại ngữ và các lãnh vực khác...</p>
                 <div class="text-center">
-                  <a class="btn btn-success btn-lg btn-block" href="{{ route('welcome') }}" style="margin-bottom: 10px;font-weight: 300;background-color: #24a7ad;">Chương Trình & Lịch Học</a>
+                  <a class="btn btn-success btn-lg btn-block" href="{{ route('page', 'chao-mung') }}" style="margin-bottom: 10px;font-weight: 300;background-color: #24a7ad;">Chương Trình & Lịch Học</a>
                 </div>
               </div>
             </div>

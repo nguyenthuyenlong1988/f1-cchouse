@@ -40,12 +40,12 @@
 
                 <div>
                   <div>
-                    <a href="{{ route('intro') }}"><img class="logo" itemprop="logo" src="assets/img/logo_140x140.png" alt="Logo" /></a>
+                    <a href="{{ route('page', 'intro') }}"><img class="logo" itemprop="logo" src="assets/img/logo_140x140.png" alt="Logo" /></a>
                     <p>
                       Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
                       và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
                       đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
-                      <a href="{{ route('intro') }}"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a>
+                      <a href="{{ route('page', 'intro') }}"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a>
                     </p>
                     <ul class="social-links circle animated-effect-1">
                       <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>

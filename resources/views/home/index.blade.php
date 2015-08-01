@@ -146,7 +146,7 @@ class="home-page"
       </h4>
       <p class="text-center" style="font-size: 120%;">Rễ của sự học tập thì đắng, quả của sự học tập thì ngọt.</p>
       <p class="text-center">&mdash; Ngạn ngữ Nga &mdash;</p>
-      <p class="text-center"><a class="peekaboo3-btn" href="{{ route('intro') }}">Xem tiếp <span class="fa fa-plus-circle" aria-hidden="true"></span></a></p>
+      <p class="text-center"><a class="peekaboo3-btn" href="{{ route('page', 'gioi-thieu') }}">Xem tiếp <span class="fa fa-plus-circle" aria-hidden="true"></span></a></p>
     </div>
 
     {{-- HCM --}}

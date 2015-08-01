@@ -17,6 +17,13 @@ Route::patterns([
     'ARTICLE' => '^([a-z0-9]+(?:[_-]?[a-z0-9]+)*(?:\/[a-z0-9]+(?:[_-]?[a-z0-9]+)*)*)(?:-{2}([A-Za-z0-9_]+))?$'
 ]);
 
+// Pages URL
+
+Route::get('/', [
+    'as'   => 'home',
+    'uses' => 'HomeController@index'
+]);
+
 // Test URL
 Route::get('test/{page}', [
     'as'   => 'test',
@@ -32,52 +39,16 @@ Route::get('test/{page}', [
     }
 ]);
 
-// Pages URL
-
-Route::get('/', [
-    'as'   => 'home',
-    'uses' => 'HomeController@index'
-]);
-
-Route::get('chao-mung', [
-    'as'   => 'welcome',
-    'uses' => 'WelcomeController@index'
-]);
-
-Route::get('gioi-thieu', [
-    'as'   => 'intro',
-    'uses' => function () {
-        return view('welcome.intro');
-    }
-]);
-
-Route::get('lien-he', [
-    'as'   => 'contact',
-    'uses' => function () {
-        return view('welcome.contact');
-    }
-]);
-
-Route::get('lich-hoc', [
-    'as'   => 'schedule',
-    'uses' => function () {
-        return view('welcome.schedule');
-    }
-]);
-
-Route::get('chieu-sinh', [
-    'as'   => 'enrolstudents',
-    'uses' => function () {
-        return view('welcome.enrolstudents');
-    }
-]);
-
-
 // Define multi-level route
 
 Route::get('tin/{ARTICLE?}', [
     'as'   => 'article.index',
     'uses' => 'ArticleController@index'
+]);
+
+Route::get('{PAGE}', [
+    'as'   => 'page',
+    'uses' => 'HomeController@page'
 ]);
 
 // Controllers within the "App\Http\Controllers\Admin" namespace
