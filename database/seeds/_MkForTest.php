@@ -42,7 +42,9 @@ class _MkForTest extends Seeder
         factory(NhaThieuNhi\User::class, 'admin')
             ->create()
             ->posts()
-            ->save(factory(NhaThieuNhi\Post::class, 'demo_post')->make());
+            ->save(factory(NhaThieuNhi\Post::class, 'demo_post')->make())
+            ->taxonomy()
+            ->attach(1);
     }
 
     private function _createUsers()
@@ -51,7 +53,10 @@ class _MkForTest extends Seeder
             ->create()
             ->each(function ($u) {
                 $u->posts()
-                  ->saveMany(factory(NhaThieuNhi\Post::class, 'demo_post', 2)->make());
+                  ->saveMany(factory(NhaThieuNhi\Post::class, 'demo_post', 2)->make())
+                  ->each(function ($p) {
+                      $p->taxonomy()->attach(1);
+                  });
             });
     }
 
