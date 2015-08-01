@@ -53,12 +53,14 @@
     }
 
     .content {
+      font-weight: 400;
       text-align: center;
       display: inline-block;
     }
 
     .title {
       font-size: 72px;
+      font-weight: 300;
       margin-bottom: 40px;
     }
 
@@ -90,6 +92,7 @@
   <div class="container">
     <div class="content">
       <div class="title">Đang bảo trì.</div>
+      <p>Bảo trì chủ nhật, mở lại sáng thứ 2 (ngày 2/8/2015).</p>
     </div>
   </div>
   <div class="footer">
