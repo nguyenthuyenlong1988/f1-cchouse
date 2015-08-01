@@ -6,7 +6,11 @@
 
 /public/.htaccess
 .env
+
+.ftpquota
+
 .buildpath
 .project
+
 composer.lock
 error_log
