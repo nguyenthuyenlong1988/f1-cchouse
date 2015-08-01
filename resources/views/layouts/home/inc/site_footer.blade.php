@@ -26,6 +26,99 @@
     </div>
   </div> {{-- #footer-call-us --}}
 
+  <div id="footer-map">
+    <div class="ivy-page-wrapper">
+
+      <div class="row-fluid">
+        <div class="col-md-8">
+          <div id="localbusiness" class="footer-content" itemscope itemtype="http://schema.org/LocalBusiness">
+            <div class="logo-footer">
+              <h1 class="name"><span itemprop="name">Nhà Thiếu Nhi Gò Vấp</span> &copy; 2015</h1>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+
+                <div>
+                  <div>
+                    <a href="{{ route('intro') }}"><img class="logo" itemprop="logo" src="assets/img/logo_140x140.png" alt="Logo" /></a>
+                    <p>
+                      Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
+                      và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
+                      đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
+                      <a href="{{ route('intro') }}"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a>
+                    </p>
+                    <ul class="social-links circle animated-effect-1">
+                      <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                      <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                      <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                      <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                      <li class="xing"><a target="_blank" href="http://www.xing.com"><i class="fa fa-xing"></i></a></li>
+                      <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+                      <li class="youtube"><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                    <ul class="list-icons">
+                      <li>
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                          <span itemprop="streetAddress">Số 27, Đường số 9</span>,
+                          <span itemprop="addressLocality">P.16, Q.Gò Vấp</span>,
+                          <span itemprop="addressRegion">TP.HCM</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                          <span itemprop="telephone"><a href="tel:+84839163089">08-3916-30-89</a></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                          <span><a href="mailto:lienhe@nhathieunhigovap.com">lienhe@nhathieunhigovap.com</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div> {{-- #copyright --}}
+
+              </div>
+              <div class="col-md-6">
+                <div id="google-map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-content">
+            <div class="quick-contact">
+              <h2 class="title">Liên Hệ</h2>
+              <br />
+              <form novalidate="novalidate">
+                <div class="form-group has-feedback">
+                  <label class="sr-only" for="senderName">Họ &amp; Tên</label>
+                  <input id="senderName" class="form-control" type="text" name="name" placeholder="Họ &amp; Tên" />
+                  <span class="form-control-feedback glyphicon glyphicon-user"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <label class="sr-only" for="senderEmail">E-mail</label>
+                  <input id="senderEmail" class="form-control" type="text" name="email" placeholder="E-mail" />
+                  <span class="form-control-feedback glyphicon glyphicon-envelope"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <label class="sr-only" for="senderMessage">Nội dung</label>
+                  <textarea id="senderMessage" class="form-control" name="message" placeholder="Nội dung" rows="6"></textarea>
+                  <span class="form-control-feedback glyphicon glyphicon-pencil"></span>
+                </div>
+                <input class="button-submit" type="submit" value="Gửi" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> {{-- .row-fluid --}}
+
+    </div>
+  </div> {{-- #footer-map --}}
+
   <div id="footer-gallery">
     <div class="ivy-page-wrapper">
       <h2 class="title sr-only">Flickr Gallery</h2>
@@ -147,99 +240,6 @@
       </ul>
     </div>
   </div>
-
-  <div id="footer-map">
-    <div class="ivy-page-wrapper">
-
-      <div class="row-fluid">
-        <div class="col-md-8">
-          <div id="localbusiness" class="footer-content" itemscope itemtype="http://schema.org/LocalBusiness">
-            <div class="logo-footer">
-              <h1 class="name"><span itemprop="name">Nhà Thiếu Nhi Gò Vấp</span> &copy; 2015</h1>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-
-                <div>
-                  <div>
-                    <a href="{{ route('intro') }}"><img class="logo" itemprop="logo" src="assets/img/logo_140x140.png" alt="Logo" /></a>
-                    <p>
-                      Năm 2010, Nhà thiếu nhi Quận Gò Vấp được tặng Cờ thi đua dẫn đầu Cụm của Thành phố,
-                      và Bằng khen của Trung ương Đoàn. Có được sự ghi nhận đó là do Đơn vị đã tổ chức nhiều hoạt động phong phú,
-                      đa dạng đáp ứng nhu cầu vui chơi hồn nhiên củathanh thiếu niên trong quận.
-                      <a href="{{ route('intro') }}"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a>
-                    </p>
-                    <ul class="social-links circle animated-effect-1">
-                      <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-                      <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-                      <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
-                      <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
-                      <li class="xing"><a target="_blank" href="http://www.xing.com"><i class="fa fa-xing"></i></a></li>
-                      <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
-                      <li class="youtube"><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
-                    </ul>
-                    <ul class="list-icons">
-                      <li>
-                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                          <span itemprop="streetAddress">Số 27, Đường số 9</span>,
-                          <span itemprop="addressLocality">P.16, Q.Gò Vấp</span>,
-                          <span itemprop="addressRegion">TP.HCM</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                          <span itemprop="telephone"><a href="tel:+84839163089">08-3916-30-89</a></span>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                          <span><a href="mailto:lienhe@nhathieunhigovap.com">lienhe@nhathieunhigovap.com</a></span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div> {{-- #copyright --}}
-
-              </div>
-              <div class="col-md-6">
-                <div id="google-map"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="footer-content">
-            <div class="quick-contact">
-              <h2 class="title">Liên Hệ</h2>
-              <br />
-              <form novalidate="novalidate">
-                <div class="form-group has-feedback">
-                  <label class="sr-only" for="senderName">Họ &amp; Tên</label>
-                  <input id="senderName" class="form-control" type="text" name="name" placeholder="Họ &amp; Tên" />
-                  <span class="form-control-feedback glyphicon glyphicon-user"></span>
-                </div>
-                <div class="form-group has-feedback">
-                  <label class="sr-only" for="senderEmail">E-mail</label>
-                  <input id="senderEmail" class="form-control" type="text" name="email" placeholder="E-mail" />
-                  <span class="form-control-feedback glyphicon glyphicon-envelope"></span>
-                </div>
-                <div class="form-group has-feedback">
-                  <label class="sr-only" for="senderMessage">Nội dung</label>
-                  <textarea id="senderMessage" class="form-control" name="message" placeholder="Nội dung" rows="6"></textarea>
-                  <span class="form-control-feedback glyphicon glyphicon-pencil"></span>
-                </div>
-                <input class="button-submit" type="submit" value="Gửi" />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> {{-- .row-fluid --}}
-
-    </div>
-  </div> {{-- #footer-map --}}
 
   <div id="copyright" class="billy-copyright">
     <span>&copy; 2015</span> &ndash;
