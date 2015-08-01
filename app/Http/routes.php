@@ -17,6 +17,13 @@ Route::patterns([
     'ARTICLE' => '^([a-z0-9]+(?:[_-]?[a-z0-9]+)*(?:\/[a-z0-9]+(?:[_-]?[a-z0-9]+)*)*)(?:-{2}([A-Za-z0-9_]+))?$'
 ]);
 
+// Default controllers
+
+Route::controllers([
+    'auth'     => Auth\AuthController::class,
+    'password' => Auth\PasswordController::class,
+]);
+
 // Pages URL
 
 Route::get('/', [
@@ -37,18 +44,6 @@ Route::get('test/{page}', [
                 return 'This URL is only for testing!';
         }
     }
-]);
-
-// Define multi-level route
-
-Route::get('tin/{ARTICLE?}', [
-    'as'   => 'article.index',
-    'uses' => 'ArticleController@index'
-]);
-
-Route::get('{PAGE}', [
-    'as'   => 'page',
-    'uses' => 'HomeController@page'
 ]);
 
 // Controllers within the "App\Http\Controllers\Admin" namespace
@@ -119,9 +114,14 @@ Route::get('image/{name?}', [
     'uses' => 'Api\FileController@indexImage'
 ])->where('name', '^[a-z0-9_-]+(/[a-z0-9_-]+)*\.(jpg|png|gif)$');
 
-// Default controllers
+// Define multi-level route
 
-Route::controllers([
-    'auth'     => Auth\AuthController::class,
-    'password' => Auth\PasswordController::class,
+Route::get('tin/{ARTICLE?}', [
+    'as'   => 'article.index',
+    'uses' => 'ArticleController@index'
+]);
+
+Route::get('{PAGE}', [
+    'as'   => 'page',
+    'uses' => 'HomeController@page'
 ]);
