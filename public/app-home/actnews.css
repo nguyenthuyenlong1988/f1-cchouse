@@ -2,6 +2,11 @@
  | home/actnews.css
  =============================================================================*/
 
+.actnews-page .breadcrumb {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .actnews-page #detail-section,
 .actnews-page #navbar ul.navbar-nav > li.active > a {
   background-color: #0f9d58;

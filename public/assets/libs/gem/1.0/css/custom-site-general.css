@@ -145,8 +145,8 @@ h4, h5, h6 {
 
 .page-header {
   margin-top: 25px;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 300;
   border-bottom: .1rem solid rgba(0,0,0,.15);
   text-transform: uppercase;
 }
@@ -909,6 +909,28 @@ h4, h5, h6 {
 
 #doc-widget .item a:hover .title-container:before {
   opacity: 1;
+}
+
+/*=============================================================================
+ | custom-category-widget.css
+ =============================================================================*/
+
+.category-widget a.list-group-item {
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+}
+
+.category-widget a.list-group-item + .list-group-item {
+  border-top: 1px solid #ddd;
+}
+
+.category-widget h4 {
+  font-size: 1.7rem;
+}
+
+.category-widget p {
+  font-size: 1.3rem;
 }
 
 /*=============================================================================

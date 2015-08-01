@@ -1,7 +1,7 @@
 {{-- Created at 2015/07/30 13:42 htien Exp $ --}}
 @extends('layouts.home.main_page')
 
-@section('page_title', 'Tin tức Hoạt động')
+@section('page_title', $termCategory->term_name)
 @section('page_body_attributes')
   id="actnews-index" class="actnews-page"
 @stop
@@ -34,14 +34,12 @@
   </div>
   @endif
 
-  <h1 class="page-header">
-    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-    {{ $termCategory->term_name }}
-  </h1>
+  {{-- BREADCRUMB --}}
+
   <div>
     <ol class="breadcrumb">
       <li>
-        <a href="{{ route('home') }}">Trang chủ</a>
+        <a href="{{ route('article.index') }}">Tin tức</a>
       </li>
       @foreach ($parentCategories as $t)
       <li>
@@ -51,30 +49,19 @@
       <li class="active">{{ $termCategory->term_name }}</li>
     </ol>
   </div>
+
+  {{-- PAGE HEADER --}}
+
+  <h1 class="page-header">
+    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    {{ $termCategory->term_name }}
+  </h1>
+
+  {{-- COLUMNS & CONTENT --}}
+
   <div class="row">
 
-    <div class="sidebar col-md-3">
-      <div class="box">
-        <h4 class="box-title"><span>Chuyên mục</span></h4>
-        <div>
-          <div class="list-group">
-            @foreach ($relCategories as $t)
-            <a class="list-group-item" href="{{ route('article.index', $t->term_slug) }}">
-              <span class="badge">{{ $t->term_taxonomy_count }}</span>
-              <h4 class="list-group-item-heading">{{ $t->term_name }}</h4>
-              <p class="list-group-item-text">{{ $t->term_taxonomy_description }}</p>
-            </a>
-            @endforeach
-          </div>
-        </div>
-      </div>
-
-      @include('_shared.home.actpics')
-
-      @include('_shared.home.film3d')
-    </div>
-
-    <div class="col-md-6">
+    <div class="col-md-6 col-md-push-3">
       @forelse ($articles as $key => $p)
       <?php $author = $p->author()->select('id', 'name')->first();
             $postId = Hashids::encode($p->id); ?>
@@ -82,7 +69,7 @@
 
       <div class="post post-first">
         <h2 class="post-title">
-          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
+          <a href="{{ route('article.index', $termCategory->term_slug . '/' . $p->post_name . '--' . $postId) }}">{{ $p->post_title }}</a>
         </h2>
         <p class="post-info">
           <span class="post-date">{{ ivy_echo_date($p->post_date) }}</span>
@@ -90,7 +77,7 @@
         </p>
         @unless (empty($p->post_avatar))
         <div class="post-avatar">
-          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">
+          <a href="{{ route('article.index', $termCategory->term_slug . '/' . $p->post_name . '--' . $postId) }}">
             <img src="{{ route('_image.index') }}/{{ $p->post_avatar }}" alt="" />
           </a>
         </div>
@@ -102,7 +89,7 @@
 
       <div class="post">
         <h2 class="post-title">
-          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">{{ $p->post_title }}</a>
+          <a href="{{ route('article.index', $termCategory->term_slug . '/' . $p->post_name . '--' . $postId) }}">{{ $p->post_title }}</a>
         </h2>
         <p class="post-info">
           <span class="post-date">{{ ivy_echo_date($p->post_date) }}</span>
@@ -110,7 +97,7 @@
         </p>
         @unless (empty($p->post_avatar))
         <div class="post-avatar">
-          <a href="{{ route('actnews.show', $p->post_name . '-' . $postId) }}">
+          <a href="{{ route('article.index', $termCategory->term_slug . '/' . $p->post_name . '--' . $postId) }}">
             <img src="{{ route('_image.index') }}/{{ $p->post_avatar }}" alt="" />
           </a>
         </div>
@@ -124,7 +111,30 @@
       @endforelse
     </div>
 
+    <div class="sidebar col-md-3 col-md-pull-6">
+
+      <div class="box category-widget">
+        <h4 class="box-title"><span>Mục liên quan</span></h4>
+        <div>
+          <div class="list-group">
+            @foreach ($relCategories as $t)
+            <a class="list-group-item" href="{{ route('article.index', $t->term_slug) }}">
+              <span class="badge">{{ $t->term_taxonomy_count }}</span>
+              <h4 class="list-group-item-heading">{{ $t->term_name }}</h4>
+              <p class="list-group-item-text">{{ $t->term_taxonomy_description }}</p>
+            </a>
+            @endforeach
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="sidebar col-md-3">
+
+      @include('_shared.home.actpics')
+
+      @include('_shared.home.film3d')
 
       @include('_shared.common.facebook_fanpage')
 

@@ -75,6 +75,10 @@
   transition: transform .2s ease-out;
 }
 
+.breadcrumb {
+  background-color: transparent;
+}
+
 .panel .panel-body {
   word-wrap: break-word;
 }

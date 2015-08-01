@@ -50,7 +50,14 @@ class ArticleController extends Controller
                 return response()->view("errors.404", ['exception' => NULL], 404);
             }
 
-            return view('article.show', compact('article'));
+            $termCategory     = &$requestTerm;
+            $parentCategories = $this->_getTermsBySlugSegments($infoUri['term_slugs']);
+            $relCategories    = $this->_getTermsByParent($termCategory->id);
+
+            return view('article.show', compact(
+                'article', 'termCategory',
+                'parentCategories', 'relCategories'
+            ));
         }
         else { // If URI reference to category...
             // List of articles has same term_slug
@@ -100,7 +107,8 @@ class ArticleController extends Controller
             'terms.id',
             'terms.term_name',
             'terms.term_slug',
-            'term_taxonomy.id as term_taxonomy_id'
+            'term_taxonomy.id as term_taxonomy_id',
+            'term_taxonomy.count as term_taxonomy_count'
         ]);
     }
 
