@@ -22,11 +22,14 @@ class AppServiceProvider extends ServiceProvider
 
         \DB::listen(function ($sql, $bindings, $time) {
             $output = new ConsoleOutput();
+            $output->writeln('');
+            $output->writeln('');
             $output->writeln('=====>>>>>>>>>>');
             $output->writeln("<info>Query:</info> $sql");
             $output->writeln('<info>Bindings:</info> ' . print_r($bindings, TRUE));
             $output->writeln("<info>Time:</info> $time");
-            $output->writeln('<<<<<<<<<<=====');
+            $output->writeln('');
+            $output->writeln('');
         });
     }
 
