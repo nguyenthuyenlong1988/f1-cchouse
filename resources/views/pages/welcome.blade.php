@@ -1,5 +1,5 @@
 {{-- Created at 2015/06/01 04:25 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 
 @section('page_title', 'Chào Mừng')
 @section('page_body_attributes')

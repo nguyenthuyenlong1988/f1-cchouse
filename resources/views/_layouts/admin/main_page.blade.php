@@ -1,5 +1,5 @@
 {{-- Created at 2015/06/21 09:29 htien Exp $ --}}
-@extends('layouts.admin.app')
+@extends('_layouts.admin.app')
 
 @section('page_title', '[Không tiêu đề]')
 

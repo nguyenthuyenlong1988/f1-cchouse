@@ -1,5 +1,5 @@
 {{-- Created at 2015/06/21 06:04 htien Exp $ --}}
-@extends('layouts.admin.main_page')
+@extends('_layouts.admin.main_page')
 
 @section('page_title', 'Tin tức - Hoạt động')
 

@@ -1,5 +1,5 @@
 {{-- Created at 2015/06/21 12:38 htien Exp $ --}}
-@extends('layouts.admin.main_page')
+@extends('_layouts.admin.main_page')
 
 @section('page_title', 'Đăng nhập')
 

@@ -1,5 +1,5 @@
 {{-- Created at 2015/06/30 22:21 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 
 @section('page_title', 'Giới Thiệu')
 @section('page_body_attributes')

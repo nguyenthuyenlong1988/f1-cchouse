@@ -1,5 +1,5 @@
 {{-- Created at 2015/07/14 17:38 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 
 @section('content')
 

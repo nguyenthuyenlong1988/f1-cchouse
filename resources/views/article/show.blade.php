@@ -1,5 +1,5 @@
 {{-- Created at 2015/07/30 11:57 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 
 @section('page_title', $article->post_title)
 @section('page_body_attributes')

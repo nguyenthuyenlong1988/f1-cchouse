@@ -1,5 +1,5 @@
 {{-- Created at 2015/06/30 22:40 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 
 @section('page_title', 'Thời khóa biểu')
 @section('page_body_attributes')

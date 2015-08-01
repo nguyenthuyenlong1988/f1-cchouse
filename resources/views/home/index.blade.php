@@ -1,5 +1,5 @@
 {{-- Created at 2015/05/27 03:44 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 @section('page_title', 'Trang Chủ')
 @section('page_body_attributes')
 class="home-page"

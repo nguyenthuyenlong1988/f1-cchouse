@@ -7,13 +7,13 @@
 <head>
   <meta charset="UTF-8" />
   <!-- BILLY_HEAD BEGIN -->
-  @include('layouts.admin.inc.billy_head')
+  @include('_layouts.admin.inc.billy_head')
 
   <!-- BILLY_HEAD END -->
 </head>
 <body>
 
-  @include('layouts.admin.inc.billy_neck')
+  @include('_layouts.admin.inc.billy_neck')
 
   <!-- PAGE BEGIN -->
   <div id="page" class="clearfix">
@@ -21,7 +21,7 @@
     <!-- SITE_HEADER BEGIN -->
     <header id="header" class="ivy-site-header">
 
-      @include('layouts.admin.inc.site_topbar')
+      @include('_layouts.admin.inc.site_topbar')
 
     </header>
 
@@ -30,7 +30,7 @@
     <!-- MAIN BEGIN -->
     <main id="main" class="ivy-site-main">
 
-      @include('layouts.admin.inc.site_main')
+      @include('_layouts.admin.inc.site_main')
 
     </main>
 
@@ -47,7 +47,7 @@
   <!-- PAGE END -->
 
   <!-- BILLY_FOOT BEGIN -->
-  @include('layouts.admin.inc.billy_foot')
+  @include('_layouts.admin.inc.billy_foot')
 
   <!-- BILLY_FOOT END -->
 

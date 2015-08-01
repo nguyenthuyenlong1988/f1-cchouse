@@ -7,13 +7,13 @@
 <head>
   <meta charset="UTF-8" />
   <!-- BILLY_HEAD BEGIN -->
-  @include('layouts.home.inc.billy_head')
+  @include('_layouts.home.inc.billy_head')
 
   <!-- BILLY_HEAD END -->
 </head>
 <body @yield('page_body_attributes')>
 
-  @include('layouts.home.inc.billy_neck')
+  @include('_layouts.home.inc.billy_neck')
 
   <!-- PAGE BEGIN -->
   <div id="page" class="clearfix">
@@ -21,11 +21,11 @@
     <!-- SITE_HEADER BEGIN -->
     <header id="header" class="ivy-site-header">
 
-      @include('layouts.home.inc.site_topbar')
+      @include('_layouts.home.inc.site_topbar')
 
-      @include('layouts.home.inc.site_header')
+      @include('_layouts.home.inc.site_header')
 
-      @include('layouts.home.inc.site_nav')
+      @include('_layouts.home.inc.site_nav')
 
     </header>
 
@@ -34,7 +34,7 @@
     <!-- MAIN BEGIN -->
     <main id="main" class="ivy-site-main">
 
-      @include('layouts.home.inc.site_main')
+      @include('_layouts.home.inc.site_main')
 
     </main>
 
@@ -43,7 +43,7 @@
     <!-- SITE_FOOTER BEGIN -->
     <footer id="footer" class="ivy-site-footer">
 
-      @include('layouts.home.inc.site_footer')
+      @include('_layouts.home.inc.site_footer')
 
     </footer>
 
@@ -54,7 +54,7 @@
   <!-- PAGE END -->
 
   <!-- BILLY_FOOT BEGIN -->
-  @include('layouts.home.inc.billy_foot')
+  @include('_layouts.home.inc.billy_foot')
 
   <!-- BILLY_FOOT END -->
 

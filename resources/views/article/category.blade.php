@@ -1,5 +1,5 @@
 {{-- Created at 2015/07/30 13:42 htien Exp $ --}}
-@extends('layouts.home.main_page')
+@extends('_layouts.home.main_page')
 
 @section('page_title', $termCategory->term_name)
 @section('page_body_attributes')

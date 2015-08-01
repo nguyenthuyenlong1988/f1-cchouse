@@ -1,5 +1,5 @@
 {{-- Created at 2015/07/14 17:17 htien Exp $ --}}
-@extends('layouts.admin.main_page')
+@extends('_layouts.admin.main_page')
 
 @section('content')
 

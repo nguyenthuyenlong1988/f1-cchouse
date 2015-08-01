@@ -58,7 +58,7 @@
   </style>
 </head>
 <body>
-  @include('layouts.home.inc.billy_neck')
+  @include('_layouts.home.inc.billy_neck')
 
   <div class="header">
     <h1>Nhà Thiếu Nhi Gò Vấp</h1>
