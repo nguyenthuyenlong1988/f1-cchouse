@@ -11,6 +11,11 @@
 |
 */
 
+// List of patterns for route parameters
+
+Route::patterns([
+    'ARTICLE' => '^([a-z0-9]+(?:[_-]?[a-z0-9]+)*(?:\/[a-z0-9]+(?:[_-]?[a-z0-9]+)*)*)(?:-{2}([A-Za-z0-9_]+))?$'
+]);
 
 // Test URL
 Route::get('test/{page}', [
@@ -66,6 +71,15 @@ Route::get('chieu-sinh', [
         return view('welcome.enrolstudents');
     }
 ]);
+
+
+// Define multi-level route
+
+Route::get('tin/{ARTICLE?}', [
+    'as'   => 'article.index',
+    'uses' => 'ArticleController@index'
+]);
+
 
 // Actnews Posts
 Route::get('tin-tuc-hoat-dong', [

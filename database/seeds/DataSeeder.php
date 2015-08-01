@@ -65,7 +65,7 @@ class DataSeeder extends Seeder
             ],
 
             // Hoạt động thanh thiếu nhi
-            'hoat-dong-thanh-thieu-nhi' => [
+            'hoat-dong-ttn' => [
                 'name'   => 'Hoạt động thanh thiếu nhi',
                 'subcat' => [
                     'ho-boi-1-6'  => 'Hồ bơi 1/6',

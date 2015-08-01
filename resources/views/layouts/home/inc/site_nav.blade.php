@@ -1,5 +1,14 @@
 {{-- Created at 2015/05/27 05:08 htien Exp $ --}}
 
+<?php
+  $navItems = [
+    ['title' => 'Tin Tức - Hoạt Động', 'name' => 'hoat-dong'],
+    ['title' => 'Phòng Ban', 'name' => 'phong'],
+    ['title' => 'Hoạt Động Thanh Thiếu Nhi', 'name' => 'hoat-dong-ttn'],
+    ['title' => 'Góc Măng Non', 'name' => 'goc-mang-non']
+  ];
+?>
+
 <nav id="navbar" class="ivy-site-nav ivy-site-navbar navbar">
   <div class="ivy-page-wrapper">
 
@@ -17,12 +26,13 @@
       </div>
 
       <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
+        @if (count($navItems) > 0)
         <ul class="nav navbar-nav">
-          <li{!! Route::is('actnews.*') ? ' class="active"' : '' !!}><a href="{{ route('actnews.index') }}">Tin Tức - Hoạt Động</a></li>
-          <li><a href="javascript:void(0)">Phòng Ban</a></li>
-          <li><a href="javascript:void(0)">Hoạt Động Thanh Thiếu Nhi</a></li>
-          <li><a href="javascript:void(0)">Góc Măng Non</a></li>
+          @foreach ($navItems as $i)
+          <li{!! Request::is("tin/$i[name]") || Request::is("tin/$i[name]/*") ? ' class="active"' : '' !!}><a href="{{ route('article.index', "$i[name]") }}">{{ $i['title'] }}</a></li>
+          @endforeach
         </ul>
+        @endif
 
         <ul class="nav navbar-nav navbar-right">
           <li{!! Route::is('contact') ? ' class="active"' : '' !!}>
