@@ -80,18 +80,6 @@ Route::get('tin/{ARTICLE?}', [
     'uses' => 'ArticleController@index'
 ]);
 
-
-// Actnews Posts
-Route::get('tin-tuc-hoat-dong', [
-    'as'   => 'actnews.index',
-    'uses' => 'ActNewsController@index'
-]);
-
-Route::get('tin-tuc-hoat-dong/{uri}', [
-    'as'   => 'actnews.show',
-    'uses' => 'ActNewsController@show'
-]);
-
 // Controllers within the "App\Http\Controllers\Admin" namespace
 // Route name: admin::@dmin-zone...
 Route::group([
@@ -120,14 +108,6 @@ Route::group([
         'middle' => 'auth',
     ], function () {
         Route::resource('posts', 'PostController');
-    });
-
-    // Whisper routes
-    Route::group([
-        'as'     => '',
-        'middle' => 'auth',
-    ], function () {
-        Route::resource('whisper', 'WhisperController');
     });
 
 });
