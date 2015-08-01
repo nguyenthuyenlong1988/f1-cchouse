@@ -42,4 +42,9 @@ class PostTaxonomy extends Model
         'term_taxonomy_id',
         'term_order'
     ];
+
+    public function taxonomy()
+    {
+        return $this->belongsTo(TermTaxonomy::class, 'term_taxonomy_id');
+    }
 }
