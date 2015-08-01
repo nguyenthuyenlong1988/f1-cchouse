@@ -23,7 +23,6 @@
           <div class="panel panel-primary">
             <div class="panel-heading">
               <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}">Tin tức - Hoạt động</a>
-              <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.whisper.index') }}">Góc tâm sự</a>
             </div>
             <div class="panel-body">
             </div>
