@@ -16,7 +16,7 @@ class ArticleController extends Controller
     public function index($uri = NULL)
     {
         if (NULL === $uri) {
-            return view('article.index');
+            return response()->redirectToRoute('page', 'chao-mung');
         }
 
         $infoUri = $this->_parseUri($uri);
