@@ -54,25 +54,24 @@ Route::group([
     'namespace' => 'Admin',
 ], function () {
 
-    // Dashboard routes
     Route::group([
         'as'         => '',
         'middleware' => ['adminzone', 'auth']
     ], function () {
+
         Route::get('/', [
             'as'   => 'index',
-            'uses' => 'DashboardController@index'
+            'uses' => function () {
+                return redirect()->route('admin::@dmin-zone.dashboard.index');
+            }
         ]);
+
+        // Dashboard routes
         Route::resource('dashboard', 'DashboardController', [
             'only' => ['index']
         ]);
-    });
 
-    // Posts routes
-    Route::group([
-        'as'     => '',
-        'middle' => 'auth',
-    ], function () {
+        // Posts routes
         Route::resource('posts', 'PostController');
     });
 
