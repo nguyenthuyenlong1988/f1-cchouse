@@ -45,7 +45,7 @@
 <script>
 //<![CDATA[
   var
-    cfg = {
+    _cfg = {
       // Base configuration
       app_name               : '{{ config('params.app_name') }}',
       api_url                : '{{ Request::getBaseUrl() }}' + '/_api',
