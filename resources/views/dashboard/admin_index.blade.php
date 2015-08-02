@@ -21,17 +21,16 @@
         <div class="col-md-6">
 
           <div class="panel panel-primary">
-            <div class="panel-heading">
-              <a class="btn btn-primary" href="{{ route('admin::@dmin-zone.posts.index') }}">Tin tức - Hoạt động</a>
-            </div>
+            <div class="panel-heading">Thống Kê Dữ Liệu</div>
             <div class="panel-body">
+              <br />
             </div>
           </div>
 
           <div class="panel panel-primary">
-            <div class="panel-heading">...</div>
+            <div class="panel-heading">Bài viết gần đây</div>
             <div class="panel-body">
-              ...
+              <br />
             </div>
           </div>
 
@@ -40,16 +39,16 @@
         <div class="col-md-6">
 
           <div class="panel panel-primary">
-            <div class="panel-heading">...</div>
+            <div class="panel-heading">Lưu Lượng Truy Cập</div>
             <div class="panel-body">
-              ...
+              <br />
             </div>
           </div>
 
           <div class="panel panel-primary">
-            <div class="panel-heading">...</div>
+            <div class="panel-heading">Bài viết nhanh</div>
             <div class="panel-body">
-              ...
+              <a class="btn btn-success" href="{{ route('admin::@dmin-zone.posts.index') }}">Bài viết <span class="glyphicon glyphicon-menu-right"></span></a>
             </div>
           </div>
 

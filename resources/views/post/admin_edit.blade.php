@@ -32,7 +32,7 @@
 
 <ol class="breadcrumb">
   <li><a href="{{ route('admin::index') }}">Vùng quản lý</a></li>
-  <li><a href="{{ route('admin::@dmin-zone.posts.index') }}">Tin tức - Hoạt động</a></li>
+  <li><a href="{{ route('admin::@dmin-zone.posts.index') }}">Bài viết</a></li>
   <li class="active">{ EDIT #{{ $post->id }} } - {{ $post->post_title }}</li>
 </ol>
 

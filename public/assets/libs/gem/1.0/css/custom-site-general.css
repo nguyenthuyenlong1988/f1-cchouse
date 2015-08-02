@@ -569,7 +569,7 @@ h4, h5, h6 {
 .box-title {
   position: relative;
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 300;
   border-bottom: .2rem solid #49b860;
   text-transform: uppercase;
@@ -925,12 +925,21 @@ h4, h5, h6 {
   border-top: 1px solid #ddd;
 }
 
+.category-widget a.list-group-item h4 {
+  font-weight: 300;
+  color: #666;
+}
+
 .category-widget h4 {
   font-size: 1.7rem;
 }
 
 .category-widget p {
   font-size: 1.3rem;
+}
+
+.category-widget .badge {
+  font-weight: 300;
 }
 
 /*=============================================================================

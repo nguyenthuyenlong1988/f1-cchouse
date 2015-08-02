@@ -21,13 +21,9 @@ a {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
   background-color: #26292e; /*1d1e23,026649,94a5a0,026649*/
-}
-
-#header, .breadcrumb {
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .login-panel, .admin-panel {
@@ -74,7 +70,6 @@ body {
 }
 
 .panel-primary .panel-heading {
-  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
 }
 
@@ -92,6 +87,11 @@ body {
 
 .breadcrumb a {
   color: #00add2;
+  text-transform: uppercase;
+}
+
+.table > thead > tr > th, .table > tfoot > tr > th {
+  font-weight: 400;
   text-transform: uppercase;
 }
 

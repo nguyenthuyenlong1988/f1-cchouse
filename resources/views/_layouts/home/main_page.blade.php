@@ -44,7 +44,7 @@
 
 @yield('content_before')
 
-<section id="detail-section" class="ivy-section stripeouter">
+<section id="detail-section" class="ivy-section">
   <div class="ivy-page-wrapper">
     <div id="detail-wrapper">
 

@@ -11,11 +11,12 @@
 
 <ol class="breadcrumb">
   <li><a href="{{ route('admin::index') }}">Vùng quản lý</a></li>
-  <li><a href="{{ route('admin::@dmin-zone.posts.index') }}">Tin tức - Hoạt động</a></li>
+  <li><a href="{{ route('admin::@dmin-zone.posts.index') }}">Bài viết</a></li>
   <li class="active">#{{ $post->id }} - {{ $post->post_title }}</li>
 </ol>
 
 <div class="container">
+  <?php $postId = Hashids::encode($post->id); ?>
 
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -42,13 +43,16 @@
       <div class="row">
         <div class="col-md-9">
           <h2 style="margin-top:0">{{ $post->post_title }}</h2>
-          <h5>
+          <p>
             <em>&mdash; Cập nhật lần cuối:</em> {{ ivy_echo_date($post->updated_at) }}
-          </h5>
+          </p>
         </div>
         <div class="col-md-3">
-          <h5><em>Ngày tạo:</em> {{ ivy_echo_date($post->created_at) }}</h5>
-          <h5><em>Tác giả:</em> {{ empty($post->post_author) ? 'SYSTEM' : $post->author->name }}</h5>
+          <ul>
+            <li><em>Ngày tạo:</em> {{ ivy_echo_date($post->created_at) }}</li>
+            <li><em>Tác giả:</em> {{ empty($post->post_author) ? 'SYSTEM' : $post->author->name }}</li>
+          </ul>
+          <a href="{{ route('article.index', $category->term_slug . '/' . $post->post_name . '--' . $postId) }}" target="_blank">Xem bài viết</a>
         </div>
       </div>
     </div>

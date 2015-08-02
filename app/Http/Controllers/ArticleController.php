@@ -55,8 +55,10 @@ class ArticleController extends Controller
             $relCategories    = $this->_getTermsByParent($termCategory->id);
 
             return view('article.show', compact(
-                'article', 'termCategory',
-                'parentCategories', 'relCategories'
+                'article',
+                'termCategory',
+                'parentCategories',
+                'relCategories'
             ));
         }
         else { // If URI reference to category...
@@ -71,8 +73,10 @@ class ArticleController extends Controller
             }
 
             return view('article.category', compact(
-                'articles', 'termCategory',
-                'parentCategories', 'relCategories'
+                'articles',
+                'termCategory',
+                'parentCategories',
+                'relCategories'
             ));
         }
     }
@@ -136,7 +140,7 @@ class ArticleController extends Controller
         ]);
     }
 
-    private function _getTermsBySlugSegments(array $slugs, $popLast = TRUE)
+    private function _getTermsBySlugSegments(array $slugs)
     {
         if (empty($slugs) OR count($slugs) == 0) {
             return NULL;

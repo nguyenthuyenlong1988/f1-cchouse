@@ -26,7 +26,7 @@ function ivy_echo_date(\Carbon\Carbon $date)
 {
     $date->setTimezone(config('params.user_timezone'));
 
-    return $date->isToday() ? 'Mới hôm nay @' . $date->format(config('params.user_hourformat'))
+    return $date->isToday() ? 'Mới @' . $date->format(config('params.user_hourformat'))
         : ($date->isYesterday() ? 'Hôm qua @' . $date->format(config('params.user_hourformat'))
             : $date->format(config('params.user_dateformat')));
 }
