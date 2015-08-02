@@ -9,7 +9,7 @@ namespace NhaThieuNhi\Http\Controllers;
 
 use NhaThieuNhi\Http\Requests;
 
-class MyExampleController extends Controller
+class ExampleController extends Controller
 {
     /**
      * Display a listing of the resource.
