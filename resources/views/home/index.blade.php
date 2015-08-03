@@ -61,14 +61,14 @@ class="home-page"
 
     <div class="actnews-list-content">
       <h2 class="box-title"><span>Tin tức Hoạt động</span></h2>
-      @forelse ($actNews as $key => $p)
-        <?php $postUri = $p->post_name . '-' . Hashids::encode($p->id); ?>
+      @forelse ($articles as $key => $p)
+        <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
         @if ($key == 0)  {{-- First post --}}
 
         <article class="actnews actnews-first clearfix">
           <header class="entry-header">
             <h3 class="entry-title">
-              <a href="{{ route('actnews.show', $postUri) }}">
+              <a href="{{ route('article.index', $postUri) }}">
                 <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
                 {{ $p->post_title }}
               </a>
@@ -87,16 +87,16 @@ class="home-page"
             @if (empty($p->post_avatar))
               <div class="entry-thumbnail no-thumbnail">
                 <img src="assets/img/transparent.gif" alt="" />
-                <a href="{{ route('actnews.show', $postUri) }}"></a>
+                <a href="{{ route('article.index', $postUri) }}"></a>
               </div>
             @else
               <div class="entry-thumbnail img-circle">
                 <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
-                <a href="{{ route('actnews.show', $postUri) }}"></a>
+                <a href="{{ route('article.index', $postUri) }}"></a>
               </div>
             @endif
             <h3 class="entry-title">
-              <a href="{{ route('actnews.show', $postUri) }}">{{ $p->post_title }}</a>
+              <a href="{{ route('article.index', $postUri) }}">{{ $p->post_title }}</a>
             </h3>
           </header>
           <div class="entry-summary">
@@ -113,22 +113,22 @@ class="home-page"
         </div>
       @endforelse
 
-      <div class="__divider-style-1"></div>
-      <div class="headline-template">
-        <div>
-          <ul class="col">
-            @for ($i = 0; $i < 4; $i++)
-              <li class="headlines">
-                <a href="javascript:void(0)">
-                  <img src="assets/img/transparent.gif" alt="" />
-                  <h4>Tạp chí Mỹ tiết lộ lý do ông Putin được yêu mến ở Nga Tàu Khựa</h4>
-                  <span class="sourcename">Nhà Thiếu Nhi</span>
-                </a>
-              </li>
-            @endfor
-          </ul>
-        </div>
-      </div>
+      {{--<div class="__divider-style-1"></div>--}}
+      {{--<div class="headline-template">--}}
+        {{--<div>--}}
+          {{--<ul class="col">--}}
+            {{--@for ($i = 0; $i < 4; $i++)--}}
+              {{--<li class="headlines">--}}
+                {{--<a href="javascript:void(0)">--}}
+                  {{--<img src="assets/img/transparent.gif" alt="" />--}}
+                  {{--<h4>Tạp chí Mỹ tiết lộ lý do ông Putin được yêu mến ở Nga Tàu Khựa</h4>--}}
+                  {{--<span class="sourcename">Nhà Thiếu Nhi</span>--}}
+                {{--</a>--}}
+              {{--</li>--}}
+            {{--@endfor--}}
+          {{--</ul>--}}
+        {{--</div>--}}
+      {{--</div>--}}
 
     </div>
 
