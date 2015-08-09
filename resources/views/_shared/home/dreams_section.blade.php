@@ -1,8 +1,13 @@
 {{-- Created at 2015/06/01 04:01 htien Exp $ --}}
-
 <section id="dreams-section" class="ivy-section">
   <div class="ivy-page-wrapper">
-    <h2 class="hidden">Dreams</h2>
+    <!-- <h2 class="hidden">Dreams</h2> -->
+    <div id="learning-program" style="background-color: #FABF0C; 
+                                      color: #fff; text-align: center;
+                                      height: 200px;">
+      <img src="assets/img/banner-awning.png" alt="" />
+      <span class="blink" style="color: #A1EF0B; font-size: 30px;">CHƯƠNG TRÌNH VÀ LỊCH HỌC</span>
+    </div>
     <div id="dreams-wrapper" class="section-topline">
       <div class="cuztom-row">
 
@@ -32,9 +37,10 @@
 
           {{-- Ads --}}
           <div class="box qc-section">
-            <h4 class="box-title"><span>Quảng cáo</span></h4>
+            <h4 class="box-title"><span>Truyện cười</span></h4>
             <div>
-              <span>Quảng cáo</span>
+              <!-- <span>Truyện cười</span> -->
+              <img src="assets/img/truyencuoi_banner.png" alt="" />
             </div>
           </div>
 
@@ -42,7 +48,7 @@
 
         <div class="cuztom-col col-md-3">
           <div id="act-newest" class="box">
-            <h2 class="box-title"><span>Sự kiện <i class="fa fa-angle-right"></i></span></h2>
+            <h2 class="box-title"><span>Thông báo <i class="fa fa-angle-right"></i></span></h2>
             <div class="box-pad">
               <div class="row">
                 <div class="col-md-12">

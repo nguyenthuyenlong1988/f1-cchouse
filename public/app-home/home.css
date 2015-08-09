@@ -15,6 +15,8 @@
   padding: 0 0 20px;
   background-color: #fff;
   border-top: 0 solid #c5e2c4; /*84cdc7*/
+  width: 50%;
+  padding-left: 5px;
 }
 
 .home-page .actnews .entry-title {
@@ -35,8 +37,8 @@
 .home-page .actnews .entry-thumbnail {
   position: relative;
   float: left;
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin-bottom: 5px;
+  margin-right: 5px;
   background-color: #c5e2c4;
   text-align: center;
 }
@@ -60,14 +62,15 @@
 }
 
 .home-page .actnews .no-thumbnail img {
-  width: 180px;
-  height: 130px;
+  width: 150px;
+  height: 100px;
 }
 
 .home-page .actnews-first {
   padding: 0 0 20px;
   border-width: 0;
   border-top: 1px solid transparent;
+  width: 50%;
 }
 
 .home-page .actnews-first .entry-title {
@@ -80,6 +83,7 @@
   display: block;
   margin-bottom: 8px;
   width: 100%;
+  height: 200px;
 }
 
 @media (max-width: 430px) {

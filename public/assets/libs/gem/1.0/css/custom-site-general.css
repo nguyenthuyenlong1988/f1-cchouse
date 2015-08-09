@@ -108,7 +108,7 @@ h4, h5, h6 {
 
 .qc-section > div {
   margin: 15px 0 30px;
-  padding: 50px 15px;
+  /* padding: 50px 15px; */
   background-color: #fff;
   border: 1px solid #ccc;
   color: #999;
@@ -117,6 +117,7 @@ h4, h5, h6 {
           border-radius: 2px;
   text-align: center;
   text-transform: uppercase;
+  background-color: blanchedalmond;
 }
 
 #page {
@@ -307,7 +308,7 @@ h4, h5, h6 {
   display: block !important;
   width: 200%;
   height: 100%;
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,1);
   color: #fff;
   -webkit-transition: background-color .3s ease-out;
      -moz-transition: background-color .3s ease-out;
@@ -317,7 +318,7 @@ h4, h5, h6 {
 }
 
 .owl-prev:hover, .owl-next:hover {
-  background-color: rgba(255,255,255,.45);
+  background-color: rgba(255,255,255,1);
 }
 
 .owl-prev .set-middle, .owl-next .set-middle {
@@ -573,14 +574,16 @@ h4, h5, h6 {
   margin-top: 0;
   font-size: 1.8rem;
   font-weight: 300;
-  border-bottom: .2rem solid #49b860;
+  /* border-bottom: .2rem solid #49b860; */
+  border-bottom: .2rem solid #0098db;
   text-transform: uppercase;
 }
 
 .box-title span {
   display: inline-block;
   padding: .6rem 1rem;
-  background-color: #49b860;
+  /* background-color: #49b860; */
+  background-color: #0098db;
   color: #fff;
 }
 
@@ -590,7 +593,8 @@ h4, h5, h6 {
   left: 22px;
   width: 0;
   height: 0;
-  border-top: 6px solid #49b860;
+  /* border-top: 6px solid #49b860; */
+  border-top: 6px solid #0098db;
   border-left: 6px solid rgba(0,0,0,0);
   border-right: 6px solid rgba(0,0,0,0);
   content: no-close-quote;
@@ -683,6 +687,7 @@ h4, h5, h6 {
 
 #newsletter-area {
   padding-bottom: 50px;
+  background-color: #fff;
 }
 
 #newsletter-area .inner-area:before {
