@@ -61,7 +61,7 @@ class="home-page"
 
     <div class="actnews-list-content clearfix">
       <h2 class="box-title"><span>Tin tức Hoạt động</span></h2>
-      @forelse ($articles as $key => $p)
+      @forelse ($tthd as $key => $p)
         <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
         @if ($key == 0)  {{-- First post --}}
 
@@ -136,7 +136,7 @@ class="home-page"
 
     <div class="actnews-list-content clearfix">
       <h2 class="box-title"><span>Phòng ban</span></h2>
-      @forelse ($articles as $key => $p)
+      @forelse ($pb as $key => $p)
         <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
         @if ($key == 0)  {{-- First post --}}
 
@@ -206,12 +206,12 @@ class="home-page"
       {{--</div>--}}
 
     </div>
-    
+
     {{-- Hoat dong thanh thieu nhi --}}
 
     <div class="actnews-list-content clearfix">
       <h2 class="box-title"><span>Hoạt động thanh thiếu nhi</span></h2>
-      @forelse ($articles as $key => $p)
+      @forelse ($hdttn as $key => $p)
         <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
         @if ($key == 0)  {{-- First post --}}
 
@@ -286,7 +286,7 @@ class="home-page"
 
     <div class="actnews-list-content clearfix">
       <h2 class="box-title"><span>Góc măng non</span></h2>
-      @forelse ($articles as $key => $p)
+      @forelse ($gmn as $key => $p)
         <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
         @if ($key == 0)  {{-- First post --}}
 

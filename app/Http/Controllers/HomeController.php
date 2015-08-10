@@ -11,20 +11,24 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Gets 4 last posts
-//        $actNews = Post::where([
-//            'post_type'   => 'act_news',
-//            'post_status' => 'publish'
-//        ])
-//                       ->orderBy('id', 'DESC')
-//                       ->take(3)
-//                       ->get();
+        // Get last posts
+        $tthd = $this->_getPostsByTaxonomy('category', 'publish', 'hoat-dong')
+                     ->take(3)
+                     ->get();
 
-        $articles = $this->_getPostsByTaxonomy('category', 'publish')
-                         ->take(3)
-                         ->get();
+        $pb = $this->_getPostsByTaxonomy('category', 'publish', 'phong')
+                   ->take(3)
+                   ->get();
 
-        return view('home.index', compact('articles'));
+        $hdttn = $this->_getPostsByTaxonomy('category', 'publish', 'hoat-dong-ttn')
+                      ->take(3)
+                      ->get();
+
+        $gmn = $this->_getPostsByTaxonomy('category', 'publish', 'goc-mang-non')
+                    ->take(3)
+                    ->get();
+
+        return view('home.index', compact('tthd', 'pb', 'hdttn', 'gmn'));
     }
 
     public function page($page)
@@ -62,10 +66,11 @@ class HomeController extends Controller
     /**
      * @param $taxonomy
      * @param $status
+     * @param $slug
      *
      * @return mixed
      */
-    private function _getPostsByTaxonomy($taxonomy, $status)
+    private function _getPostsByTaxonomy($taxonomy, $status, $slug)
     {
         return \DB::table('posts as p')
                   ->join('post_taxonomy as pt', 'pt.object_id', '=', 'p.id')
@@ -93,7 +98,10 @@ class HomeController extends Controller
                       'p.post_status' => $status,
                       'tt.taxonomy'   => $taxonomy,
                   ])
-                  ->orWhere('p.post_author', '')
+                  ->where(function ($q) use ($slug) {
+                      $q->where('t.term_slug', '=', $slug)
+                        ->orWhere('t.term_slug', 'like', \DB::raw("'$slug/%'"));
+                  })
                   ->orderBy('p.id', 'DESC');
     }
 }
