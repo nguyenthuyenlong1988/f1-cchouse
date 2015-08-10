@@ -22,15 +22,15 @@ class AppServiceProvider extends ServiceProvider
 
         if (env('APP_DEBUG')) {
             \DB::listen(function ($sql, $bindings, $time) {
-                $output = new ConsoleOutput();
-                $output->writeln('');
-                $output->writeln('');
-                $output->writeln('=====>>>>>>>>>>');
-                $output->writeln("<info>Query:</info> $sql");
-                $output->writeln('<info>Bindings:</info> ' . print_r($bindings, TRUE));
-                $output->writeln("<info>Time:</info> $time");
-                $output->writeln('');
-                $output->writeln('');
+                $op = new ConsoleOutput();
+                $op->writeln('');
+                $op->writeln('');
+                $op->writeln('=====>>>>>>>>>>');
+                $op->writeln("<info>Query:</info> $sql");
+                $op->writeln('<info>Bindings:</info> ' . print_r($bindings, TRUE));
+                $op->writeln("<info>Time:</info> $time");
+                $op->writeln('');
+                $op->writeln('');
             });
         }
     }
