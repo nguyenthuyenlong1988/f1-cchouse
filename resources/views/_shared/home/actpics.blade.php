@@ -4,10 +4,15 @@
   <h4 class="box-title"><span>Ảnh hoạt động</span></h4>
   <div class="UISlider">
     <ul class="slideList no-bullets">
-      @for ($i = 0; $i < 12; $i++)
+      @for ($i = 1; $i <= 12; $i++)
+        <?php 
+         if ($i < 10) {
+           $i = "0" . $i;
+         }
+        ?>
         <li>
           <div class="text-center">
-            <img src="assets/img/transparent.gif" alt=""
+            <img src="assets/img/demo/ngoaikhoa/ngoaikhoa-{{ $i }}.jpg" alt=""
                  style="width: 600px;height: 480px;background-color: #ccc;"/>
             {{ $i }}
           </div>

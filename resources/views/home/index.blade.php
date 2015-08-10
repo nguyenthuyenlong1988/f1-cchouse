@@ -49,23 +49,23 @@ class="home-page"
 {{-- ROW --}}
 
 <div class="cuztom-row">
-  <div class="col-sm-6">
+  <div class="col-sm-6" style="width: 75%;">
 
     {{-- Column Header --}}
 
-    <h2 class="section-topline text-center visible-xs" style="margin-top: 40px;margin-bottom: 30px;padding-bottom: 15px;">
+    <h2 class="text-center visible-xs" style="margin-top: 40px;margin-bottom: 30px;padding-bottom: 15px;">
       <img class="hidden-xs" src="assets/img/florish-left.png" alt="" />Tin Tức Hoạt Động<img class="hidden-xs" src="assets/img/florish-right.png" alt="" />
     </h2>
 
     {{-- Activity News --}}
 
-    <div class="actnews-list-content">
+    <div class="actnews-list-content clearfix">
       <h2 class="box-title"><span>Tin tức Hoạt động</span></h2>
       @forelse ($articles as $key => $p)
         <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
         @if ($key == 0)  {{-- First post --}}
 
-        <article class="actnews actnews-first clearfix">
+        <article class="actnews actnews-first" style="float: left;">
           <header class="entry-header">
             <h3 class="entry-title">
               <a href="{{ route('article.index', $postUri) }}">
@@ -81,8 +81,233 @@ class="home-page"
 
         @else  {{-- next posts --}}
 
-        <article class="actnews clearfix">
-          <div class="__divider-style-1"></div>
+        <article class="actnews" style="float: left;">
+          <!-- <div class="__divider-style-1"></div> -->
+          <header class="entry-header">
+            @if (empty($p->post_avatar))
+              <div class="entry-thumbnail no-thumbnail">
+                <img src="assets/img/transparent.gif" alt="" />
+                <a href="{{ route('article.index', $postUri) }}"></a>
+              </div>
+            @else
+              <div class="entry-thumbnail img-circle">
+                <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                <a href="{{ route('article.index', $postUri) }}"></a>
+              </div>
+            @endif
+            <h3 class="entry-title">
+              <a href="{{ route('article.index', $postUri) }}">{{ $p->post_title }}</a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @endif
+      @empty
+        <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
+          <h3 style="margin-top:0">Chưa có tin tức.</h3>
+          <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
+          Hãy cập nhật thêm bài viết trong hệ thống quản lý!
+        </div>
+      @endforelse
+
+      {{--<div class="__divider-style-1"></div>--}}
+      {{--<div class="headline-template">--}}
+        {{--<div>--}}
+          {{--<ul class="col">--}}
+            {{--@for ($i = 0; $i < 4; $i++)--}}
+              {{--<li class="headlines">--}}
+                {{--<a href="javascript:void(0)">--}}
+                  {{--<img src="assets/img/transparent.gif" alt="" />--}}
+                  {{--<h4>Tạp chí Mỹ tiết lộ lý do ông Putin được yêu mến ở Nga Tàu Khựa</h4>--}}
+                  {{--<span class="sourcename">Nhà Thiếu Nhi</span>--}}
+                {{--</a>--}}
+              {{--</li>--}}
+            {{--@endfor--}}
+          {{--</ul>--}}
+        {{--</div>--}}
+      {{--</div>--}}
+
+    </div>
+
+    {{-- Phong Ban --}}
+
+    <div class="actnews-list-content clearfix">
+      <h2 class="box-title"><span>Phòng ban</span></h2>
+      @forelse ($articles as $key => $p)
+        <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
+        @if ($key == 0)  {{-- First post --}}
+
+        <article class="actnews actnews-first" style="float: left;">
+          <header class="entry-header">
+            <h3 class="entry-title">
+              <a href="{{ route('article.index', $postUri) }}">
+                <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                {{ $p->post_title }}
+              </a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @else  {{-- next posts --}}
+
+        <article class="actnews" style="float: left;">
+          <!-- <div class="__divider-style-1"></div> -->
+          <header class="entry-header">
+            @if (empty($p->post_avatar))
+              <div class="entry-thumbnail no-thumbnail">
+                <img src="assets/img/transparent.gif" alt="" />
+                <a href="{{ route('article.index', $postUri) }}"></a>
+              </div>
+            @else
+              <div class="entry-thumbnail img-circle">
+                <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                <a href="{{ route('article.index', $postUri) }}"></a>
+              </div>
+            @endif
+            <h3 class="entry-title">
+              <a href="{{ route('article.index', $postUri) }}">{{ $p->post_title }}</a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @endif
+      @empty
+        <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
+          <h3 style="margin-top:0">Chưa có tin tức.</h3>
+          <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
+          Hãy cập nhật thêm bài viết trong hệ thống quản lý!
+        </div>
+      @endforelse
+
+      {{--<div class="__divider-style-1"></div>--}}
+      {{--<div class="headline-template">--}}
+        {{--<div>--}}
+          {{--<ul class="col">--}}
+            {{--@for ($i = 0; $i < 4; $i++)--}}
+              {{--<li class="headlines">--}}
+                {{--<a href="javascript:void(0)">--}}
+                  {{--<img src="assets/img/transparent.gif" alt="" />--}}
+                  {{--<h4>Tạp chí Mỹ tiết lộ lý do ông Putin được yêu mến ở Nga Tàu Khựa</h4>--}}
+                  {{--<span class="sourcename">Nhà Thiếu Nhi</span>--}}
+                {{--</a>--}}
+              {{--</li>--}}
+            {{--@endfor--}}
+          {{--</ul>--}}
+        {{--</div>--}}
+      {{--</div>--}}
+
+    </div>
+    
+    {{-- Hoat dong thanh thieu nhi --}}
+
+    <div class="actnews-list-content clearfix">
+      <h2 class="box-title"><span>Hoạt động thanh thiếu nhi</span></h2>
+      @forelse ($articles as $key => $p)
+        <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
+        @if ($key == 0)  {{-- First post --}}
+
+        <article class="actnews actnews-first" style="float: left;">
+          <header class="entry-header">
+            <h3 class="entry-title">
+              <a href="{{ route('article.index', $postUri) }}">
+                <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                {{ $p->post_title }}
+              </a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @else  {{-- next posts --}}
+
+        <article class="actnews" style="float: left;">
+          <!-- <div class="__divider-style-1"></div> -->
+          <header class="entry-header">
+            @if (empty($p->post_avatar))
+              <div class="entry-thumbnail no-thumbnail">
+                <img src="assets/img/transparent.gif" alt="" />
+                <a href="{{ route('article.index', $postUri) }}"></a>
+              </div>
+            @else
+              <div class="entry-thumbnail img-circle">
+                <img src="{{ route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                <a href="{{ route('article.index', $postUri) }}"></a>
+              </div>
+            @endif
+            <h3 class="entry-title">
+              <a href="{{ route('article.index', $postUri) }}">{{ $p->post_title }}</a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @endif
+      @empty
+        <div class="clearfix" style="margin-top:5px;padding:10px;background-color:#fff;border:2px dashed #84cdc7">
+          <h3 style="margin-top:0">Chưa có tin tức.</h3>
+          <img src="assets/img/demo/100x100_thumbnail_1.jpg" alt="" style="float:left;margin-right:7px" />
+          Hãy cập nhật thêm bài viết trong hệ thống quản lý!
+        </div>
+      @endforelse
+
+      {{--<div class="__divider-style-1"></div>--}}
+      {{--<div class="headline-template">--}}
+        {{--<div>--}}
+          {{--<ul class="col">--}}
+            {{--@for ($i = 0; $i < 4; $i++)--}}
+              {{--<li class="headlines">--}}
+                {{--<a href="javascript:void(0)">--}}
+                  {{--<img src="assets/img/transparent.gif" alt="" />--}}
+                  {{--<h4>Tạp chí Mỹ tiết lộ lý do ông Putin được yêu mến ở Nga Tàu Khựa</h4>--}}
+                  {{--<span class="sourcename">Nhà Thiếu Nhi</span>--}}
+                {{--</a>--}}
+              {{--</li>--}}
+            {{--@endfor--}}
+          {{--</ul>--}}
+        {{--</div>--}}
+      {{--</div>--}}
+
+    </div>
+
+    {{-- Goc Mang Non --}}
+
+    <div class="actnews-list-content clearfix">
+      <h2 class="box-title"><span>Góc măng non</span></h2>
+      @forelse ($articles as $key => $p)
+        <?php $postUri = $p->term_slug . '/' . $p->post_name . '--' . Hashids::encode($p->id); ?>
+        @if ($key == 0)  {{-- First post --}}
+
+        <article class="actnews actnews-first" style="float: left;">
+          <header class="entry-header">
+            <h3 class="entry-title">
+              <a href="{{ route('article.index', $postUri) }}">
+                <img src="{{ empty($p->post_avatar) ? 'assets/img/transparent.gif' : route('_image.index') . '/' . $p->post_avatar }}" alt="" />
+                {{ $p->post_title }}
+              </a>
+            </h3>
+          </header>
+          <div class="entry-summary">
+            {{ $p->post_excerpt }}
+          </div>
+        </article>
+
+        @else  {{-- next posts --}}
+
+        <article class="actnews" style="float: left;">
+          <!-- <div class="__divider-style-1"></div> -->
           <header class="entry-header">
             @if (empty($p->post_avatar))
               <div class="entry-thumbnail no-thumbnail">
@@ -133,7 +358,8 @@ class="home-page"
     </div>
 
   </div>
-  <div class="sidebar col-sm-3">
+
+  <!-- <div class="sidebar col-sm-3">
 
     {{-- Danh Ngôn --}}
 
@@ -187,7 +413,7 @@ class="home-page"
       </ul>
     </div>
 
-  </div>
+  </div> -->
   <div class="sidebar col-sm-3">
 
     {{-- Activity Pictures (vertical slider) --}}
