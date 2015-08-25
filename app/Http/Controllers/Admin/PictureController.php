@@ -74,11 +74,11 @@ class PictureController extends Controller {
           if($file_size > 2097152){
             $errors[]='File size must be less than 2 MB';
           }
-          $desired_dir= public_path() . "\uploads\album";
+          $desired_dir= public_path() . "/uploads/album";
         
           if(empty($errors)==true) {
             if(is_dir($desired_dir)==false) {
-              mkdir("$desired_dir", 0700);		// Create directory if it does not exist
+              mkdir("$desired_dir", 0777);		// Create directory if it does not exist
             }
             if(is_dir("$desired_dir/".$file_name)==false) {
               move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
@@ -172,11 +172,11 @@ class PictureController extends Controller {
           if($file_size > 2097152){
             $errors[]='File size must be less than 2 MB';
           }
-          $desired_dir= public_path() . "\uploads\album";
+          $desired_dir= public_path() . "/uploads/album";
     
           if(empty($errors)==true) {
             if(is_dir($desired_dir)==false) {
-              mkdir("$desired_dir", 0700);		// Create directory if it does not exist
+              mkdir("$desired_dir", 0777);		// Create directory if it does not exist
             }
             if(is_dir("$desired_dir/".$file_name)==false) {
               move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
@@ -210,7 +210,7 @@ class PictureController extends Controller {
   }
   
   public function destroy($aPicCateId) {
-    $desired_dir= public_path() . "\uploads\album";
+    $desired_dir= public_path() . "/uploads/album";
     $pics = $this->getAllPicsByPicCateId($aPicCateId);
     if (count($pics) > 0) {
       foreach ($pics as $pic) {
