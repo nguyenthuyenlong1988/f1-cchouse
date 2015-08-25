@@ -138,9 +138,10 @@ Route::get('tin/{ARTICLE?}', [
     'uses' => 'ArticleController@index'
 ]);
 
+Route::get('home/album/{pic_cate_id}', "HomeController@album");
+
 Route::get('{PAGE}', [
     'as'   => 'page',
     'uses' => 'HomeController@page'
 ]);
 
-Route::get('home/album/{pic_cate_id}', "HomeController@album");
