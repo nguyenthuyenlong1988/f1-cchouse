@@ -29,16 +29,20 @@ class HomeController extends Controller
                   ->get();
       
       // right vertical album slide
-      $lastPicCateId = $this->getLastPicCateId();
-      $pics = $this->getAllPicsByPicCateId($lastPicCateId);
       $arrPic = array();
-      foreach ($pics as $val) {
-        $arrPic[] = array(
-          "id" => $val->id,
-          "name" => $val->name,
-          "description" => $val->description,
-          "fileName" => $val->file_name 
-        );
+      $lastPicCateId = $this->getLastPicCateId();
+      if ($lastPicCateId != null) {
+        $pics = $this->getAllPicsByPicCateId($lastPicCateId);
+        foreach ($pics as $val) {
+          $arrPic[] = array(
+            "id" => $val->id,
+            "name" => $val->name,
+            "description" => $val->description,
+            "fileName" => $val->file_name 
+          );
+        }
+      } else {
+        $lastPicCateId = "";
       }
 
       return view('home.index', compact('tthd', 'pb', 'hdttn', 'gmn', 'lastPicCateId', 'arrPic'));
@@ -160,6 +164,9 @@ class HomeController extends Controller
   
   private function getLastPicCateId() {
     $lastPicCateId = \DB::table("pic_cate")->select("id")->orderBy("id", "desc")->first();
+    if ($lastPicCateId == null) {
+      return null;
+    }
     return $lastPicCateId->id;
   }
   
